@@ -1,0 +1,18 @@
+{
+  "frozen": "2026-10-30, accepted by project owner before any V3-V5 run",
+  "V2": {"integer": "exact", "float_relative": 1e-9, "random_masks_per_tool": 1000, "seed": 20261030},
+  "V3": {
+    "pspnet_official_vs_adapter_iou_equivalent": 0.98,
+    "hybridgnet_max_node_deviation_px_1024": 0.5,
+    "chexone_tokens": "identical", "chexone_option_prob_abs": 1e-3,
+    "pneumothorax_prob_max_abs": 1e-4, "pneumothorax_mask": "identical",
+    "lines_tubes_score_abs": 1e-4, "lines_tubes_points": "identical", "lines_tubes_line_iou": 0.999,
+    "cxas_official_vs_adapter_mask_iou": 0.999,
+    "a12_vs_cxas_ctr_spearman_min": 0.8
+  },
+  "V4": {"hybridgnet_node_px_original": 2.0, "chexone_box_grid_cells": 1, "lines_tubes_point_frac_width": 0.01,
+         "pspnet_flip_mirror_iou": 0.9, "ctr_flip_abs": 0.02, "mask_shift_iou": 0.95},
+  "V5": {"pspnet_montgomery_lung_dice_median_in_fov": 0.85, "pspnet_jsrt_lung_dice_median": 0.85,
+         "pspnet_jsrt_heart_dice_median": 0.75, "hybridgnet_montgomery_lung_dice_median": 0.90,
+         "chexone_nih_view_accuracy": 0.85, "chexone_grid_scale_cases_min": 50}
+}

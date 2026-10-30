@@ -1,0 +1,2722 @@
+{
+ "purpose": "V5 A1/A2/A4 (third-party mirror; implementation check only)",
+ "cases": [
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN001.png",
+   "image_sha256": "6c1629cd92ec5734adeee608bd764028e747aaf152f7ce7ee1d96a80ce960d2c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN001.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN001.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN001.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN001.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN001.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN002.png",
+   "image_sha256": "a3be043830487c09fff62d09f6cfe6ae676693e74dbed934281bd69be7aec04a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN002.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN002.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN002.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN002.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN002.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN003.png",
+   "image_sha256": "150ab67a1c012b2bab46726dd0fa3e8881882b5a5105975462dcbabee320e2b5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN003.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN003.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN003.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN003.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN003.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN004.png",
+   "image_sha256": "d07bd51cf57f132537b97f45af683f39697d5c319206df345cad1f6a8d6a8374",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN004.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN004.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN004.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN004.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN004.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN005.png",
+   "image_sha256": "548e1195ae41e8820f84617aa938b5dac3e8bf03da7cd086bcd1fdf5b47244e3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN005.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN005.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN005.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN005.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN005.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN006.png",
+   "image_sha256": "468f8c20873086b671a7e72933802eb156c555c9caf313a44f03a5e30da62198",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN006.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN006.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN006.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN006.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN006.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN007.png",
+   "image_sha256": "16b8a7dac866480a7a642f3d62a912cf84970f854cc219c9d3b60802ad178612",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN007.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN007.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN007.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN007.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN007.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN008.png",
+   "image_sha256": "540853d29f2bcc40b41771bad803803596bc88dbc1db7f4620f41010e462bd85",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN008.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN008.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN008.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN008.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN008.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN009.png",
+   "image_sha256": "c5dcf9d0614776842fde059f6875f771d90ccae84e5e607832d9237687678f45",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN009.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN009.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN009.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN009.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN009.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN010.png",
+   "image_sha256": "6d5ff51af80eff40d450f8d6799e71af4c2d5564791f0a23eef3ba4c0026ec4f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN010.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN010.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN010.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN010.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN010.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN011.png",
+   "image_sha256": "8a4e4fc24801aca7b27334f798a61838e4e9446a766162e7b373d46078f2f0a6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN011.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN011.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN011.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN011.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN011.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN012.png",
+   "image_sha256": "7ce6cb83a24350d7f58e97fb819623f13e737bb89c93a483299775314c192ab8",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN012.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN012.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN012.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN012.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN012.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN013.png",
+   "image_sha256": "ba872a8e959fe3f99eb2769cb24c69df7bac79015ccdb51461afe8dfcf5674d4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN013.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN013.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN013.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN013.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN013.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN014.png",
+   "image_sha256": "c15f87ce1260f137ecd87bcef12767920d5a929b94880b5e05d66a3510e70cd3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN014.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN014.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN014.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN014.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN014.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN015.png",
+   "image_sha256": "d81d8bf3401b19a8755249ce67c5499714ee11bc39707d4141b5c932baa72438",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN015.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN015.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN015.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN015.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN015.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN016.png",
+   "image_sha256": "b4f535d7ca0b3c9bac62305218bc4b9f22be34472e746204bd448cb10a450a20",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN016.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN016.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN016.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN016.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN016.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN017.png",
+   "image_sha256": "89256a3f06254cd68dd921dd223e9a70601af511587380d60ab88bef511c4d55",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN017.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN017.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN017.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN017.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN017.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN018.png",
+   "image_sha256": "2ff7435fbf8dfd3153e2502c310cf780379dbe5edbc52dece0900cbffe34de2e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN018.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN018.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN018.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN018.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN018.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN019.png",
+   "image_sha256": "ea2956c7b81bc078bea73f3971164d21dbfd47de2cbb55da0b3eb668e6525b33",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN019.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN019.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN019.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN019.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN019.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN020.png",
+   "image_sha256": "7290e9a3db1dfe9cb8d88e12db3b5747280ea8d7a0452eca69779ccdcce61c7c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN020.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN020.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN020.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN020.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN020.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN021.png",
+   "image_sha256": "86bea6c4da4a1dbf23d13a21751bf19706c997c2dcb0ee5414f9fdbee3f235d0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN021.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN021.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN021.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN021.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN021.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN022.png",
+   "image_sha256": "e4504eac75351215e2859a4d2592019c11c5d74b3705ac4c2e77400151cbd609",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN022.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN022.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN022.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN022.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN022.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN023.png",
+   "image_sha256": "60ed2e5507fab5c345b5cf6b78d9af70ec3716953a0bf26e059389700599ec15",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN023.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN023.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN023.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN023.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN023.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN024.png",
+   "image_sha256": "6a1abbcea1d5c90f5bdbc0af12cc9c62ac23f10bf00520ac794b4e5d9a0a0e81",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN024.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN024.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN024.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN024.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN024.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN025.png",
+   "image_sha256": "621ca05cee4dc8c7119b5fe050a086daa2276df540514648c3ad80245763f513",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN025.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN025.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN025.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN025.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN025.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN026.png",
+   "image_sha256": "d4252db2b83ccdab78965d679fb0aea97fa78f610c26dab8c9ca0df31b282347",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN026.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN026.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN026.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN026.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN026.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN027.png",
+   "image_sha256": "a44f7ee2dc905c35499e6dc41b65be4ab9122ba4dfbbe7237d1bd9ee271e490d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN027.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN027.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN027.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN027.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN027.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN028.png",
+   "image_sha256": "9b41d728f5e49d14dcec26835a5cd89b4f8c17c850c5258349ed11edfb3ac595",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN028.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN028.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN028.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN028.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN028.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN029.png",
+   "image_sha256": "8ca8a35aec7056984e375d3ce55428fffbe8b84e0db8de0f7d8a745a5f6eb427",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN029.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN029.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN029.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN029.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN029.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN030.png",
+   "image_sha256": "ebe8d35bcc976eff8dea1bfdcc8052d42560d96d236b7e8159e18f6d1127f224",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN030.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN030.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN030.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN030.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN030.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN031.png",
+   "image_sha256": "c3c60b52dd69dd3971b3da561f11f304ae9f1c2831c1c5a352488b4987a438f6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN031.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN031.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN031.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN031.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN031.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN032.png",
+   "image_sha256": "e2dad3c9903e38a0eae539c436bd6dacca30c963f4068acf5c5d8556faa21a3b",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN032.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN032.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN032.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN032.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN032.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN033.png",
+   "image_sha256": "5646045b818c4a08b5a6621aa73186688b14c0501209ee4405181940c0e166ad",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN033.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN033.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN033.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN033.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN033.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN034.png",
+   "image_sha256": "5005acbfabaae70d246a87f80105a14dab819f71c29ac755a701545f7f9f6b37",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN034.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN034.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN034.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN034.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN034.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN035.png",
+   "image_sha256": "cb39cf7d69d5a6e602849a35da149eb6cde1ab98d9e656f4d25a5879288ef921",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN035.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN035.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN035.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN035.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN035.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN036.png",
+   "image_sha256": "4aa19459db966a25d5e398462c7dddb3291ef0e197db13123975bec757feb1e1",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN036.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN036.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN036.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN036.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN036.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN037.png",
+   "image_sha256": "802e307d0be7bf4464da5db8200e162775d8aacf95dfe31d1e8fbfa18cf58a2a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN037.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN037.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN037.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN037.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN037.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN038.png",
+   "image_sha256": "c60ac3a0b0ef91b36e8e348264420ce23ca36e6b618c91da8f33566a88be20bf",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN038.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN038.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN038.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN038.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN038.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN039.png",
+   "image_sha256": "d5f1fc3bb5e699b28477cb42a18cad9ed7db97fff8136cd1b7cf407e2e229771",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN039.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN039.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN039.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN039.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN039.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN040.png",
+   "image_sha256": "c40d98b79d690104c8911e4bd74004b48ac6582a0190f24871560807bcb8b6d1",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN040.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN040.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN040.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN040.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN040.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN041.png",
+   "image_sha256": "96ba1f35b75081b7574cd4d7cfd4825e76376fd5d41e1b2c789d8e8f0dcb8a5a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN041.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN041.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN041.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN041.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN041.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN042.png",
+   "image_sha256": "3495e4801517d9e2d93319795c7fc91f99d1712aa8ac41215ea887e9dfe97018",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN042.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN042.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN042.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN042.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN042.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN043.png",
+   "image_sha256": "d50591b9a625ae4ef356ed332bcfeb2741a4f8256132131c22cf4a50b267ef4d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN043.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN043.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN043.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN043.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN043.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN044.png",
+   "image_sha256": "f7e02a7235df3edfc49735dc65ee6f260dd0c6cb6628f8ce11e1158c44b84c15",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN044.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN044.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN044.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN044.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN044.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN045.png",
+   "image_sha256": "638282955c3307a24534b5a6b72bcbdc09b54fb862077bee618ec3e3136c5e38",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN045.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN045.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN045.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN045.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN045.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN046.png",
+   "image_sha256": "aaacf4b85eb3847b32e9e3cd57237b10a1ef9b7bcfa590b54cb7c4eb2e93cfc2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN046.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN046.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN046.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN046.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN046.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN047.png",
+   "image_sha256": "51d806247a4671e8f2bc89dbdf1018acf4edb1b316f1fe0e4c8ed91d49c9db78",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN047.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN047.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN047.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN047.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN047.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN048.png",
+   "image_sha256": "acf74cd788dc43a83909249426c9e4033914cee5192c9b9ac272a9a9ca003a58",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN048.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN048.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN048.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN048.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN048.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN049.png",
+   "image_sha256": "67d27936ec6d7b316258a643bed70e23d04b83e2c7330ce45eb9cbacc5898d46",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN049.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN049.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN049.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN049.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN049.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN050.png",
+   "image_sha256": "39d62acae9baad8fa5ff210821bccb1e34ba032548c5d2cc815716aebbd15b4f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN050.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN050.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN050.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN050.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN050.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN051.png",
+   "image_sha256": "c9deec71e643b8788633afcf3629b11279850119c4ad52c0bb1367805260b332",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN051.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN051.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN051.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN051.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN051.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN052.png",
+   "image_sha256": "137589b0441cc6fe5df12095d7b508ad67267b327b73e6889bfa43d338248d26",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN052.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN052.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN052.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN052.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN052.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN053.png",
+   "image_sha256": "ce97b61cda9e1b98e8a06d99030053bf863624b018e68e5011759ca6edf74b0f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN053.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN053.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN053.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN053.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN053.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN054.png",
+   "image_sha256": "85ea91f7ee96a3a15732f8fba8fe08ab39f8dd8e27a0b5a75f0a7c71df5ae0cc",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN054.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN054.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN054.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN054.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN054.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN055.png",
+   "image_sha256": "fca8c7f8f214efc27ede23f7caca28515d590d7dab812525faf149e5b83de913",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN055.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN055.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN055.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN055.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN055.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN056.png",
+   "image_sha256": "73b023f11bac1f104e038ca3a7b4c932d4f0f6177f9542dcf671442cd5e54d9e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN056.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN056.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN056.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN056.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN056.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN057.png",
+   "image_sha256": "c7067463b3836d84465be8fa723c11426a8e31cb4da993f74a71cf3e32a3bd6b",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN057.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN057.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN057.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN057.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN057.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN058.png",
+   "image_sha256": "2dc2c4e500160b388380aeadab568238bebf626adf074a950bf77552eac62bdc",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN058.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN058.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN058.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN058.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN058.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN059.png",
+   "image_sha256": "8fc73c65fa87c62dbce885d6a7bbb558e849e8e0c0930e786503e2640f0b7104",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN059.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN059.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN059.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN059.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN059.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN060.png",
+   "image_sha256": "88fb021a4fa13162dcaef9276dd70acd4f8aae74d9bd7a3fee451a84cd1f228c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN060.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN060.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN060.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN060.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN060.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN061.png",
+   "image_sha256": "ecb126cdfdffd390129793da15377576c118f1efbd4bbebd700179946a0c9388",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN061.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN061.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN061.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN061.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN061.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN062.png",
+   "image_sha256": "1c93f07dd179b252f167725b0a6baa3fbad3c5e274ae15fdde29cf48ff3ae47f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN062.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN062.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN062.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN062.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN062.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN063.png",
+   "image_sha256": "c06322e3ea1d39be1899b40ed52a68c48a31f73f7eb1c6fdbc70ac7da25d61f2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN063.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN063.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN063.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN063.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN063.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN064.png",
+   "image_sha256": "9b10d36e1ba1358a6cd62cc69f698339f5b6090f80695e5bc4397c952fd12b36",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN064.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN064.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN064.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN064.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN064.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN065.png",
+   "image_sha256": "cb04bd848432b520865a953f2222c29c9d4776a110e5139b3b8de7a53a6d88ec",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN065.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN065.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN065.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN065.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN065.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN066.png",
+   "image_sha256": "8815e4edf2ec531a05a84300acff28123a31766e140cebbf08ee3f8c2dbcbd2e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN066.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN066.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN066.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN066.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN066.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN067.png",
+   "image_sha256": "5debf59a66c2fad6cd99a940479444768ebfd05f1311ee0c14aab8f334219787",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN067.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN067.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN067.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN067.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN067.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN068.png",
+   "image_sha256": "6804afffd728128ea77a34ea264a33922da7e74124d71c88b9aa436096cda1c8",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN068.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN068.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN068.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN068.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN068.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN069.png",
+   "image_sha256": "de4b27c7445719a44f2f18f64787d1b180da925ae89f81125295bf86b29ba675",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN069.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN069.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN069.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN069.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN069.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN070.png",
+   "image_sha256": "a618ce5a68c54659db003295126c20a23fc6959d7d6c46bf9011178bf9163c5f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN070.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN070.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN070.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN070.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN070.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN071.png",
+   "image_sha256": "45b21f6283567f80790ccae1cd97581493757f00c507fdfc5fb6ecb1bdcbc0be",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN071.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN071.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN071.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN071.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN071.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN072.png",
+   "image_sha256": "20a3414e4da6da004f4bda10bb7c7573b8c323be91b240ce9c0a36bb3f1ce0da",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN072.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN072.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN072.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN072.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN072.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN073.png",
+   "image_sha256": "3b1bb8ec75bfd5db135266fd3d4a1350de9a1125dcf363097d2d13c2cd9dd716",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN073.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN073.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN073.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN073.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN073.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN074.png",
+   "image_sha256": "f9a9800d966d5cd2fcf558f54a9af5e0ed9968f9cc5e5383fde2eac52b8e47d2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN074.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN074.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN074.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN074.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN074.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN075.png",
+   "image_sha256": "d3e0af0b7452f7d9312ef36f24cfa9685a2380f41a776da5bc4cb0df9c7fcf4f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN075.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN075.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN075.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN075.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN075.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN076.png",
+   "image_sha256": "c0c2778f1b5503aa4579e6203f825953b34febc65316da9615d7af007cae2908",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN076.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN076.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN076.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN076.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN076.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN077.png",
+   "image_sha256": "8554875ad0f19be5b1035cbe556a5acfac9738462831fb21c4a0ce906bc1d2c7",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN077.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN077.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN077.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN077.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN077.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN078.png",
+   "image_sha256": "7f79063dd7512913fd8d03e23603b5323c3d2f0a7d75529a382cf948e139b3cd",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN078.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN078.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN078.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN078.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN078.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN079.png",
+   "image_sha256": "d0c51633423cdf01067c0de4175b79c6af3ead5978a26270faa4ca9239ce30da",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN079.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN079.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN079.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN079.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN079.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN080.png",
+   "image_sha256": "f9adf800544d187f2fcc97f87c993c736fdfb7cc7d1dd1c2595397467dea244a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN080.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN080.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN080.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN080.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN080.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN081.png",
+   "image_sha256": "a31ebf12a6f62b4388547ce3aeaa2cedb12e2c1f01e2ad11b00250bc279824e3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN081.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN081.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN081.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN081.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN081.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN082.png",
+   "image_sha256": "dd72f1db7b0d9e125cf4b37c2ee8f966efdb6fd745572b20b0d70e132dbdb3e2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN082.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN082.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN082.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN082.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN082.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN083.png",
+   "image_sha256": "eff099fe1454ab5b693aa875e2250a44cec31c6e4dd3b6d8ed900cadc70a4bd4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN083.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN083.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN083.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN083.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN083.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN084.png",
+   "image_sha256": "8301e5cd6184c590e9f26671c2b808bfa2cf7c6c220690a0ca9687a95f145593",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN084.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN084.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN084.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN084.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN084.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN085.png",
+   "image_sha256": "64e954da1e11f3d62aa944824c705d61fdb76ea281a19baff9f9abb76d6ee6f6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN085.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN085.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN085.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN085.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN085.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN086.png",
+   "image_sha256": "30e489abcb8121b77ecb67a88b2437286aacaecee529dabc3f37ccb1f9c17c88",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN086.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN086.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN086.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN086.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN086.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN087.png",
+   "image_sha256": "c178919a11d719b1b8258a1c571d71ae10c4c2fedc77a38f43266d2eaa2ba2ff",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN087.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN087.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN087.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN087.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN087.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN088.png",
+   "image_sha256": "ef1a032689759ef9012b01f3dd1d626886cbcfbbfe877e7d8cf359c1b27a1a75",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN088.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN088.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN088.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN088.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN088.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN089.png",
+   "image_sha256": "451f4eda782bcf2d2ee69974c611cd2821072244bc50d81fa0cb3b97c67814da",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN089.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN089.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN089.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN089.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN089.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN090.png",
+   "image_sha256": "d8fff0573a31f44741439314f787cdcf3260ecebadea5ed08232427d19ff0073",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN090.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN090.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN090.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN090.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN090.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN091.png",
+   "image_sha256": "236c31c5f6eb55edfa842cf55f97a858c32fc64c35ce0838657f4117eba82c77",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN091.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN091.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN091.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN091.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN091.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN092.png",
+   "image_sha256": "3acfd500086f79185d7862e9a3cbe2b15927060e63d52960036ab5768dbb028a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN092.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN092.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN092.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN092.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN092.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN093.png",
+   "image_sha256": "945a293100a40b3f3672d6dac4c1b9e1eb64c42497cd96669b01d448ee8afbfe",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN093.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN093.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN093.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN093.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN093.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN094.png",
+   "image_sha256": "70b4cf127c6068159300bb87a49ed344ae5bdca2e0192bc2f04dbba6e732c067",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN094.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN094.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN094.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN094.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN094.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN095.png",
+   "image_sha256": "e2920997932b80b448a7191ec44cb999932e7137e01c0a681df3b2c5eb8acb13",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN095.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN095.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN095.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN095.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN095.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN096.png",
+   "image_sha256": "b201b05282970ac4f593a46cbc40a5bfe62478b508ee3c1dbae5fd76db79216f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN096.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN096.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN096.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN096.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN096.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN097.png",
+   "image_sha256": "8f0c08ee38c20750ee1c85ef2ae551ee55966528da0ef4adbdcb049b7dfb9e3d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN097.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN097.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN097.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN097.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN097.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN098.png",
+   "image_sha256": "bbded85e0c388e0930c26373498f2fc1128b293b158b10a37b7e1c2c2e03925e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN098.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN098.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN098.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN098.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN098.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN099.png",
+   "image_sha256": "9d585383f0db06617298ba58f39ead43043614167adb5a8af375252cb00d90a4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN099.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN099.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN099.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN099.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN099.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN100.png",
+   "image_sha256": "38b2f2ba124930d84972cab48df448082b801cbca635063eeb7105d0952a5892",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN100.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN100.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN100.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN100.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN100.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN101.png",
+   "image_sha256": "3d46bda9e2ee3898ee834fd49518b5899e73e2d161254394481c98664f7e5b54",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN101.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN101.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN101.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN101.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN101.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN102.png",
+   "image_sha256": "ad469750d789fc143a1e868a1602f255565d09994e9aae5893e392ecdd0af313",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN102.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN102.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN102.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN102.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN102.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN103.png",
+   "image_sha256": "390db0b5665e632cd53a7cba9a7fecaca96eaa944de59a1607c0e62b389db14c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN103.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN103.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN103.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN103.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN103.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN104.png",
+   "image_sha256": "b59e8bd03517d1e8f475df132e9b3f64f0dfe5793f5abf044aa0c55101157197",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN104.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN104.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN104.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN104.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN104.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN105.png",
+   "image_sha256": "2c33c8900f72cc9a4fecf4b7297bb2d632aa0220090a1a159635de9c532c2563",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN105.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN105.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN105.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN105.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN105.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN106.png",
+   "image_sha256": "55e961b8e4e77c5ac58071066ba32f9d4c6d541ffc8ec0f008e006db9f60b845",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN106.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN106.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN106.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN106.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN106.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN107.png",
+   "image_sha256": "110281eb171888f3ae127ee0faa34c675e1a25f8c1f7f85d3169d654cf68a875",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN107.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN107.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN107.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN107.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN107.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN108.png",
+   "image_sha256": "7e53a991892bedf5526934e7742b7d802c79e7321bd1f46174e5681206e4b069",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN108.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN108.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN108.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN108.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN108.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN109.png",
+   "image_sha256": "19884d8de33139e1e8b198543c4cbff086a30cdb2ff470f1600d7c19dafd53b6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN109.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN109.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN109.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN109.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN109.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN110.png",
+   "image_sha256": "8a05d4d2a477d67b3bc32d686afe04ca74338ccdc7d8dd015153f9311d003468",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN110.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN110.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN110.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN110.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN110.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN111.png",
+   "image_sha256": "dc5a9cd2589280a1e9a13f8d59b88b9eac4f6b68e6b7c4bfd0612beec95933d9",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN111.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN111.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN111.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN111.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN111.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN112.png",
+   "image_sha256": "dd562f6137f51bb8f6a710d639070a3c34d9e3049e196dc42be5bb127e691dc6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN112.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN112.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN112.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN112.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN112.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN113.png",
+   "image_sha256": "0c314b18cdc603c13a551959c33ebc3680ddb8c49ffaf979e1f6acc981f14bbd",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN113.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN113.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN113.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN113.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN113.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN114.png",
+   "image_sha256": "c64c0eabaafb776cb68591169277a05d494c95976b7170a8cb94134b045ec632",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN114.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN114.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN114.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN114.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN114.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN115.png",
+   "image_sha256": "bd293d377bb4fb8e25ee9fac81b86a2e491babb17cb2d8eab85d9409631ff9dd",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN115.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN115.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN115.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN115.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN115.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN116.png",
+   "image_sha256": "c2fd6bd2690f0117d922ddc9023e5fb70d2cc4ac502b3a58ad84a08b0ac2a6a5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN116.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN116.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN116.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN116.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN116.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN117.png",
+   "image_sha256": "4f774ef16bcd23ca10fd3516e4bbc799c5d725fac24fef1a0da77886faa9b1e0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN117.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN117.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN117.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN117.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN117.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN118.png",
+   "image_sha256": "63258d814c02eb7c3a732d41cc4a49ea605fc8a1412c9e7edcc73ba4bcc4ebc3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN118.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN118.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN118.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN118.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN118.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN119.png",
+   "image_sha256": "23613bbc7d3fb9a91654e1018301b5d4e5b7805e3a0fe43da1f9b5078c7f6cb2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN119.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN119.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN119.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN119.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN119.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN120.png",
+   "image_sha256": "d51e18eb13059f660469b980e11ffd3edcbf5aa45f82436251b546360f1496cd",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN120.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN120.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN120.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN120.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN120.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN121.png",
+   "image_sha256": "c82810356781757976b29b33855f34cbda5001b9a63d74d5fbb4214bb7a6726a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN121.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN121.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN121.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN121.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN121.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN122.png",
+   "image_sha256": "60e7a3f658ada8b8e43e9c9aa73c8935765c823aacd59f514cd27f465d6aab57",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN122.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN122.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN122.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN122.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN122.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN123.png",
+   "image_sha256": "a6e3dcfdffce908bfdea9973925720a15caadfb555abeef1507a9c2018877643",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN123.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN123.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN123.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN123.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN123.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN124.png",
+   "image_sha256": "cb9f50b1222ca4deba82dd51855c3f4147fee6c3f9598853ce75a8bbfdc73f79",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN124.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN124.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN124.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN124.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN124.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN125.png",
+   "image_sha256": "9d836ad417fc8c140cc0e5af928a5606116ae5d03a44de28a0cf14fd5e7f4531",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN125.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN125.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN125.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN125.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN125.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN126.png",
+   "image_sha256": "d011337be39afe19523ca52d7e694076a0d4af2fd87b3eb0f2782ddbb5cb2d2a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN126.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN126.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN126.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN126.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN126.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN127.png",
+   "image_sha256": "3bfdcfc6974063df6904c40f91bb874e793b0aa78dedd59c512bdcd015fffb91",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN127.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN127.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN127.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN127.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN127.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN128.png",
+   "image_sha256": "e9dca65cba54e542a64caba699b65cf078e2a8a07204074ec9f40e3436581cdf",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN128.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN128.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN128.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN128.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN128.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN129.png",
+   "image_sha256": "c1fdac2d17807316ca370356b5db357e1599c71b49a0daed3b8471355e7c1eae",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN129.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN129.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN129.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN129.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN129.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN130.png",
+   "image_sha256": "f1d13b7a8951622aa7e2c07c7422d1f3f5b2c9656880758a1d6ecb89d1951920",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN130.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN130.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN130.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN130.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN130.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN131.png",
+   "image_sha256": "ff57356faa5736ab1fc4614edf204e3fdfb8a42ca026fd25d2ba368bc7aaffe5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN131.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN131.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN131.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN131.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN131.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN132.png",
+   "image_sha256": "068765e1f9d33bd38dcf4c3cc15176f67f4b9724d8af3546eb853bb4f8bc01d5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN132.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN132.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN132.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN132.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN132.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN133.png",
+   "image_sha256": "df7c764a3032ba66a085bc5bb2265b6c13ae7125a3e8fe5f46ac34bb24c18faa",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN133.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN133.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN133.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN133.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN133.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN134.png",
+   "image_sha256": "3c866cb7db19d5c8cd327f9488bd9f6b38229b1895a5ea3c5ca37d3fe979727e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN134.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN134.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN134.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN134.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN134.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN135.png",
+   "image_sha256": "08ef5c3a1d8d910b6ea57d980afeab59c411035b7558b424596a343545f8c67d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN135.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN135.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN135.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN135.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN135.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN136.png",
+   "image_sha256": "4c72ae53011925cbf15c909fadd95707e4c07c09d7f1e3dd3fd1021e333131cf",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN136.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN136.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN136.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN136.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN136.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN137.png",
+   "image_sha256": "5b880d9838fad5cf4f5ddbb06e7855d660c5e47e3ca33ed4492d3229dbed8a57",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN137.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN137.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN137.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN137.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN137.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN138.png",
+   "image_sha256": "f476c3f0bcb3a1746fa7c42e29953141b2d0232386ff00726679987e37e3aa73",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN138.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN138.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN138.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN138.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN138.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN139.png",
+   "image_sha256": "9261be8b4963d7f93e16a3294db36bf424457df711f48707db4d0fc0369964f3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN139.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN139.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN139.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN139.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN139.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN140.png",
+   "image_sha256": "2dcebed14fd0d3f70e7ca87bc22a78079cb6d02db5ca0c60d92e4d55d443441f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN140.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN140.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN140.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN140.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN140.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN141.png",
+   "image_sha256": "997de0acdc749afc08d833e3f1e8d81d64925110ddae0d28bda1174cf5f7a720",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN141.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN141.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN141.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN141.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN141.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN142.png",
+   "image_sha256": "9450dae43ebfb1a35c164d226008c23de2da6b33d334c1d21aeff50b4e603600",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN142.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN142.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN142.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN142.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN142.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN143.png",
+   "image_sha256": "adca2cca3aaca7ce8e2b91da6dcd28df1abf7998bd1825fc7ed6f857a9c26461",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN143.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN143.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN143.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN143.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN143.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN144.png",
+   "image_sha256": "e843b3eac16e27ab98d394971ea26a923358e7b00885b3ad55b31c94e447dd47",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN144.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN144.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN144.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN144.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN144.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN145.png",
+   "image_sha256": "4dbc47a388c81a88f52857192012e2ba1995c111f9aeafefbfca409532f82774",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN145.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN145.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN145.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN145.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN145.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN146.png",
+   "image_sha256": "223d6c3b03f61f63b92bffd340fd36609945298c682d7ec897b667ddd5e09c93",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN146.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN146.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN146.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN146.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN146.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN147.png",
+   "image_sha256": "8c6005bf3f99409550696caf387479c1c9c1cbf7965d6450cfe027a068d13c3c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN147.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN147.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN147.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN147.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN147.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN148.png",
+   "image_sha256": "452e23d135f2143661fa71904213a693c75494a3990577049213963219f48e81",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN148.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN148.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN148.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN148.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN148.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN149.png",
+   "image_sha256": "ac439d07d729318acf1ebbf924e08d4bb87d5352c5de98cb672a9543b3e188ee",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN149.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN149.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN149.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN149.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN149.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN150.png",
+   "image_sha256": "2a01820b64868243f79b71ceb04b5f671885579222fcf814ae1d84d459bfdba2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN150.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN150.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN150.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN150.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN150.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN151.png",
+   "image_sha256": "0cdbe9ff4980008781be55a2162786c56857539da3cbdb6d78b2bbc85df6d701",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN151.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN151.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN151.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN151.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN151.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN152.png",
+   "image_sha256": "a599f0ec2f0de9d3dc34510741eb2809e12d13012a49bfeec3b589d96d65305d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN152.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN152.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN152.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN152.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN152.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN153.png",
+   "image_sha256": "e20e66e38848348be38c16f6fcc897a9eefd7af03970471fa3980d9567b3f5fd",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN153.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN153.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN153.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN153.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN153.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCLN154.png",
+   "image_sha256": "6c2afba57e3595d6226745002f8d20a13247f2043bce12a40e04223474fb20be",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCLN154.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCLN154.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCLN154.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCLN154.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCLN154.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN001.png",
+   "image_sha256": "9d982972fc2fb8579dc83351fa366f26eaa6a3c06a91ad9ef0feeac6bbb69ad0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN001.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN001.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN001.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN001.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN001.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN002.png",
+   "image_sha256": "29d3f9af98638dbb3cc9176c91cf2d68b1f36a7556f124324da68dd6c5fbff93",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN002.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN002.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN002.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN002.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN002.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN003.png",
+   "image_sha256": "4e8497103cf86ad727da816b12bc7524c46dd21703d5fdd725c4faccbead683a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN003.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN003.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN003.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN003.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN003.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN004.png",
+   "image_sha256": "0b7aae209eda42e80f2f74ea501449674ccd09eeb1a6c9e971414daac3c40328",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN004.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN004.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN004.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN004.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN004.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN005.png",
+   "image_sha256": "dbfc04d1e67ce359f85a7ad5a24d97aad1fbc90a78d05d903c663a786356dc85",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN005.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN005.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN005.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN005.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN005.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN006.png",
+   "image_sha256": "455c64286ad16e194b1b5d44e976ff395f49f1f57d454745e9db76a87e5ce459",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN006.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN006.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN006.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN006.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN006.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN007.png",
+   "image_sha256": "ded1c0af0c531f693e73999de8c452f511e8932420547b42b1f3b2a358ddbda0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN007.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN007.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN007.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN007.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN007.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN008.png",
+   "image_sha256": "f9044c59f72abe98845899eb312be81c27fdda0518bc6806f97f27a25617d3e8",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN008.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN008.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN008.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN008.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN008.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN009.png",
+   "image_sha256": "31fc40bddc567638575a15a58b3b0616903b7460245576126713a720582a5d09",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN009.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN009.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN009.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN009.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN009.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN010.png",
+   "image_sha256": "624c1b878b13363383011e476e9070db34d752e64830448be89f4e3b2d1a0455",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN010.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN010.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN010.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN010.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN010.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN011.png",
+   "image_sha256": "50686cb97601379b0865a1613b7d18dc48c2fd7b5650300baf6c30829f994b2d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN011.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN011.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN011.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN011.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN011.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN012.png",
+   "image_sha256": "f9f058ee318f19bc189aef55cfa91841178267eed93a789bd0aa6a73f1790416",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN012.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN012.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN012.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN012.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN012.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN013.png",
+   "image_sha256": "e019bb0a6e887ed0e5a385b2e420aa7df1d4b7913c2c5cafde4b0aa8898a7c6f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN013.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN013.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN013.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN013.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN013.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN014.png",
+   "image_sha256": "18831d70774944807d49e41772c7013436e7f5c1d9a196df485648e851d7bd28",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN014.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN014.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN014.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN014.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN014.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN015.png",
+   "image_sha256": "c1fbdc00f52bee592a766fbe156e69c333941a28582e3f4308b18f444ee8b28c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN015.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN015.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN015.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN015.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN015.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN016.png",
+   "image_sha256": "55099adb73b36a9134abfbb6774251991ac4082d035a1018580744aa174861de",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN016.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN016.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN016.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN016.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN016.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN017.png",
+   "image_sha256": "62d9d25e2c60323f531dc470ebb950490e8d0fdf58235ed6122738bb22a90b6a",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN017.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN017.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN017.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN017.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN017.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN018.png",
+   "image_sha256": "7a6c49b6b7ae3781b3a766aba87166100ec07c8b0537e90489305680eeef73cf",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN018.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN018.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN018.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN018.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN018.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN019.png",
+   "image_sha256": "5530255756b0726a409727a49ad8a7b92208d92f07ce54c84826a7105bd982a4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN019.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN019.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN019.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN019.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN019.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN020.png",
+   "image_sha256": "b9a42eb1eca270f6ec2459778b25c622ce6fb1aab229ca0d3c0b044ef7ae8772",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN020.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN020.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN020.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN020.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN020.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN021.png",
+   "image_sha256": "6b7984c419826c82e8077b14d17fef654324f03dcd456fb5da22ce006e595bb5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN021.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN021.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN021.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN021.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN021.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN022.png",
+   "image_sha256": "8c7f054b74ad0498b2d51a591af494c15496cd189db1b907eb7f39bae7fa7af1",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN022.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN022.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN022.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN022.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN022.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN023.png",
+   "image_sha256": "b1fbd00813de52d2f006cbd09f46189f152a807757f05f0d59ceccec4bf9aa8c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN023.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN023.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN023.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN023.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN023.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN024.png",
+   "image_sha256": "2874cbe96eaed008ceba1962c0284fb4b9787c520ae08c0240f4a275b1f8c8b0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN024.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN024.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN024.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN024.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN024.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN025.png",
+   "image_sha256": "6d1d3edc8caf1332c1a4f5a073df34d122f949dc64b898307547853305ca08ed",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN025.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN025.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN025.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN025.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN025.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN026.png",
+   "image_sha256": "2d33f53bc2a7299427b0bd9a9e4687d66a6e74baa3d332911d94422a021bce7b",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN026.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN026.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN026.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN026.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN026.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN027.png",
+   "image_sha256": "bbc99fef1ba8ef496597b6ec41688eb9e8329f06e183717399c1cbbc9262f003",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN027.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN027.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN027.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN027.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN027.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN028.png",
+   "image_sha256": "c048556cd9762b5a6278f0f6dfe1308ff3d7fd949fb0e2e770efaa23befac912",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN028.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN028.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN028.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN028.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN028.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN029.png",
+   "image_sha256": "627aa7a346139b43e67870d36b8cbcaeb001444db28a7c218c1168cb8c63b203",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN029.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN029.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN029.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN029.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN029.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN030.png",
+   "image_sha256": "30e8576fb5fab45db85b3e7220d529cd3d641490d93680c69f1b48436a70d213",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN030.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN030.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN030.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN030.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN030.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN031.png",
+   "image_sha256": "08619c58c43474a4b2c32f7225a2f8dbe2ffc497d9118d482f26ce601b332ae4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN031.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN031.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN031.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN031.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN031.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN032.png",
+   "image_sha256": "2644c7954323958491ccc01c5e67553ce35cf292671217ed1e2d11bb8237cc81",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN032.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN032.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN032.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN032.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN032.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN033.png",
+   "image_sha256": "727733d38a4ee383b977df2f3639531865e760ce61b94678ba9e848636e14164",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN033.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN033.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN033.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN033.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN033.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN034.png",
+   "image_sha256": "eed3bd9ce7820e2acb99ed94859dbece599e5e26653f16bd983ef9144e6cf0d0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN034.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN034.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN034.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN034.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN034.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN035.png",
+   "image_sha256": "18806981e13b1b347f2ba90c55d92919c6176a1f5edffdaa16264e7af62818c8",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN035.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN035.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN035.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN035.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN035.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN036.png",
+   "image_sha256": "b0cd2a10a1478bc6c1d637580c15e7905d6dbdb95cefd41126ef7db011bf0feb",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN036.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN036.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN036.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN036.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN036.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN037.png",
+   "image_sha256": "016898a245e6759006d9b6aca01aea1d5cae7b216eddf050c284c0b3dad2a27c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN037.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN037.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN037.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN037.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN037.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN038.png",
+   "image_sha256": "b1b7070fdfa4f3692e70c8536b9831945fb1b2acab9694f70a8375bd1643537c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN038.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN038.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN038.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN038.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN038.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN039.png",
+   "image_sha256": "82b5d84c73e1a0dcbf56fef6d33fdb7f1cdc15712251c447193164afdd0923fe",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN039.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN039.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN039.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN039.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN039.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN040.png",
+   "image_sha256": "06d4e408c56f8ee2dfe1a44d07815dabbac01635b3dbf961947b169a2f15ed66",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN040.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN040.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN040.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN040.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN040.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN041.png",
+   "image_sha256": "b4aa208269b94ef29a0da7e68732af2f26d38adcd8f1696542e18f9e4fb85c9b",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN041.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN041.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN041.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN041.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN041.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN042.png",
+   "image_sha256": "d08e72d69e499cd8643aa0b5ec7ad0d6f0b99a816651de142a6c962a77fc0c1f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN042.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN042.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN042.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN042.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN042.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN043.png",
+   "image_sha256": "23590145e31c61da34b26d7be52db8ea1f967cb02db1548152baebbec4a6453b",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN043.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN043.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN043.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN043.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN043.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN044.png",
+   "image_sha256": "8704a85d703b38ee1dfec0d417c588d645615610c1e736f8b38a3cdc08e84c03",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN044.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN044.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN044.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN044.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN044.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN045.png",
+   "image_sha256": "4d4ea9de690788c6755d66dbdaa9062e9615c035f8621ae34d1d73d4fe32ff22",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN045.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN045.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN045.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN045.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN045.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN046.png",
+   "image_sha256": "b6dcf83980b5881d0adf51052a8a91fea5e54fe2f520a7c8695cc9538b2c0d44",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN046.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN046.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN046.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN046.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN046.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN047.png",
+   "image_sha256": "fbf28ae907603f0b262261e74bf07ac97b0973354d98e9178e48eeae98583459",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN047.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN047.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN047.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN047.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN047.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN048.png",
+   "image_sha256": "23f424cedbffd78aa18849a139003bcaa81dc918e5f1942adba1be2b0843efb1",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN048.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN048.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN048.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN048.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN048.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN049.png",
+   "image_sha256": "c21ab1bd4ef2a1e86693b7058fb91cd2ab0b9ced954635078de8b929adecbdbf",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN049.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN049.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN049.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN049.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN049.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN050.png",
+   "image_sha256": "6e5ad39acc07cf904bd7fb8fd5a7e6637e1bbcbe14b754253d6bbe243efa9862",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN050.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN050.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN050.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN050.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN050.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN051.png",
+   "image_sha256": "0a62ef5431caddc3779c00535223c71c5956139bec5f20767f17f554507b8b32",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN051.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN051.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN051.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN051.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN051.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN052.png",
+   "image_sha256": "927639554c319ec831b001df3b605912126ecef59778e12e2bc375b1597f4262",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN052.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN052.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN052.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN052.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN052.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN053.png",
+   "image_sha256": "484b9e870549942ac79879fd54310a5ff565e96b41f8ee7af68f58fd24f61238",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN053.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN053.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN053.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN053.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN053.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN054.png",
+   "image_sha256": "079ffc7127cd29e5300fc32c8092a9e17c2a7feeef13420c035d253f82c6cec9",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN054.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN054.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN054.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN054.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN054.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN055.png",
+   "image_sha256": "c83bf5949ba5ee911818dfdb0b5af31d067ce6b5b1f873179c4d7b1957e48e88",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN055.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN055.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN055.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN055.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN055.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN056.png",
+   "image_sha256": "736beae78e9ad3eeb08948d82a84893ee08f3725cf564c411f5a75ece732b4d1",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN056.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN056.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN056.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN056.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN056.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN057.png",
+   "image_sha256": "cc3a2630e163b0545e2e25997854194f6cabf2f73168b621eab129606bff2c86",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN057.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN057.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN057.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN057.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN057.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN058.png",
+   "image_sha256": "c9d8600ec9e783d9caf7502acaaf72664c132f2bbda6c4ff4ca7e7265988a474",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN058.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN058.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN058.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN058.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN058.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN059.png",
+   "image_sha256": "9b2bc33a603d945602af8a4945f5dfdbe22b4732e45dc6e2222b5c1482fc5d21",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN059.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN059.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN059.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN059.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN059.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN060.png",
+   "image_sha256": "5ff0c9c25aff553d9064039590151f725099ca10330f1e9d8dbc39c413580c0e",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN060.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN060.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN060.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN060.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN060.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN061.png",
+   "image_sha256": "2dd955e10c579f961c4b581e2c711ccf46717488135d64c4e86d8509a15ab910",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN061.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN061.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN061.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN061.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN061.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN062.png",
+   "image_sha256": "6090694a0efb1f256b1b7d16223220582f16058034496710f5d7e8780869ae22",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN062.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN062.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN062.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN062.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN062.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN063.png",
+   "image_sha256": "c86010aec325ed5343d606665042de5c1d1b35af70cc6b3ba4bfd7d3767505b0",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN063.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN063.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN063.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN063.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN063.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN064.png",
+   "image_sha256": "e2e323f4a552eb79a1952d69783d0c40cd0431fb9cb99edc32bf7c493ef34fba",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN064.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN064.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN064.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN064.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN064.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN065.png",
+   "image_sha256": "3d1532926543c8e529276353f3cffb116ed895f10f96257c7a26d346bd2dd87c",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN065.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN065.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN065.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN065.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN065.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN066.png",
+   "image_sha256": "19584a1c43a2efeed645e9b2cc68367c19fd32f733ddc3ef94fd8b54abf57640",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN066.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN066.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN066.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN066.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN066.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN067.png",
+   "image_sha256": "3d2c0ec3fe45b8611160974705f64b2b0923c45eb8e94a0336db62b3059f0b88",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN067.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN067.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN067.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN067.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN067.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN068.png",
+   "image_sha256": "3b3d3025265c13cb11c0a6bd793d69c90e4fbec2e27c2eb3f5fce311e5ff1ee7",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN068.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN068.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN068.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN068.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN068.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN069.png",
+   "image_sha256": "c3c87ed06cda588228602a4cb36336ce1e08c975ad60a60f8b199bc9ca22d120",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN069.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN069.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN069.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN069.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN069.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN070.png",
+   "image_sha256": "53b99fed9714fa6437a376ea5bbacaf56f33b9a0203b6dd1b08eff67fd07d18d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN070.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN070.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN070.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN070.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN070.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN071.png",
+   "image_sha256": "b304b2f321dc3291bbc1a6a974f1132387650887580b30a24f41c888839dc80f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN071.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN071.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN071.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN071.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN071.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN072.png",
+   "image_sha256": "22cb9376ff953c95d6d89e823ee64accf9bdef78441248cf31f9bc144f549ad6",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN072.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN072.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN072.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN072.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN072.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN073.png",
+   "image_sha256": "9000a4ed7691592e33bd9a47880c66d12af92e21946aaea98c640841fd45f5f7",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN073.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN073.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN073.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN073.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN073.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN074.png",
+   "image_sha256": "0b14b1e46ce1a64c79b1d57b117dfe0d5e65f56ef3ab161b49859f56b1f62dd3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN074.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN074.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN074.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN074.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN074.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN075.png",
+   "image_sha256": "6bf8309c9085005564a1b5d4897c927d8f571cb83ec748bf6a80a54dab4fac21",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN075.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN075.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN075.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN075.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN075.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN076.png",
+   "image_sha256": "11554aa048d3ffe6ac50d90ff4082157cf43a6549ba4cb2ae43db24e745cf1c3",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN076.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN076.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN076.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN076.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN076.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN077.png",
+   "image_sha256": "017f691d5d2e9a6322518148bc887b516ebf7321e8021b9e2a8c6d7f6bdb75ea",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN077.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN077.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN077.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN077.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN077.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN078.png",
+   "image_sha256": "6eb1bd25e7289bd06d4b9092a5f14643b3c1bb435aac86b0937c95cac73cc2bc",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN078.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN078.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN078.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN078.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN078.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN079.png",
+   "image_sha256": "c99a6a93f5a69662ee08b728060429d5e5bd266727ecbd3a99ad183952fc21aa",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN079.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN079.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN079.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN079.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN079.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN080.png",
+   "image_sha256": "9edf2d5bfcc61833345dfc5d6265114b955ce6919ade331bcf7075d184ead7fb",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN080.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN080.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN080.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN080.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN080.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN081.png",
+   "image_sha256": "53cd7fff5dc08b2760e89288eea06f92d3256667a5204691b3118329ef7def17",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN081.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN081.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN081.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN081.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN081.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN082.png",
+   "image_sha256": "57ab2cbb5002111541087554bd547b43aa8f2adf7cff29ac0b8fd625007eded5",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN082.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN082.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN082.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN082.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN082.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN083.png",
+   "image_sha256": "586327e8d67d04ce7555f3e974c17cb0d3104dd4f2bb7f578021eebb16ee1e90",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN083.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN083.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN083.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN083.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN083.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN084.png",
+   "image_sha256": "cd0bab759a43c391a18138396627d92ac5fce4134de7229f7b9ec38a4df07ed2",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN084.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN084.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN084.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN084.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN084.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN085.png",
+   "image_sha256": "c89f78827a2007c880acbc0ff7771125b1b04de5fd11b86659fac145d4766991",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN085.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN085.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN085.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN085.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN085.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN086.png",
+   "image_sha256": "ab4d00f6a5b6324bdace988d95929866fd399b27d3e5e120dc39cf02a7037518",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN086.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN086.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN086.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN086.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN086.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN087.png",
+   "image_sha256": "6e290910e350c92e97bff1e0106452d8a379bd7b29e467b4712c4cc2513fa442",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN087.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN087.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN087.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN087.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN087.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN088.png",
+   "image_sha256": "3ced38ce16f00deed2d25a003397fdaa15110619d61cea72ba4c67a864418fc4",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN088.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN088.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN088.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN088.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN088.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN089.png",
+   "image_sha256": "25a372e2a6bef366af9d817b8e06080c63d041c02f33d069bbf09dbcc63e144f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN089.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN089.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN089.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN089.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN089.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN090.png",
+   "image_sha256": "c0497e088b11b7aab62c50b259e23620650230d1b535bb0c2f29c99251d74262",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN090.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN090.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN090.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN090.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN090.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN091.png",
+   "image_sha256": "df47eda1954f1911ae93fb9d0931684d6896fb46b2aed06efea7264a36d01655",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN091.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN091.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN091.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN091.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN091.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN092.png",
+   "image_sha256": "ba7e0506549675eaaef7740dbd34a01e126dabe5ade125ce438803d970f1105f",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN092.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN092.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN092.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN092.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN092.png"
+   }
+  },
+  {
+   "image_path": "jsrt/kaggle-png-v1/data/images/images/JPCNN093.png",
+   "image_sha256": "cee5a2f87ef0f38394dc16d9722e0603e5d5ef49f8633b74fbb2d07551acbd9d",
+   "masks": {
+    "heart": "jsrt/scr-masks-mirror-revygabor/masks/heart/JPCNN093.png",
+    "left_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/left_clavicle/JPCNN093.png",
+    "left_lung": "jsrt/scr-masks-mirror-revygabor/masks/left_lung/JPCNN093.png",
+    "right_clavicle": "jsrt/scr-masks-mirror-revygabor/masks/right_clavicle/JPCNN093.png",
+    "right_lung": "jsrt/scr-masks-mirror-revygabor/masks/right_lung/JPCNN093.png"
+   }
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+# 本地环境与缓存
+.venv/
+.venv-models/
+.venv-oracle/
+.claude/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# 本地凭据和配置
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*
+*secret*
+
+# 日志和临时输出
+*.log
+*.console.txt
+*.tmp
+*.swp
+
+# 数据与第三方内容（体积大，按文档记录的方法重新获取）
+data/
+original_data/
+tools/weights/
+tools/src/
+tools/cache/
+# Keep the dependency lock and setup notes visible in the public repository.
+!tools/
+!tools/requirements-models.lock
+!tools/README.md
+
+# 压缩包、模型和其他大文件
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+
+# 试验大产物（可由脚本复现；不上传运行目录）
+trials/
+tool_verification/runs/
+tool_verification/**/__pycache__/
+tool_verification/**/*.png
+tool_verification/**/*.npy
+tool_verification/**/*.npz
+*.egg-info/
+
+# Local evaluation workspace and untouched uploaded baseline
+.baseline/
+doc/_review_records/
+migration_record.json

@@ -1,0 +1,557 @@
+{
+ "purpose": "V5 A1/A5 lungs; leftMask=image-left=patient right",
+ "cases": [
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0001_0.png",
+   "image_sha256": "754d3ef3986e8682624f2e1c2cd14aacd3a503869f965a38235b6b07465e12da"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0002_0.png",
+   "image_sha256": "15d5fd2d870d166e1b95d51e0d62080057d7be66bebec49eb47cb1b92ea0c007"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0003_0.png",
+   "image_sha256": "56fdf66348025487d6b18a9483b9cbc3ed9a12581abb207bb51f04faf37d2fc5"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0004_0.png",
+   "image_sha256": "41b10c7b35613138f68fd8b7d3ad92589636304f0064f73dbc9d0c0e45e7644a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0005_0.png",
+   "image_sha256": "6ebc18fcd0528b8e9c36ca28d8c9a46dc303147d215542f91c79ea473752c630"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0006_0.png",
+   "image_sha256": "5dccaecfc6c08341ec4ab4437085d65acf607e622c4b4f90df32a785d6891b4c"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0008_0.png",
+   "image_sha256": "bb8f5ea73da3af05228dd4a48f31f000cacf03a736992f41a68299d8171bed5c"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0011_0.png",
+   "image_sha256": "a0395314047dc34f5ff19b2fc39dc8fc55e59055be318dbe6676bd6ee4b93793"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0013_0.png",
+   "image_sha256": "fb9af469086aef1fdacbcc373e66184bbba0ebcd29b9a26c6799c9598f6ee5fc"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0015_0.png",
+   "image_sha256": "e6b7e672379b6a801ce5153c341820c7465f681b34d69cff24d216ca8641d090"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0016_0.png",
+   "image_sha256": "ca640b5b47342c5b1de276d528ad89bc6f480357d780222417f5d1188970e3e2"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0017_0.png",
+   "image_sha256": "e76f182ec40284765122afd40047fe0df0fb3ca1e617b2f43999f6dc5af504e2"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0019_0.png",
+   "image_sha256": "034da5a4400b4265200bb708163f51196d156ecdacad8643b942ccd9df677526"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0020_0.png",
+   "image_sha256": "d90d8cc8ac2b919df27c039d79525e2df4028e9be7a17e5b98b49ac87d12fde6"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0021_0.png",
+   "image_sha256": "5d9d23863ec8d96e811197a8d31ff610c44cea34ecadf54f6092b0ac7ba17d74"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0022_0.png",
+   "image_sha256": "f032fd33169e783adf609278853f84f372577afde0dd4bc974da5401712c7860"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0023_0.png",
+   "image_sha256": "7404a158c63876ca3d9682a2ce9c8cc6daf5b488fe930d3202ac2f92a3be6876"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0024_0.png",
+   "image_sha256": "cd03025858ef7753af7e9d3a71a4ab5395dfb230885b861b8fc8ca503ba35cec"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0026_0.png",
+   "image_sha256": "9d7819bf3849a694bb76e611b73de7343c04f1cfdccaa89ff9d97e13169b6078"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0027_0.png",
+   "image_sha256": "4df8b39bdd4d2d63377dca1abb94dfc4062074fe7befbf9c5ad79ae9b534d812"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0028_0.png",
+   "image_sha256": "a966be5a73aadf53840df72447982e2c33a25e64376ed8b10eb32767f146994e"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0029_0.png",
+   "image_sha256": "8bb307a1be7a29ca04030c555c85f5e67a40daaf0ee0a326b4f91849dda93c16"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0030_0.png",
+   "image_sha256": "7acfe6a99e90474ebc0ea5bd32dd7695bffda96e33c80c8e3969d9c85be97c0a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0031_0.png",
+   "image_sha256": "ca586d1640072b793c747ab107b3f6db32f258d4b595c090d6c443c7d3de4507"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0035_0.png",
+   "image_sha256": "d15aee38a1fb8342fb3bf6f25ab17b3e6d0eab090bb66755b76f90544fa60421"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0038_0.png",
+   "image_sha256": "9adb2e4180532e4d97a3bfe297184aa8a1e87cb5d955d4653f72902feac92a79"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0040_0.png",
+   "image_sha256": "293f573857605a6bd2de5c05caaa8e1d1abda6bb45d0f7c66fcf87a0db8786e7"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0041_0.png",
+   "image_sha256": "017f9851a46b5e7590a4a3ffa938a49bb12811077eaf49a2618cb2fcb49ffae9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0042_0.png",
+   "image_sha256": "d2e4a2dfa6820dada246c8a7074be9f891507749def02bf6bbf35b264e432977"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0043_0.png",
+   "image_sha256": "4f70938ee20610cc1648076564929fcac6422fabdc1e6b4c051018c87c413a04"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0044_0.png",
+   "image_sha256": "98d3e68ba04d1a1f9f570ccf8ebe11967ba45db50e53da31574e69ab3123389a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0045_0.png",
+   "image_sha256": "357a7265b7f965e74fdf7ec3278529d0fa910f6c85bb27d03ca6ed29570a7cb6"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0046_0.png",
+   "image_sha256": "c085234bbbfeb888acf26ee636669e7aa7059febc718bc203205752e89665f6a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0047_0.png",
+   "image_sha256": "70e7ba352ca7d42ad93eb2ad03c4d1aca54e65b19f4b4afca39507ade26e2fe9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0048_0.png",
+   "image_sha256": "3b19f2f655c0aee0e6e8876dd20ac090af747d6d7c5bd8291462157f623fc5fd"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0049_0.png",
+   "image_sha256": "e18263f402d7693daafb998942738a85651271cd253c46841085c5cdb239bf29"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0051_0.png",
+   "image_sha256": "b8e8ba64f5bf39725728abb5817c94fa58f2c9f74835539b2ffd98ffc689052b"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0052_0.png",
+   "image_sha256": "cf2b71c54dcbe9e359683443a5038879d1339af5a50234498243ed47e287d302"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0053_0.png",
+   "image_sha256": "f37c5fb99d31973e4063fc7a545003d4141d8f6e25c295801408d9f918fd7626"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0054_0.png",
+   "image_sha256": "1056bf68f29db9bbaa4184d8377aa31b75a65d0305ff35bd319eacdbbee8812a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0055_0.png",
+   "image_sha256": "60ebbbbc802c2621d243653bba2413a5453df27300a2d7e60dc96720a03122b8"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0056_0.png",
+   "image_sha256": "3334463cff7e1d8966439058d9e7c20fcc4f91220a2314b2cf8d5fad77ecc0cb"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0057_0.png",
+   "image_sha256": "c5e7f2bc6f4cfc299397db3bd35e2f6bcea29c21450c8956bbac046ed72b7f5b"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0058_0.png",
+   "image_sha256": "36b03371e99a019fce5c9ac8293f79959f627a98c896b850f66dc8d387eabfa6"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0059_0.png",
+   "image_sha256": "91177526a666aabbbc19974457878ea38c896380f00f0c8882f5ece4c99880d3"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0060_0.png",
+   "image_sha256": "9489b956193f76ab73c1c662e84a655a78054bf6962063921970d7bd65b3b289"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0061_0.png",
+   "image_sha256": "531bec199f535382fbbc5ec864e16cb0113d03bec2f7bea519a5d35bf85b59c9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0062_0.png",
+   "image_sha256": "2ac998e93bf1c89c52f6ce4d8e7921cb432bdf57aec3b52900293d29c2a6bcba"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0063_0.png",
+   "image_sha256": "9b547c3e88a962e059dce918f01716293c77c8d1362dac9a3dcf0202a243bc74"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0064_0.png",
+   "image_sha256": "dab1d232ef5e946669db71df2b03837a35018e8f4e419e94773201a723c48e5e"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0068_0.png",
+   "image_sha256": "22c17ac9de3366666a57d5cc3cd19834f4091ce9814edbc10692af016dbca07a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0069_0.png",
+   "image_sha256": "178613053a1d9177e5d8753bfe57a01a96bfa803f2216ba061a530bb92939995"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0070_0.png",
+   "image_sha256": "487b5fd7dfce50c785c50894bdedeb88d91bfa976dc7692a5eda12cae275287d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0071_0.png",
+   "image_sha256": "ce3d2cc6e9ad9c8e68fe135e9e30142806747ae96c5c544d441a2c21f1913d6a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0072_0.png",
+   "image_sha256": "55ca782f3acd41baa061d7f50c45db08908adcab95955e3f327202add91f86b9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0074_0.png",
+   "image_sha256": "3ae933102130037c877d70dbabf846f3c55cc9a406b23c7292d548dcd3a39461"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0075_0.png",
+   "image_sha256": "ff94471c313f48d92d3b530723ad128517d10cbdef31060f035e0a58fbbf0b59"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0077_0.png",
+   "image_sha256": "61f646d87a0d375888f2cad89a4e8263df6506ce904232f30887fefd0544824a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0079_0.png",
+   "image_sha256": "1108b41ae8c803c4b44c53f59e56004610889534efc171773822a46d7c88398f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0080_0.png",
+   "image_sha256": "13b5b49d0d7b3679683336cb82889debfcf352fcdcfe7f8ef53f9507b421866f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0081_0.png",
+   "image_sha256": "5be69ce018c3c5ad67da83b7e9534dcc7895ffecb9487de521cc13c15d69b33f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0082_0.png",
+   "image_sha256": "2bcbe9de5dc853f5f69929a3f6b4f8d82f161ca84f6b6e28f0b8118e75ac85f7"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0083_0.png",
+   "image_sha256": "9db260f715a02f05c0b761a722cd6e9081990dac68a0b9c0755b2432d75487ef"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0084_0.png",
+   "image_sha256": "6f52232dd0fb0e7d9eaf5a01128d66ef565cd144e32c4efc5607e84c3840b552"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0085_0.png",
+   "image_sha256": "f687cc0b788c8068aaa9d56c72bd9cf20ceca2b712089a512bf85d48188e3e62"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0086_0.png",
+   "image_sha256": "a764d5d277e84bfbc92eb182847aca041673fc4d25bb0556dfd3737205610a0c"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0087_0.png",
+   "image_sha256": "0b027c35c3a3f2e6bd93bfa5f6cea78136997b742ff8aa9e7b4c8e0762410404"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0089_0.png",
+   "image_sha256": "b32116336719b47c62569e063c48f0c72d951bee3190d3f030ff99718d43be9f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0090_0.png",
+   "image_sha256": "568492d74ccafa60dcafba488eb502a007e77a893a2c6223b676e0c2d4fdd8ab"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0091_0.png",
+   "image_sha256": "af3e17430aa436f519d747179879beb4731dce661fd2b56b4e2f995eb60395b0"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0092_0.png",
+   "image_sha256": "d16fde57415d752bca4dd192b405cfefb03519bf5b8760d3efaadcf9264b8e9d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0094_0.png",
+   "image_sha256": "3627bc46c515027cf0a65b7e87962a04fc18a8ce891057fad6833dd6367fd273"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0095_0.png",
+   "image_sha256": "2627f6e6710b3f8f37b0f4ba39fe919b4551118c9335220800b20d7aeb0f30de"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0096_0.png",
+   "image_sha256": "fac7532b38f2caec72534116b7002b3665bbf1c1a8da3eae2fbabe7729799e7c"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0097_0.png",
+   "image_sha256": "54a2b6416c7d257589d4acc9a7fc935f3081ad8a6ff7fe8185f76ddc1588d05d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0099_0.png",
+   "image_sha256": "6a67109cfff83eb267716da8ee64db494278bddd3080c99d5010b37c5f7f40d0"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0100_0.png",
+   "image_sha256": "4ef8cf50d126b5854303083a6c485fdda73555e3b33035a81898560d41716e91"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0101_0.png",
+   "image_sha256": "b9650b96952a6930c14edac602a9e1ce577526f8d4a9e628572171ef7c4c28b1"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0102_0.png",
+   "image_sha256": "88475a99bc72bfcbed1ac6f98f418e51e105f2eb8b3e50dab739ed81885e2120"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0103_0.png",
+   "image_sha256": "963c29252c10bc99faa53f5b5126d7cf19dbbbd4cc67cc7479ff778aa0853098"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0104_1.png",
+   "image_sha256": "079741458b058a14b26e1c3e48f8056e01c1ec75119293eb5456b55bff4cdb16"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0108_1.png",
+   "image_sha256": "3d9f4a33ad2b4240a55f4d2eb3fdd9b471ea569e216bb47b15189b67d9556d62"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0113_1.png",
+   "image_sha256": "7bf349f6b9379be0cd212bffc687252882473e073c5aab8eb43af03b171c3add"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0117_1.png",
+   "image_sha256": "2e8b6b7e00a81b2d98b056bd8898e292aa8177b18e6650de8d31311edb5ed562"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0126_1.png",
+   "image_sha256": "f8e6c005ad85b2e36d9951b7ebba9e4099904e75f0f1de364acd82ddfccafde6"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0140_1.png",
+   "image_sha256": "35bb134787b720bacdecf1b61413f6861a219f35c1d28676abd23ea0ea24c0bd"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0141_1.png",
+   "image_sha256": "54e877d3a19bae56d1f6cb2f565251ba2ecac2428a737bfabbc4833ffd4f4138"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0142_1.png",
+   "image_sha256": "97d36e56e7cc4ee3d372ca23b89106237f597b60c7218b4c31c0a2cd1ecb53ae"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0144_1.png",
+   "image_sha256": "9a755d9177b43d2d421a94d4becee0a4ce6978d64cf1730f7527eda043e7a7fc"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0150_1.png",
+   "image_sha256": "82bd01ef149f6e1a4cd02b4176719c2b7f2423b044b777e935006bd625511092"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0162_1.png",
+   "image_sha256": "660c85a59576e7ed9fad5b953375127c864c7588afe88ff29818e822fdd90980"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0166_1.png",
+   "image_sha256": "390bc263c635285fde7e93b02c41a059112af5a4c85fc4812d7b6079164d9f0d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0170_1.png",
+   "image_sha256": "f59d978a64a6b6fc48cd591478bf31bd9bdd8b5087611cd5b1f2003010f534cf"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0173_1.png",
+   "image_sha256": "c4c5c9c04c322244a0f99bbc88f3109b9b789bda644d97adf38c798c7b02b1d3"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0182_1.png",
+   "image_sha256": "1eef095386026f67b3e0bddef42523ad84cfdfa801acf39a4bed2601178edec9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0188_1.png",
+   "image_sha256": "7d538c9be133302c1e3617947d0d61294c46f59a0106e38606995c10b320b5e6"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0194_1.png",
+   "image_sha256": "9dae64258e7119e51f14b2c289391946d975745f9f883c3f49f910b60cac3df5"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0195_1.png",
+   "image_sha256": "535b728f6ac647941ee020b18012c27a0ac770040aa0a7786aac7f6ae12084b3"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0196_1.png",
+   "image_sha256": "4bb73f967c7ae22ff0a89eff5ee078ffe61f9788d3d26097b1c6a53710babef4"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0203_1.png",
+   "image_sha256": "94792adc5cd4433d35b5eb4c2b4fdf0f178d9c61d6297ffc1f1a2dab84555593"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0213_1.png",
+   "image_sha256": "fcdb47eff0965fa434198bf16fc0f48f01b964971ad3b4a3679c05485d56f135"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0218_1.png",
+   "image_sha256": "bf79a6c7f58a8dcf6cd13d28d8de524e6b68c883b45b1b07392057641ac25366"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0223_1.png",
+   "image_sha256": "f6e1fcac6c648a02ca87f81b25403fa395000b0ef41cc7fee585c5c5046d8e0d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0228_1.png",
+   "image_sha256": "5ec954d1b02a5a811e8d9f499e855ee5d8a7fd7a58e6898e08f27736cb5e7718"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0243_1.png",
+   "image_sha256": "f966e35079c92cc3fd6824f69ba50b99bd0b5e72493d389f8b186f670b126a2a"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0251_1.png",
+   "image_sha256": "cbab0c435a5986ec1f469817228c7014d27bb45562a871c53e06f5358f011a10"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0253_1.png",
+   "image_sha256": "91699ddda3bf436f994532f08d25a3ee7f18d7addde309d14cdce54eaadace54"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0254_1.png",
+   "image_sha256": "9f4a804570cdd37ef8da4ebe99cf11b9f7310b3650805db697ca8787decc1140"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0255_1.png",
+   "image_sha256": "e3131b66c2512f7fbf31d607819a49b98fa991729e02f5e0b3faac998f03dade"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0258_1.png",
+   "image_sha256": "5da92b8ed8641e2be6b15e939cab8c7efb0272594fdde2e39359fb443fb76bfe"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0264_1.png",
+   "image_sha256": "f54faeef0f9762f9e14c02e9b206b1b2ecb75a5a2c7a6ca7978e611229df682d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0266_1.png",
+   "image_sha256": "55f241f5fd54c37bb64bea8234c4b31023c315902f73d1b80536c20c6862e8d9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0275_1.png",
+   "image_sha256": "84866a22ee595bb8aea3d518b6c64d29e53cb215c66b9da0559f41741d8473ea"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0282_1.png",
+   "image_sha256": "80ee88603c4b113e1859f7619b3bc1c35c64b4dab717d459f5a0898aede3d569"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0289_1.png",
+   "image_sha256": "8eade2396ecefeaea8c0060b37bc799fc904b72e8b0c37313ab6e08f004fe52f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0294_1.png",
+   "image_sha256": "672d753667542f8ecd5534c8b48ea76d9cab62c78be8d1f7d0a57feb10e2bdda"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0301_1.png",
+   "image_sha256": "d48e5d2ddd329468e5ce3e2e266a4d5115567837c838cff5cf02432ee8495d5f"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0309_1.png",
+   "image_sha256": "764b62a471804de8e20d8f6d1ebeeb6de65065010cb760985659e98f2fda6c06"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0311_1.png",
+   "image_sha256": "a966e361502a530f88a46432b660b612f069c968dcd1657396a9a7dcc3c91ba0"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0313_1.png",
+   "image_sha256": "2bc208d0c49653b4829819380ecb4d7cff4b020de09718376221b3ef5f4b595b"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0316_1.png",
+   "image_sha256": "271651062cc4994d1e02abf081d1ce4b5f1deedee2d3caced92ce533a475a9b2"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0331_1.png",
+   "image_sha256": "29c45487617c78cdfe70db4ab8329fda115e408d03a08f94564d6d939d7e9bbc"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0334_1.png",
+   "image_sha256": "8116e234cc72927fa74937ff4a22e8c794ff09af4d1e7237b163fa232667b11b"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0338_1.png",
+   "image_sha256": "ad6e4c09138230ab82f42ff4521f17e339c5c61af8c725515a8234ba8dd81aec"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0348_1.png",
+   "image_sha256": "cd469627526a79754847d5d3eeb416c1d699112d88c3be4fe77b9d906d333cb9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0350_1.png",
+   "image_sha256": "3082645d379e9e77d249b6bc7f79b67945b3eccbce128afb13531918111b11f8"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0352_1.png",
+   "image_sha256": "b3a393f3977bb0532d1a1cc92cdc2b77dae75246b94836910468896156ba47d3"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0354_1.png",
+   "image_sha256": "849375254397ca1d6492c67b61b3faa50d0709cd7448974d82225f84298dff62"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0362_1.png",
+   "image_sha256": "dd1c4f3ae4cb729bcb2052455fd58b782e0064721b6f3fbae8dbfc47c81ff737"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0367_1.png",
+   "image_sha256": "3c3dfee5930cb0e121716a8fc59e2378ae21cda509c6a4dfe2611e4761353522"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0369_1.png",
+   "image_sha256": "dfbba4d8856d7577eb98e598f57a402d15d8c44d843972eb2c55009407b1fd16"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0372_1.png",
+   "image_sha256": "a775a5ccbe57e4c4e2b5322d874717ce5642be4418229d82fff58d3d86a9964d"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0375_1.png",
+   "image_sha256": "2fadf3a17e10cd0e6eae958c1844ab334b4b18736d27d6ae2bad364a1d9ed9a9"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0383_1.png",
+   "image_sha256": "32089155eb977431f7b0ddfd8ee15e62f39c8e814896960228bae639a841f27b"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0387_1.png",
+   "image_sha256": "353eb675ed32f8c04cc7fbc92e576cec40dbc2295f57285c6ecfcbd768cdbb07"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0390_1.png",
+   "image_sha256": "6e3c3557c10dea99b484cf75da5e85cc5baa458386056ca94b250394f1a961a3"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0393_1.png",
+   "image_sha256": "fdc801a2af6503f7c13fa4deb0b20f1faffedaf528616491866d3ae59f06b2a2"
+  },
+  {
+   "image_path": "montgomery-nlm/data/MontgomerySet/CXR_png/MCUCXR_0399_1.png",
+   "image_sha256": "11160a54e2e5afc528dcb5b3c2879d03d24c779bfcef54d90eef4db2d7866d11"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "visevi"
+version = "0.0.1"
+description = "Reasoning-conditioned visual evidence construction for chest X-rays (QCEC, two-layer)"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=1.26,<2", "pillow", "scipy", "opencv-python>=4.8,<4.12", "shapely", "matplotlib",
+]
+
+[project.optional-dependencies]
+eval = ["torchxrayvision==1.4.0", "jsonschema>=4.23", "pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
