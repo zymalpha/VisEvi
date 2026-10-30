@@ -6,20 +6,6 @@
   "input_type": "paired_images",
   "steps": [
     {
-      "step_id": "prior_lungs",
-      "tool": "segment_lungs",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
-      "step_id": "prior_heart",
-      "tool": "segment_heart",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
       "step_id": "prior_candidates",
       "tool": "detect_abnormalities",
       "depends_on": [],
@@ -28,7 +14,8 @@
           "$input.finding"
         ]
       },
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "prior_extent",
@@ -39,7 +26,8 @@
       "parameters": {
         "mask_name": "$input.lesion_mask_name"
       },
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "prior_intensity",
@@ -50,21 +38,8 @@
       "parameters": {
         "mask_name": "$input.lesion_mask_name"
       },
-      "required": true
-    },
-    {
-      "step_id": "current_lungs",
-      "tool": "segment_lungs",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
-      "step_id": "current_heart",
-      "tool": "segment_heart",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "current_candidates",
@@ -75,7 +50,8 @@
           "$input.finding"
         ]
       },
-      "required": true
+      "required": true,
+      "input_role": "current"
     },
     {
       "step_id": "current_extent",
@@ -86,7 +62,8 @@
       "parameters": {
         "mask_name": "$input.lesion_mask_name"
       },
-      "required": true
+      "required": true,
+      "input_role": "current"
     },
     {
       "step_id": "current_intensity",
@@ -97,7 +74,8 @@
       "parameters": {
         "mask_name": "$input.lesion_mask_name"
       },
-      "required": true
+      "required": true,
+      "input_role": "current"
     }
   ],
   "outputs": [
@@ -117,7 +95,7 @@
     "Inputs and all spatial evidence must use the same original-image coordinate frame.",
     "Model-derived masks and box approximations are predictions, not independent reference annotations.",
     "Use separate prior/current EvidenceSession instances and retain study/patient IDs and actual chronological order.",
-    "Matched-patient identity, projection comparability and cross-study registration are prerequisites.",
+    "Matched-patient identity, projection comparability and a registration already applied to a shared pixel frame are prerequisites.",
     "Same-tool steps in different studies must never share an image-bound prediction cache."
   ],
   "refusal_rules": [
@@ -144,9 +122,8 @@
   },
   "status": "specified",
   "blockers": [
-    "Paired-image session orchestration and independent longitudinal annotations are missing.",
-    "Cross-study registration, lesion matching and change measurement program are not implemented.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent longitudinal annotations and a validated automatic registration/matching pipeline are missing.",
+    "The executable pilot requires caller-verified registration and one-to-one lesion correspondence; clinical change thresholds are not frozen."
   ],
   "version": "1.0",
   "keywords": [

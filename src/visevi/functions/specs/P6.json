@@ -83,8 +83,7 @@
   },
   "status": "specified",
   "blockers": [
-    "A8 training-data provenance is unknown; independent masks and fusion calibration are not available.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "A8 training-data provenance is unknown; independent masks and fusion calibration are not available."
   ],
   "version": "1.0",
   "keywords": [

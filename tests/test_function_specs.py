@@ -28,7 +28,7 @@ def test_catalogue_has_exactly_the_26_business_functions_and_draft_protocols():
         assert spec.evaluation_protocol["status"] == "draft_not_frozen"
         assert spec.evaluation_protocol["primary_metrics"]
         assert spec.guards and spec.refusal_rules and spec.slots and spec.blockers
-        if function_id not in {"Q4", "P9", "G1"}:
+        if function_id not in {"Q4", "P3", "P6", "P9", "T1", "G1", "S1"}:
             assert any("executor is not implemented" in blocker for blocker in spec.blockers)
         assert spec.input_type == ("paired_images" if function_id.startswith("S") else "single_image")
 
@@ -108,10 +108,20 @@ def test_g1_preserves_two_lung_relations_and_runtime_finding_binding():
 
 def test_unsupported_device_and_temporal_work_have_explicit_blockers():
     assert any("does not support chest drains" in text for text in get_function_spec("T4").blockers)
-    for function_id in ("S1", "S2", "S3"):
+
+    s1 = get_function_spec("S1")
+    assert s1.input_type == "paired_images"
+    assert any("same original-image coordinate frame" in text for text in s1.guards)
+    assert any("caller-verified registration" in text for text in s1.blockers)
+    assert any("Independent longitudinal annotations" in text for text in s1.blockers)
+    assert any("thresholds are not frozen" in text for text in s1.blockers)
+    assert any("Same-tool steps" in text for text in s1.guards)
+
+    for function_id in ("S2", "S3"):
         spec = get_function_spec(function_id)
         assert spec.input_type == "paired_images"
         assert any("orchestration" in text for text in spec.blockers)
+        assert any("executor is not implemented" in text for text in spec.blockers)
         assert any("Same-tool steps" in text for text in spec.guards)
 
 

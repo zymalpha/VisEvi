@@ -52,6 +52,7 @@ class ToolStep:
     depends_on: tuple[str, ...] = ()
     parameters: dict[str, Any] = field(default_factory=dict)
     required: bool = True
+    input_role: str = "current"
 
     def __post_init__(self) -> None:
         if not re.fullmatch(r"[a-z][a-z0-9_]*", _text(self.step_id, "step_id")):
@@ -61,6 +62,8 @@ class ToolStep:
         object.__setattr__(self, "parameters", _mapping(self.parameters, "parameters"))
         if type(self.required) is not bool:
             raise ValueError("required must be a boolean")
+        if self.input_role not in {"current", "prior"}:
+            raise ValueError("input_role must be 'current' or 'prior'")
         if self.step_id in self.depends_on:
             raise ValueError("a tool step cannot depend on itself")
 
@@ -116,6 +119,10 @@ class FunctionSpec:
             unknown = set(step.depends_on) - set(ids)
             if unknown:
                 raise ValueError(f"{step.step_id}: unknown dependencies: {sorted(unknown)}")
+        if self.input_type == "single_image" and any(step.input_role != "current" for step in self.steps):
+            raise ValueError("single-image functions can only use current inputs")
+        if self.input_type == "paired_images" and {step.input_role for step in self.steps} != {"prior", "current"}:
+            raise ValueError("paired-image functions must declare prior and current steps")
         # An invalid dependency cycle must fail during load, before tool calls.
         pending = {step.step_id: set(step.depends_on) for step in self.steps}
         while pending:

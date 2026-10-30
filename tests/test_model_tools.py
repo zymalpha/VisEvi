@@ -69,6 +69,22 @@ def test_a8_mask_is_attached_with_provenance(session, monkeypatch, tmp_path):
     assert session.mask_provenance(['Pneumothorax_Candidate']) == [out[0].id]
 
 
+def test_a8_empty_mask_replaces_stale_positive_spatial_evidence(session, monkeypatch, tmp_path):
+    session.attach_masks(
+        {'Pneumothorax_Candidate': np.ones((30, 40), dtype=bool)},
+        {'Pneumothorax_Candidate': {'observation_id': 'old-positive'}})
+    out_dir = tmp_path / 'ptx-negative'
+    out_dir.mkdir()
+    Image.fromarray(np.zeros((30, 40), np.uint8)).save(out_dir / 'pneumothorax_mask.png')
+    stub(monkeypatch, fake_run({'case_score': 0.1, 'mask_threshold': 0.5,
+                                'max_pixel_probability': 0.2, 'frame': {}},
+                               ['pneumothorax_mask.png']))
+    out = findings.SegmentPneumothorax().run(session, output_dir=str(out_dir))
+    assert out[0].value['status'] == 'no_region_above_threshold'
+    assert not session.masks['Pneumothorax_Candidate'].any()
+    assert session.mask_metadata['Pneumothorax_Candidate']['observation_id'] == out[0].id
+
+
 def test_a26_screening_policy_controls_assertion_not_raw_outputs(session, monkeypatch, tmp_path):
     out_dir = tmp_path / 'dev'
     out_dir.mkdir()

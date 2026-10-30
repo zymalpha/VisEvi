@@ -10,14 +10,16 @@
       "tool": "segment_lungs",
       "depends_on": [],
       "parameters": {},
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "prior_heart",
       "tool": "segment_heart",
       "depends_on": [],
       "parameters": {},
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "prior_candidates",
@@ -28,21 +30,24 @@
           "$input.finding"
         ]
       },
-      "required": true
+      "required": true,
+      "input_role": "prior"
     },
     {
       "step_id": "current_lungs",
       "tool": "segment_lungs",
       "depends_on": [],
       "parameters": {},
-      "required": true
+      "required": true,
+      "input_role": "current"
     },
     {
       "step_id": "current_heart",
       "tool": "segment_heart",
       "depends_on": [],
       "parameters": {},
-      "required": true
+      "required": true,
+      "input_role": "current"
     },
     {
       "step_id": "current_candidates",
@@ -53,7 +58,8 @@
           "$input.finding"
         ]
       },
-      "required": true
+      "required": true,
+      "input_role": "current"
     }
   ],
   "outputs": [

@@ -11,18 +11,6 @@
       "depends_on": [],
       "parameters": {},
       "required": true
-    },
-    {
-      "step_id": "distance",
-      "tool": "measure_region_distance",
-      "depends_on": [
-        "devices"
-      ],
-      "parameters": {
-        "mask_a": "$input.ett_tip_mask_name",
-        "mask_b": "$input.carina_mask_name"
-      },
-      "required": true
     }
   ],
   "outputs": [
@@ -41,8 +29,8 @@
   "guards": [
     "Inputs and all spatial evidence must use the same original-image coordinate frame.",
     "Model-derived masks and box approximations are predictions, not independent reference annotations.",
-    "A11 operates on masks; a validated point adapter must provide tip/carina masks or exact point-distance computation.",
-    "Report pixels unless trusted physical pixel spacing exists; line-mask distance is not tip-to-carina distance."
+    "Compute Euclidean and signed vertical distance directly from A26 distal-tip and carina points.",
+    "Report pixels unless trusted physical pixel spacing exists; the attached line mask is not used as the tip point."
   ],
   "refusal_rules": [
     "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
@@ -72,8 +60,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Point-distance adapter, independent device annotations and clinical position thresholds are missing.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent device annotations, physical pixel spacing and clinical position thresholds are missing."
   ],
   "version": "1.0",
   "keywords": [

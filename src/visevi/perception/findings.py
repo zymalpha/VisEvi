@@ -55,8 +55,10 @@ class SegmentPneumothorax(ModelTool):
         item = unit('pneumothorax_candidate', 'region', value, region=region,
                     provenance=[f'cached:pneumothorax-cxr:{run["binding"]["image_sha256"][:16]}'],
                     validity_conditions=conditions)
+        # Attach the empty mask as well: a later negative run in the same
+        # session must replace any earlier positive spatial evidence.
         masks = [('Pneumothorax_Candidate', mask,
-                  mask_metadata(run, 'A8 segment_pneumothorax', 'pneumothorax_mask.png'), item)] if mask.any() else []
+                  mask_metadata(run, 'A8 segment_pneumothorax', 'pneumothorax_mask.png'), item)]
         return Output(units=[item], masks=masks)
 
 
