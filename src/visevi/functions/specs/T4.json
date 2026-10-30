@@ -1,0 +1,81 @@
+{
+  "function_id": "T4",
+  "name": "胸腔引流管",
+  "category": "T",
+  "proposition": "chest_drain_position_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "devices",
+      "tool": "localize_devices",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "bones",
+      "tool": "segment_shoulder_bones",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "outputs": [
+    "device_presence",
+    "drain_path",
+    "side_holes",
+    "distal_tip",
+    "pleural_projection_relation"
+  ],
+  "slots": [
+    "device",
+    "region",
+    "relation"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "The current A26 backend covers ETT/NGT/CVC/Swan-Ganz only; it has no chest-drain output."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Always block chest-drain conclusions with the current backend; absence from its outputs is not a negative finding."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent drain path, side-hole, tip and pleural-space annotations using a drain-capable model.",
+    "primary_metrics": [
+      "device_F1",
+      "line_Dice"
+    ],
+    "secondary_metrics": [
+      "tip_error_px",
+      "relation_macro_F1",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "A26 does not support chest drains; drain/side-hole detection and pleural-space reference must be added.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "胸腔引流管",
+    "胸管",
+    "chest drain"
+  ]
+}

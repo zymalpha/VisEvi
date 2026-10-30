@@ -17,5 +17,8 @@ eval = ["torchxrayvision==1.4.0", "jsonschema>=4.23", "pytest>=8"]
 [tool.setuptools.packages.find]
 where = ["src"]
 
+[tool.setuptools.package-data]
+"visevi.functions" = ["specs/*.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]

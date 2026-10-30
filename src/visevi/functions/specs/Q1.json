@@ -1,0 +1,73 @@
+{
+  "function_id": "Q1",
+  "name": "吸气程度",
+  "category": "Q",
+  "proposition": "inspiration_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "landmarks",
+      "tool": "locate_lung_landmarks",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "quality",
+      "tool": "assess_image_quality",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "outputs": [
+    "lung_base_landmarks",
+    "diaphragm_geometry",
+    "rib_counts",
+    "raw_quality",
+    "applicability"
+  ],
+  "slots": [
+    "landmark",
+    "measurement",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Assess frontal projection only; A5 does not produce a validated diaphragm apex or a clinical inspiration grade."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Return indeterminate rather than inventing a clinical grade without a frozen grade mapping."
+  ],
+  "evaluation_protocol": {
+    "reference": "Blinded independent reader inspiration grades, posterior/anterior rib counts and diaphragm landmarks.",
+    "primary_metrics": [
+      "rib_count_MAE",
+      "landmark_error_px"
+    ],
+    "secondary_metrics": [
+      "weighted_kappa",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Clinical inspiration grade mapping and independent quality annotations are not frozen.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "吸气程度",
+    "吸气不足",
+    "inspiration"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "function_id": "G3",
+  "name": "遮挡/空间关系",
+  "category": "G",
+  "proposition": "projected_spatial_relation_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "mediastinum",
+      "tool": "segment_mediastinum",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "lesion_relation",
+      "tool": "relate_lesion_to_anatomy",
+      "depends_on": [
+        "lungs",
+        "heart",
+        "mediastinum"
+      ],
+      "parameters": {
+        "lesion_mask_name": "$input.lesion_mask_name",
+        "anatomy_mask_name": "$input.anatomy_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "relations",
+      "tool": "relate_multiple_regions",
+      "depends_on": [
+        "lungs",
+        "heart",
+        "mediastinum"
+      ],
+      "parameters": {
+        "region_mask_names": "$input.region_mask_names"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "overlap_2d",
+    "containment_2d",
+    "adjacency_2d",
+    "gap_distance_px",
+    "image_axis_direction",
+    "interpretation_scope"
+  ],
+  "slots": [
+    "region",
+    "relation",
+    "measurement"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "All regions must be image-bound and complete; caller-supplied lesion mask must have traceable source.",
+    "The scope is 2D projection topology; overlap does not establish 3D occlusion, causality or anatomical invasion."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse unqualified 3D occlusion/invasion conclusions from 2D masks alone."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent annotations explicitly restricted to 2D projected overlap, containment, adjacency and separation.",
+    "primary_metrics": [
+      "relation_macro_F1",
+      "structure_exact_match"
+    ],
+    "secondary_metrics": [
+      "distance_MAE_px",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {
+      "gap_distance_px": "px"
+    },
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent projected-relation labels and caller lesion-mask source contract remain to be frozen.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "空间关系",
+    "遮挡",
+    "重叠",
+    "spatial relation",
+    "overlap"
+  ]
+}

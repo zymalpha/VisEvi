@@ -1,0 +1,158 @@
+{
+  "function_id": "S1",
+  "name": "吸收/进展",
+  "category": "S",
+  "proposition": "interval_progression_evidence",
+  "input_type": "paired_images",
+  "steps": [
+    {
+      "step_id": "prior_lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "prior_heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "prior_candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "$input.finding"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "prior_extent",
+      "tool": "measure_region_extent",
+      "depends_on": [
+        "prior_candidates"
+      ],
+      "parameters": {
+        "mask_name": "$input.lesion_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "prior_intensity",
+      "tool": "summarize_roi_intensity",
+      "depends_on": [
+        "prior_candidates"
+      ],
+      "parameters": {
+        "mask_name": "$input.lesion_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "current_lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "current_heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "current_candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "$input.finding"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "current_extent",
+      "tool": "measure_region_extent",
+      "depends_on": [
+        "current_candidates"
+      ],
+      "parameters": {
+        "mask_name": "$input.lesion_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "current_intensity",
+      "tool": "summarize_roi_intensity",
+      "depends_on": [
+        "current_candidates"
+      ],
+      "parameters": {
+        "mask_name": "$input.lesion_mask_name"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "matched_lesions",
+    "change_magnitude",
+    "change_direction",
+    "comparability"
+  ],
+  "slots": [
+    "comparison",
+    "region",
+    "measurement",
+    "temporal_relation",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Use separate prior/current EvidenceSession instances and retain study/patient IDs and actual chronological order.",
+    "Matched-patient identity, projection comparability and cross-study registration are prerequisites.",
+    "Same-tool steps in different studies must never share an image-bound prediction cache."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse temporal interpretation for unrelated patients, uncertain time order, missing registration or incomparable projections."
+  ],
+  "evaluation_protocol": {
+    "reference": "Same-patient chronologically verified paired studies with blinded lesion matching and quantitative change/direction annotations.",
+    "primary_metrics": [
+      "matching_F1",
+      "direction_accuracy"
+    ],
+    "secondary_metrics": [
+      "change_MAE",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Paired-image session orchestration and independent longitudinal annotations are missing.",
+    "Cross-study registration, lesion matching and change measurement program are not implemented.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "吸收",
+    "进展",
+    "progression",
+    "improvement"
+  ]
+}

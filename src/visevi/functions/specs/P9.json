@@ -1,0 +1,103 @@
+{
+  "function_id": "P9",
+  "name": "心影大小/CTR",
+  "category": "P",
+  "proposition": "cardiac_size_ctr_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "view",
+      "tool": "classify_view",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "quality",
+      "tool": "assess_image_quality",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "ctr",
+      "tool": "measure_ctr",
+      "depends_on": [
+        "heart"
+      ],
+      "parameters": {
+        "heart_mask_name": "Heart"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "CTR",
+    "heart_width_px",
+    "thoracic_inner_width_px",
+    "projection",
+    "quality_conditions",
+    "clinical_interpretation",
+    "enlargement"
+  ],
+  "slots": [
+    "region",
+    "measurement",
+    "condition",
+    "claim"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Clinical CTR interpretation requires verified PA projection and sufficient known image-quality evidence.",
+    "Heart and rib masks must be complete; the denominator must be a positive thoracic inner width.",
+    "Do not define a disease decision threshold until the clinical protocol and calibration are frozen."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "AP, lateral, unknown projection or unknown/invalid quality blocks clinical enlargement interpretation.",
+    "An available geometric ratio does not by itself establish cardiomegaly."
+  ],
+  "evaluation_protocol": {
+    "reference": "Blinded manual heart and thoracic-inner-margin endpoints under the same measurement convention, on independent frontal PA images. Enlargement classification requires separate case labels.",
+    "primary_metrics": [
+      "CTR_MAE",
+      "CTR_bias"
+    ],
+    "secondary_metrics": [
+      "Bland_Altman_limits",
+      "ICC",
+      "enlargement_AUROC",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {
+      "heart_width_px": "px",
+      "thoracic_inner_width_px": "px",
+      "CTR": "dimensionless"
+    },
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent manual endpoints, clinical decision threshold and quality applicability mapping remain unfrozen."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "心胸比",
+    "心影大小",
+    "CTR",
+    "cardiothoracic ratio"
+  ]
+}

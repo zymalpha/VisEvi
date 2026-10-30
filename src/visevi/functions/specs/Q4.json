@@ -1,0 +1,66 @@
+{
+  "function_id": "Q4",
+  "name": "PA/AP 投照",
+  "category": "Q",
+  "proposition": "projection_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "view",
+      "tool": "classify_view",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "outputs": [
+    "view",
+    "status",
+    "raw_text",
+    "option_raw_probabilities",
+    "probability_calibrated",
+    "applicability"
+  ],
+  "slots": [
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Preserve PA, AP, lateral and unknown as distinct outputs; unknown is not PA."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Unparsed or ambiguous model answers produce an explicit unknown/refusal, not a guessed projection."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent ViewPosition metadata with blinded reader review; exclude sources used for CheXOne training.",
+    "primary_metrics": [
+      "macro_F1"
+    ],
+    "secondary_metrics": [
+      "confusion_matrix",
+      "unknown_rate",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent AP sample source and patient-level held-out evaluation remain to be established."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "投照",
+    "PA/AP",
+    "正位侧位",
+    "view position",
+    "projection"
+  ]
+}

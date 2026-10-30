@@ -1,0 +1,110 @@
+{
+  "function_id": "G1",
+  "name": "左右定位",
+  "category": "G",
+  "proposition": "laterality_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "$input.finding"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "right_relation",
+      "tool": "relate_lesion_to_anatomy",
+      "depends_on": [
+        "lungs",
+        "candidates"
+      ],
+      "parameters": {
+        "lesion_mask_name": "$input.lesion_mask_name",
+        "anatomy_mask_name": "Right_Lung"
+      },
+      "required": true
+    },
+    {
+      "step_id": "left_relation",
+      "tool": "relate_lesion_to_anatomy",
+      "depends_on": [
+        "lungs",
+        "candidates"
+      ],
+      "parameters": {
+        "lesion_mask_name": "$input.lesion_mask_name",
+        "anatomy_mask_name": "Left_Lung"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "finding",
+    "image_sides",
+    "patient_sides",
+    "orientation_verified",
+    "orientation_source",
+    "lung_overlap",
+    "scope",
+    "status"
+  ],
+  "slots": [
+    "finding",
+    "region",
+    "location",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Input finding must name a supported detector target; a candidate mask is a union of boxes, not a lesion segmentation.",
+    "Patient-side output requires input orientation_verified=true from independent display/orientation verification; default is false.",
+    "Distinguish image-side, model anatomical labels and independently verified patient-side orientation."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Do not assert patient-side when orientation is unverified; preserve bilateral, midline, no-overlap and uncertain cases."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent patient-side lesion labels plus verified display orientation; stratify PA/AP and bilateral/midline cases.",
+    "primary_metrics": [
+      "laterality_accuracy",
+      "laterality_macro_F1"
+    ],
+    "secondary_metrics": [
+      "bilateral_F1",
+      "orientation_refusal_rate",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent lesion-side/orientation annotations remain to be acquired; no clinical accuracy result exists."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "左右定位",
+    "侧别",
+    "laterality",
+    "left or right"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "function_id": "P10",
+  "name": "主动脉结",
+  "category": "P",
+  "proposition": "aortic_knob_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "extent",
+      "tool": "measure_region_extent",
+      "depends_on": [],
+      "parameters": {
+        "mask_name": "$input.aortic_knob_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "intensity",
+      "tool": "summarize_roi_intensity",
+      "depends_on": [],
+      "parameters": {
+        "mask_name": "$input.aortic_knob_mask_name"
+      },
+      "required": true
+    },
+    {
+      "step_id": "attributes",
+      "tool": "classify_roi_attributes",
+      "depends_on": [],
+      "parameters": {
+        "roi_mask_name": "$input.aortic_knob_mask_name",
+        "attributes": [
+          "calcification"
+        ]
+      },
+      "required": false
+    }
+  ],
+  "outputs": [
+    "aortic_roi_source",
+    "width_px",
+    "grayscale_statistics",
+    "calcification_candidate",
+    "applicability"
+  ],
+  "slots": [
+    "region",
+    "measurement",
+    "appearance",
+    "attribute"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Aortic-knob structure source must be registered; a whole aorta mask is not a knob-specific ROI."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent aortic-knob boundaries and width measurements, prominence grades and calcification labels scored separately.",
+    "primary_metrics": [
+      "width_MAE_px"
+    ],
+    "secondary_metrics": [
+      "grade_macro_F1",
+      "calcification_AUROC",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {
+      "width_px": "px"
+    },
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Formal aortic-knob source and independent measurement/grade annotations are missing.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "主动脉结",
+    "aortic knob"
+  ]
+}

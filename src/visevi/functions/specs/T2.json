@@ -1,0 +1,88 @@
+{
+  "function_id": "T2",
+  "name": "中心静脉导管",
+  "category": "T",
+  "proposition": "central_venous_catheter_position_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "devices",
+      "tool": "localize_devices",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "mediastinum",
+      "tool": "segment_mediastinum",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "distance",
+      "tool": "measure_region_distance",
+      "depends_on": [
+        "devices",
+        "mediastinum"
+      ],
+      "parameters": {
+        "mask_a": "$input.cvc_tip_mask_name",
+        "mask_b": "$input.cvc_target_mask_name"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "device_presence",
+    "cvc_distal_tip_xy_px",
+    "target_reference",
+    "tip_target_distance_px",
+    "position_evidence"
+  ],
+  "slots": [
+    "device",
+    "landmark",
+    "relation",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Whole mediastinum is context only and is not the cavoatrial junction or a valid CVC target by itself."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse acceptable-position interpretation without an independently defined target and complete visible tip."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent CVC tip and anatomically defined target reference, plus reader position classes.",
+    "primary_metrics": [
+      "tip_error_px",
+      "position_macro_F1"
+    ],
+    "secondary_metrics": [
+      "distance_MAE_px",
+      "line_Dice",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "CVC target structure/point adapter and independent positional annotations are missing.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "中心静脉导管",
+    "CVC",
+    "central venous catheter"
+  ]
+}

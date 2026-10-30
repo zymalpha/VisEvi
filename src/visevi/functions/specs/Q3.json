@@ -1,0 +1,78 @@
+{
+  "function_id": "Q3",
+  "name": "曝光/对比度",
+  "category": "Q",
+  "proposition": "exposure_contrast_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "intensity",
+      "tool": "summarize_roi_intensity",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "sharpness",
+      "tool": "measure_roi_sharpness",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "quality",
+      "tool": "assess_image_quality",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "outputs": [
+    "grayscale_statistics",
+    "sharpness_proxy",
+    "retrocardiac_contrast",
+    "applicability"
+  ],
+  "slots": [
+    "appearance",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Distinguish pixel grayscale/visibility proxies from physical exposure; decoding and bit depth must be retained."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Do not diagnose under/over-exposure from grayscale statistics without a validated grade protocol."
+  ],
+  "evaluation_protocol": {
+    "reference": "Blinded technical-quality and retrocardiac-visibility grades, with controlled brightness/blur experiments separately.",
+    "primary_metrics": [
+      "weighted_kappa"
+    ],
+    "secondary_metrics": [
+      "controlled_transform_response",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent technical quality labels and clinical grade mapping are not frozen.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "曝光",
+    "对比度",
+    "exposure",
+    "contrast"
+  ]
+}

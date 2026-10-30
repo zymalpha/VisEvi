@@ -1,0 +1,84 @@
+{
+  "function_id": "Q2",
+  "name": "体位旋转",
+  "category": "Q",
+  "proposition": "rotation_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "bones",
+      "tool": "segment_shoulder_bones",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "quality",
+      "tool": "assess_image_quality",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "bone_extent",
+      "tool": "measure_region_extent",
+      "depends_on": [
+        "bones"
+      ],
+      "parameters": {
+        "mask_name": "$input.clavicle_mask_name"
+      },
+      "required": false
+    }
+  ],
+  "outputs": [
+    "clavicle_spine_geometry",
+    "rotation_index",
+    "raw_quality",
+    "applicability"
+  ],
+  "slots": [
+    "region",
+    "landmark",
+    "measurement",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Use the CXAS clavicle/spinal reference convention; full shoulder masks do not locate medial endpoints."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse rotation interpretation for an undefined midline, crossed endpoints or lateral projection."
+  ],
+  "evaluation_protocol": {
+    "reference": "Two blinded readers annotate medial clavicular ends, spinal midline and rotation grades.",
+    "primary_metrics": [
+      "distance_error_px",
+      "rotation_index_MAE"
+    ],
+    "secondary_metrics": [
+      "weighted_kappa",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Freeze anatomical endpoint convention and independent rotation grade mapping.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "体位旋转",
+    "旋转程度",
+    "rotation"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "function_id": "S2",
+  "name": "新发病灶",
+  "category": "S",
+  "proposition": "new_lesion_evidence",
+  "input_type": "paired_images",
+  "steps": [
+    {
+      "step_id": "prior_lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "prior_heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "prior_candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "$input.finding"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "current_lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "current_heart",
+      "tool": "segment_heart",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "current_candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "$input.finding"
+        ]
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "new_candidate_regions",
+    "temporal_matches",
+    "chronology",
+    "comparability"
+  ],
+  "slots": [
+    "comparison",
+    "region",
+    "measurement",
+    "temporal_relation",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Use separate prior/current EvidenceSession instances and retain study/patient IDs and actual chronological order.",
+    "Matched-patient identity, projection comparability and cross-study registration are prerequisites.",
+    "Same-tool steps in different studies must never share an image-bound prediction cache."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse temporal interpretation for unrelated patients, uncertain time order, missing registration or incomparable projections."
+  ],
+  "evaluation_protocol": {
+    "reference": "Same-patient ordered studies with independently annotated lesion correspondence and newly appearing lesions.",
+    "primary_metrics": [
+      "new_lesion_F1"
+    ],
+    "secondary_metrics": [
+      "temporal_matching_accuracy",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Paired-image session orchestration and independent longitudinal annotations are missing.",
+    "Cross-study lesion matching and new-lesion decision program are not implemented.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "新发病灶",
+    "新出现",
+    "new lesion"
+  ]
+}

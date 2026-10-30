@@ -1,0 +1,85 @@
+{
+  "function_id": "T1",
+  "name": "气管插管",
+  "category": "T",
+  "proposition": "endotracheal_tube_position_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "devices",
+      "tool": "localize_devices",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "distance",
+      "tool": "measure_region_distance",
+      "depends_on": [
+        "devices"
+      ],
+      "parameters": {
+        "mask_a": "$input.ett_tip_mask_name",
+        "mask_b": "$input.carina_mask_name"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "device_presence",
+    "ett_distal_tip_xy_px",
+    "carina_xy_px",
+    "tip_carina_distance_px",
+    "position_evidence"
+  ],
+  "slots": [
+    "device",
+    "landmark",
+    "measurement",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "A11 operates on masks; a validated point adapter must provide tip/carina masks or exact point-distance computation.",
+    "Report pixels unless trusted physical pixel spacing exists; line-mask distance is not tip-to-carina distance."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Do not assert device presence below the author screening threshold; do not interpret an invalid carina."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent ETT line, true distal tip and carina annotations; external pixel spacing for physical distances.",
+    "primary_metrics": [
+      "tip_error_px",
+      "carina_error_px"
+    ],
+    "secondary_metrics": [
+      "line_Dice",
+      "distance_MAE_px",
+      "position_macro_F1",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {
+      "tip_carina_distance_px": "px"
+    },
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Point-distance adapter, independent device annotations and clinical position thresholds are missing.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "气管插管",
+    "气管导管",
+    "ETT",
+    "endotracheal tube"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "function_id": "T3",
+  "name": "鼻胃管",
+  "category": "T",
+  "proposition": "nasogastric_tube_position_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "devices",
+      "tool": "localize_devices",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "landmarks",
+      "tool": "locate_lung_landmarks",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "distance",
+      "tool": "measure_region_distance",
+      "depends_on": [
+        "devices",
+        "landmarks"
+      ],
+      "parameters": {
+        "mask_a": "$input.ngt_tip_mask_name",
+        "mask_b": "$input.diaphragm_reference_mask_name"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "device_presence",
+    "ngt_line",
+    "lowest_visible_endpoint_xy_px",
+    "diaphragm_reference",
+    "crosses_diaphragm",
+    "position_evidence"
+  ],
+  "slots": [
+    "device",
+    "landmark",
+    "relation",
+    "condition"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "A5 lung-base contour is not a registered whole diaphragm surface; define the diaphragm reference explicitly.",
+    "A26 lowest visible NGT endpoint may be a truncated line, not the true anatomical tube tip."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
+    "Refuse true-tip/acceptable-position interpretation when the distal end or diaphragm reference is not observed."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent NGT path, diaphragm crossing, visible endpoint and true-tip annotations, distinguishing truncated cases.",
+    "primary_metrics": [
+      "line_Dice",
+      "crossing_macro_F1"
+    ],
+    "secondary_metrics": [
+      "visible_endpoint_error_px",
+      "true_tip_error_px",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Diaphragm/crossing program, point-distance adapter and independent tube annotations are missing.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "鼻胃管",
+    "胃管",
+    "NGT",
+    "nasogastric tube"
+  ]
+}

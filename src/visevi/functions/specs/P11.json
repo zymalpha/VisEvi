@@ -1,0 +1,86 @@
+{
+  "function_id": "P11",
+  "name": "骨折",
+  "category": "P",
+  "proposition": "fracture_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "bones",
+      "tool": "segment_shoulder_bones",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "fracture"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "sharpness",
+      "tool": "measure_roi_sharpness",
+      "depends_on": [
+        "candidates"
+      ],
+      "parameters": {
+        "mask_name": "Candidate_fracture"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "candidate_boxes",
+    "bone_context",
+    "roi_sharpness",
+    "case_evidence"
+  ],
+  "slots": [
+    "region",
+    "finding",
+    "appearance"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "A4 supplies shoulder bones, not a complete rib skeleton; absent shoulder overlap does not exclude rib fracture."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent fracture case labels and lesion boxes; evaluate fracture site coverage separately.",
+    "primary_metrics": [
+      "box_AP",
+      "FROC"
+    ],
+    "secondary_metrics": [
+      "case_AUROC",
+      "localization_error_px",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Fracture-specific independent labels and the anatomical coverage protocol are not available.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "骨折",
+    "fracture"
+  ]
+}

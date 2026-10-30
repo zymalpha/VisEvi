@@ -1,0 +1,94 @@
+{
+  "function_id": "P6",
+  "name": "气胸",
+  "category": "P",
+  "proposition": "pneumothorax_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "pneumothorax",
+      "tool": "segment_pneumothorax",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "candidates",
+      "tool": "detect_abnormalities",
+      "depends_on": [],
+      "parameters": {
+        "findings": [
+          "pneumothorax"
+        ]
+      },
+      "required": true
+    },
+    {
+      "step_id": "symmetry",
+      "tool": "measure_lung_symmetry",
+      "depends_on": [
+        "lungs"
+      ],
+      "parameters": {},
+      "required": true
+    }
+  ],
+  "outputs": [
+    "pneumothorax_mask",
+    "case_raw_score",
+    "candidate_boxes",
+    "lung_mirror_similarity",
+    "conflict"
+  ],
+  "slots": [
+    "finding",
+    "region",
+    "measurement",
+    "conflict"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "Lung mirror similarity measures anatomy, not lesion laterality or disease absence; A8 threshold is uncalibrated."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent manual pneumothorax masks and separately case-level labels; verify A8 training provenance before independence claims.",
+    "primary_metrics": [
+      "mask_Dice",
+      "mask_IoU"
+    ],
+    "secondary_metrics": [
+      "HD95",
+      "case_AUROC",
+      "case_AUPRC",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "A8 training-data provenance is unknown; independent masks and fusion calibration are not available.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "气胸",
+    "pneumothorax"
+  ]
+}

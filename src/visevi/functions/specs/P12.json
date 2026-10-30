@@ -1,0 +1,112 @@
+{
+  "function_id": "P12",
+  "name": "皮下气肿",
+  "category": "P",
+  "proposition": "subcutaneous_emphysema_evidence",
+  "input_type": "single_image",
+  "steps": [
+    {
+      "step_id": "lungs",
+      "tool": "segment_lungs",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
+      "step_id": "candidates",
+      "tool": "ground_phrase",
+      "depends_on": [],
+      "parameters": {
+        "phrase": "subcutaneous emphysema"
+      },
+      "required": true
+    },
+    {
+      "step_id": "intensity",
+      "tool": "summarize_roi_intensity",
+      "depends_on": [
+        "candidates"
+      ],
+      "parameters": {
+        "mask_name": "Phrase_Region"
+      },
+      "required": true
+    },
+    {
+      "step_id": "spatial",
+      "tool": "relate_lesion_to_anatomy",
+      "depends_on": [
+        "lungs",
+        "candidates"
+      ],
+      "parameters": {
+        "lesion_mask_name": "Phrase_Region",
+        "anatomy_mask_name": "Right_Lung"
+      },
+      "required": true
+    },
+    {
+      "step_id": "spatial_left",
+      "tool": "relate_lesion_to_anatomy",
+      "depends_on": [
+        "lungs",
+        "candidates"
+      ],
+      "parameters": {
+        "lesion_mask_name": "Phrase_Region",
+        "anatomy_mask_name": "Left_Lung"
+      },
+      "required": true
+    }
+  ],
+  "outputs": [
+    "candidate_boxes",
+    "appearance",
+    "projected_lung_relations",
+    "case_evidence"
+  ],
+  "slots": [
+    "finding",
+    "region",
+    "appearance",
+    "relation"
+  ],
+  "guards": [
+    "Inputs and all spatial evidence must use the same original-image coordinate frame.",
+    "Model-derived masks and box approximations are predictions, not independent reference annotations.",
+    "A18 frozen vocabulary does not include subcutaneous emphysema; do not map it to another disease attribute.",
+    "Candidate box outside the lung alone is not evidence of subcutaneous gas."
+  ],
+  "refusal_rules": [
+    "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
+    "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
+    "Do not turn raw uncalibrated model scores into calibrated clinical probabilities."
+  ],
+  "evaluation_protocol": {
+    "reference": "Independent case and region annotations for subcutaneous emphysema, with specified extra-thoracic region convention.",
+    "primary_metrics": [
+      "case_AUROC",
+      "case_AUPRC"
+    ],
+    "secondary_metrics": [
+      "region_IoU",
+      "region_hit_rate",
+      "coverage"
+    ],
+    "split": "Patient/study-disjoint development, calibration and locked test sets; exclude upstream model training overlap and development examples.",
+    "statistics": "Retain all failures/refusals; report coverage, refusal and conflict rates with patient-cluster bootstrap 95% confidence intervals; never tune on the locked test set.",
+    "status": "draft_not_frozen",
+    "units": {},
+    "acceptance": "No clinical accuracy acceptance threshold or calibrated fusion weight has been frozen."
+  },
+  "status": "specified",
+  "blockers": [
+    "Independent rare-positive region annotations and an applicable attribute channel are missing.",
+    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+  ],
+  "version": "1.0",
+  "keywords": [
+    "皮下气肿",
+    "subcutaneous emphysema"
+  ]
+}
