@@ -294,6 +294,10 @@ def main(argv=None) -> int:
                 print(f'item {index}: {exc}', file=sys.stderr)
                 if 'authorization denied' in str(exc) or 'budget exceeded' in str(exc) or 'free space' in str(exc):
                     break
+            if index % 10 == 0 or index == len(paths):
+                print(f"progress={index}/{len(paths)} downloaded={counts['downloaded']} "
+                      f"verified_existing={counts['verified_existing']} failed={counts['failed']} "
+                      f"stored_bytes={budget['stored']}", flush=True)
         print(f"downloaded={counts['downloaded']} verified_existing={counts['verified_existing']} "
               f"failed={counts['failed']} requested={len(paths)} transferred_bytes={budget['bytes']} "
               f"manifest_stored_bytes={budget['stored']}")
