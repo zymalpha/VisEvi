@@ -1,4 +1,4 @@
-"""Typed request, routing, and response contracts for single-image VQA."""
+"""Typed request, routing, and response contracts for VQA episodes."""
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field
@@ -13,21 +13,27 @@ class VQARequest:
     dataset_id: str | None = None
     sample_id: str | None = None
     slots: Mapping[str, Any] = field(default_factory=dict)
+    inputs: Mapping[str, Any] = field(default_factory=dict)
+    prior_image_ref: str | None = None
 
     def __post_init__(self) -> None:
         if not isinstance(self.image_ref, str) or not self.image_ref.strip():
             raise ValueError("image_ref must be a non-empty string")
         if not isinstance(self.question, str) or not self.question.strip():
             raise ValueError("question must be a non-empty string")
-        if not isinstance(self.slots, Mapping):
-            raise TypeError("slots must be a mapping")
-        if not all(isinstance(name, str) and name.strip() for name in self.slots):
-            raise ValueError("slot names must be non-empty strings")
-        try:
-            slots = json.loads(json.dumps(dict(self.slots), allow_nan=False))
-        except (TypeError, ValueError) as exc:
-            raise ValueError("slots must contain finite JSON values") from exc
-        object.__setattr__(self, "slots", slots)
+        for name, value in (("slots", self.slots), ("inputs", self.inputs)):
+            if not isinstance(value, Mapping):
+                raise TypeError(f"{name} must be a mapping")
+            if not all(isinstance(key, str) and key.strip() for key in value):
+                raise ValueError(f"{name} names must be non-empty strings")
+            try:
+                copied = json.loads(json.dumps(dict(value), allow_nan=False))
+            except (TypeError, ValueError) as exc:
+                raise ValueError(f"{name} must contain finite JSON values") from exc
+            object.__setattr__(self, name, copied)
+        if self.prior_image_ref is not None and (
+                not isinstance(self.prior_image_ref, str) or not self.prior_image_ref.strip()):
+            raise ValueError("prior_image_ref must be a non-empty string when provided")
         for name, value in (("dataset_id", self.dataset_id), ("sample_id", self.sample_id)):
             if value is not None and (not isinstance(value, str) or not value.strip()):
                 raise ValueError(f"{name} must be a non-empty string when provided")

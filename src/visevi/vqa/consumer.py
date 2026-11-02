@@ -22,6 +22,8 @@ class AnswerConsumer(Protocol):
 def build_answer_prompt(question: str, evidence_card: EvidenceCard, *,
                         include_image: bool = False) -> str:
     """Build a deterministic prompt for evidence-only or image-assisted answering."""
+    if evidence_card.function_id != "Q4":
+        return build_function_answer_prompt(question, evidence_card)
     if include_image:
         instruction = (
             "Answer the user's chest X-ray question by inspecting the provided image and the evidence card. "
@@ -44,6 +46,20 @@ def build_answer_prompt(question: str, evidence_card: EvidenceCard, *,
         'Set schema_version to "q4-response-2". Answer with only PA, AP, lateral, or unknown. '
         "limitations must be a list containing only these codes: "
         "image_quality_not_assessed, projection_metadata_not_used. Do not include free-text limitations.\n\n"
+        f"Question: {question.strip()}\n\n{evidence_card.to_text()}"
+    )
+
+
+def build_function_answer_prompt(question: str, evidence_card: EvidenceCard) -> str:
+    """Ask non-Q4 consumers to transport, not reinterpret, verified evidence."""
+    return (
+        "Return the complete function_output object from the evidence card without "
+        "changing, omitting, or adding any field or value. Do not infer a diagnosis, "
+        "clinical meaning, or fact that is not already present in that object. "
+        "Cite at least one existing claim ID from the card. If the card is not "
+        "answerable, abstain. Return one JSON object with exactly these keys: "
+        '"schema_version", "function_output", "citations". '
+        'Set schema_version to "function-response-1".\n\n'
         f"Question: {question.strip()}\n\n{evidence_card.to_text()}"
     )
 

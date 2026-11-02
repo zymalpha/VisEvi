@@ -77,5 +77,7 @@ PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B -m pytest -q -p no:cacheprovider
 - 代表性功能已通过人工可算输入和假模型输出的软件集成测试，用于验证依赖、证据关系、拒答和溯源；医学准确性仍按独立协议评估。
 - 功能层已实现依赖图、闭集规则路由和 Observation/Relation/Claim 三层证据节点。
 - Q/P/T/S/G 五个独立类别 Gate 已有线性/MLP 网络、独立 Sigmoid 阈值策略和可选 VQA 适配；问题编码器、权重训练与校准暂缓。未训练时返回 `untrained`，默认仍用规则路由。
-- VQA 当前只开放 Q4；类别 Gate 可多选，但现有单功能 VQA 适配会拒绝多类别执行。P9 及其他功能尚未开放 VQA。
+- VQA Python API 已将 26 项单功能接入统一路由、FunctionSpec、A 工具、EvidenceCard、consumer 和 verifier。Q4 用专用闭集答案协议，其他功能只接受与 EvidenceCard 完全一致且 Claim 绑定的结构化输出。
+- S1–S3 支持 prior/current 双影像；G3、P8、P10、T4 等外部 ROI/reference 输入通过带图像来源的 `EvidenceSession` 提供。自然语言槽位抽取、多功能联合回答、通用冲突仲裁和真实 VLM 评估尚未完成。
+- 单样本通用 VQA 命令为 `scripts/run_vqa.py`；`--inputs-json` 和 `--slots-json` 提供功能参数，`--prior-image` 提供配对检查影像。`evidence-echo` 只用于软件链路 smoke test，不是模型或医学准确性评估。
 - 最新软件测试结果与复现记录统一见[项目现状](doc/项目现状.md)，软件通过不表示路由或医学准确性通过。

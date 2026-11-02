@@ -2,6 +2,8 @@
 
 > 更新日期：2026-11-02。本文是 VQA 线路的执行计划，建立在当前 26 项 `FunctionSpec`、依赖图、`run_function_episode()` 和 Observation/Relation/Claim 证据图之上。本文中的“跑通”只表示软件链路可执行和结果可追溯，不表示医学准确性已经通过。
 
+> **全功能接入进展（2026-11-02）**：`run_vqa_episode()` 已允许 26 个已注册功能进入同一执行入口。Q4 保留 `q4-response-2` 专用 verifier；其他功能使用 `function-response-1`，要求模型原样返回 EvidenceCard 的完整 `function_output` 并引用绑定该输出的 Claim。`VQARequest` 新增 `inputs`、`prior_image_ref`；S1–S3 可运行双图流程，G3/P8/P10/T4 等可通过 Python API 传入预置 `EvidenceSession`。该通用 verifier 只检查结构、逐值一致和 Claim 绑定，不验证上游视觉/医学准确性。问题槽位抽取、多个功能联合回答、真实模型推理和独立医学评估仍未完成。
+
 > 联合输入的最新决策见[图像、问题与工具证据联合输入方案](VQA图像问题与证据联合输入方案.md)：主设置采用问题+原图+相关证据卡，evidence_only 与独立 image_only baseline 分开消融。此处较早的执行细节以该方案的输入边界和当前代码状态为准。
 
 ## 1. 目标和边界
@@ -28,7 +30,7 @@ image + question
                     引用/数值/适用条件核验 -> answer or abstain
 ```
 
-本阶段只做胸片单图 VQA。纵向比较、设备线、成对检查、外部知识检索和 E 类工具不作为首条线路的依赖。它们在 Q4/P9 闭环稳定后再接入。
+VQA adapter 当前支持五类中的单一功能调用；Q4 首条纵向切片的评估方案仍保留。S1–S3 通过 prior/current 两张输入影像接入；设备 reference、外部 ROI/mask 则由调用方提供有来源且绑定图像的输入。外部知识检索和 E 类工具不在本轮范围内。
 
 ## 2. 当前起点
 
@@ -41,12 +43,14 @@ image + question
 | 依赖图/规则路由 | 已有闭集 `RuleRouter`，能按功能 ID/关键词路由 | 可作为门控的确定性基线 |
 | `run_function_episode()` | 已能按规格执行 26 项功能并保存 episode/session | 统一工具调用入口 |
 | 证据图 | Observation、Relation、Claim 和来源边已实现 | 保存工具输出、关系和结论的溯源 |
-| EvidenceCard | `vqa/evidence_card.py` 已保留完整嵌套 JSON、上游节点和 provenance；当前仅 Q4 consumer 路径集成 | 把功能 episode 确定性地交给回答模型 |
-| VQA 适配层 | `vqa/schema.py`、`gate.py`、`runner.py` 已实现 Q4 单图流程；只接收规格声明的 JSON 槽位 | 规则路由、FunctionSpec 执行和拒答 |
+| EvidenceCard | `vqa/evidence_card.py` 为任一功能保留完整嵌套 JSON、上游节点、步骤和 provenance；成对图像记录两侧哈希 | 把功能 episode 确定性地交给回答模型 |
+| VQA 适配层 | `vqa/schema.py`、`gate.py`、`runner.py` 已接入 26 项单功能；`slots` 与功能执行 `inputs` 分开校验，可传 pair image 和已有 session | 规则路由、FunctionSpec 执行和结构化拒答 |
 | 功能门控 | Q4/P9 规则别名和冲突拒答已接入；当前仍是规则基线，不是已训练的 MoE | 唯一匹配才调用功能 |
-| LLM consumer/verifier | MedGemma 1.5 4B、Qwen3-VL、Lingshu 有本地 Transformers consumer；支持纯证据和图像+证据。Q4 evaluator 另有不经工具链的 image-only baseline。当前 Q4 响应契约为 `q4-response-2`；验证 Claim 引用、闭集答案、结构化视觉状态及受限 limitation code，但不独立验证模型是否正确观察图像 | 三种互不混池的输入对照和受约束回答 |
+| LLM consumer/verifier | MedGemma 1.5 4B、Qwen3-VL、Lingshu 有本地 Transformers consumer。Q4 使用 `q4-response-2`；其他功能使用 `function-response-1`，逐值校验 EvidenceCard 输出与 Claim 绑定。Q4 evaluator 另有独立 image-only baseline | 三种互不混池的 Q4 输入对照；其他功能的受约束结构化转述 |
 
-历史记录（2026-11-01）：13 项 Q4 合成测试和 20 张 MIMIC 开发图 A24 + evidence-echo smoke 通过。该 smoke 只证明当时的集成链路可运行；开发元数据不是独立医学金标准。2026-11-02 审查后更新 Q4 verifier 和审计记录；当前全量 CPU 软件回归 498 项通过，不代表医学准确性。模型文件检查结果：MedGemma 4B 两个权重分片及配置通过发布哈希核对，但未加载推理；Qwen3-VL 和 Lingshu 各缺三个权重分片，Lingshu 另缺 `tokenizer.json`。下载目前已暂停；三者均未完成真实模型推理。
+VQA runner 不会从自然语言猜测所有操作参数。调用方应把 FunctionSpec 概念槽位放入 `slots`，把功能程序需要的精确参数/reference 放入 `inputs`。例如 G1/P3/S 类的 `finding` 必须明确提供；S 类还要提供 `pair_metadata` 和 prior 图；P8/P10、G3、T2–T4 需要 mask 或有来源的 reference。缺失字段由 VQA 层提前拒答，输入结构正确但 A 工具或证据不满足条件时由统一功能 runner 拒答。预置 session 只支持 Python API，不提供序列化 mask 的 CLI 通道。
+
+历史记录（2026-11-01）：13 项 Q4 合成测试和 20 张 MIMIC 开发图 A24 + evidence-echo smoke 通过。该 smoke 只证明当时的集成链路可运行；开发元数据不是独立医学金标准。2026-11-02 更新 Q4 verifier、审计记录并接入 26 项 VQA API；当前全量 CPU 软件回归 529 项通过，不代表医学准确性。模型文件检查结果：MedGemma 4B 两个权重分片及配置通过发布哈希核对，但未加载推理；Qwen3-VL 和 Lingshu 各缺三个权重分片，Lingshu 另缺 `tokenizer.json`。下载目前已暂停；三者均未完成真实模型推理。
 
 当前工作区已有约 400 张 MIMIC-CXR-JPG 开发图像，约 0.61 GB；它们是开发样本，不是 VQA 锁定测试集。工作区还已有 VQA-RAD 和 VinDr-CXR-VQA 的公开元数据，但 VQA-RAD 是混合模态且存在跨 split 图像重复，VinDr 元数据没有图像，因此二者只能用于数据读取和接口 smoke test。
 
@@ -115,7 +119,7 @@ Q4 的 `unknown` 是合法结果；低置信度或冲突时必须拒答，不能
 
 ## 5. 第二条垂直切片：P9 CTR
 
-Q4 通过后实现 P9，用来验证真正的多工具组合：
+P9 已按第二条垂直切片接入 VQA runner，用来验证多工具组合。以下记录原定执行链和仍需评估的条件：
 
 ```text
 Q：心胸比是多少？心影是否增大？
@@ -167,7 +171,7 @@ P9 验收重点是共享上游工具不重复运行、心肺掩膜坐标一致�
 
 - Q、P、T、S、G 各有一个参数独立的二层 MLP，默认隐藏宽度 128；保留单层线性模式作对照。
 - 共享问题向量输入，五个头分别输出一个 logit，独立 Sigmoid 与阈值选择类别；允许多选或全不选，不把 26 项功能作为平坦分类输出。问题编码器尚未选型，当前通过接口注入。
-- 类别选择后，类内功能仍由规则和 FunctionSpec 目录约束；网络不输出槽位或医学答案。`CategoryFunctionGate` 可注入现有 runner；单功能 VQA 遇到多个类别明确拒绝，当前仍只开放 Q4。
+- 类别选择后，类内功能仍由规则和 FunctionSpec 目录约束；网络不输出槽位或医学答案。`CategoryFunctionGate` 可注入现有 runner；单功能 VQA 遇到多个类别明确拒绝执行并保留原始选择。
 - 未配置已训练权重时返回 `untrained`，不以随机分数执行工具。默认规则 Gate 不变，部署结果保留五类分数、阈值、版本和拒绝原因，未校准分数不称为置信度。
 - 标注路由监督或最终回答 loss 监督尚未选择，本次不实现训练；部署的硬选择和外部工具链也尚不可端到端反向传播。训练、校准与锁定测试集协议随训练方案另定，测试参考答案不得进入路由输入。
 - 后续应分别评估五类多标签路由的 macro/micro-F1、集合精确匹配、覆盖率、拒绝率，再评估类内功能选择，避免用一个 26 类 top-1 指标混合两层错误。
@@ -176,16 +180,18 @@ Gate 不直接生成医学答案，也不改变 A 工具输出。它只决定“
 
 ## 7. FunctionSpec 和工具执行层
 
-VQA adapter 不重新实现工具逻辑。当前只对已实现的 Q4 做规则路由，没有通用的槽位抽取器；Q4 不依赖额外槽位，传入的槽位会按 Q4 `FunctionSpec` 校验，未声明名称会拒答。P9 可以被识别为候选，但尚未开放 VQA 执行：
+VQA adapter 不重新实现工具逻辑。当前 26 项均能进入 `run_function_episode()`；没有通用的自然语言槽位抽取器。`slots` 按选中 FunctionSpec 校验，`inputs` 按该功能引用字段和运行时输入合同校验。未声明槽位、缺少必需输入或输入类型不符时，在 A 工具执行前结构化拒答：
 
 | 输入字段 | 作用 |
 |---|---|
-| `function_id` | 唯一匹配后传入 `run_function_episode()` 的功能 ID |
-| `image_ref` | 本地图像路径或已存在 session |
-| `slots` | JSON 对象；字段必须出现在对应 FunctionSpec 的 `slots` 列表 |
+| `function_id` | 由规则 Gate 从显式编号或登记关键词唯一选出 |
+| `image_ref` | 本地图像路径；也可传入与其绑定的现有 session |
+| `slots` | JSON 对象；字段必须出现在对应 FunctionSpec 的语义槽列表 |
+| `inputs` | JSON 对象；功能执行参数/reference，按选中规格和运行时合同校验 |
+| `prior_image_ref` | S1–S3 的历史影像；也可在 Python API 传入 prior session |
 | `query` | 原始问题，写入 Demand 和 trace |
 
-执行层继续使用当前 `run_function_episode()` 的新输出目录约束、缓存绑定、工具 provenance、拒答和 session/episode 保存逻辑。VQA 层不能绕过 registry 直接调用模型，也不能把缓存目录中的旧 mask 当作未经绑定的人工输入。
+执行层继续使用当前 `run_function_episode()` 的新输出目录约束、缓存绑定、工具 provenance、拒答和 session/episode 保存逻辑。VQA 层不能绕过 registry 直接调用模型，也不能把缓存目录中的旧 mask 当作未经绑定的人工输入。G3/P8/P10/T4 等使用 caller mask 的任务，必须通过已绑定当前影像、带来源 Observation 和 mask metadata 的 `EvidenceSession` 进入 API。
 
 ## 8. 证据组织和 EvidenceCard
 
@@ -273,14 +279,14 @@ P9 增加 CTR MAE、偏差、Bland–Altman 界限、ICC 和临床解释覆盖�
 |---|---|---|---|---|
 | VQA-0 | 锁定数据版本、授权、图像匹配和问题 schema | 已有 400 张开发图 manifest；PhysioNet VQA 访问/匹配待完成 | 标注与图像按 ID 一对一匹配；不含未授权文件 | 部分完成 |
 | VQA-1 | 实现 VQARequest、规则 adapter 和路由结果 schema | `vqa/schema.py`、`gate.py`；Q4/P9 规则基线完成 | 未知、歧义和未声明槽位可拒答 | 完成基线 |
-| VQA-2 | 接入 `FunctionSpec` 校验和 `run_function_episode()` | Q4 VQA episode runner 完成，其他功能未接 | route、工具、Claim 和拒答进入 episode | Q4 完成 |
-| VQA-3 | 实现 EvidenceCard renderer 和 Q4 verifier | Q4 JSON/text card、`q4-response-2` verifier 和逐例审计已实现 | 嵌套字段保留；额外自由文本、无效引用和结构化冲突/不确定状态拒答 | 工程实现已接入；当前全量 CPU 回归 498 passed |
+| VQA-2 | 接入 `FunctionSpec` 校验和 `run_function_episode()` | 26 项单功能统一 runner；S1–S3 支持配对影像 | route、工具、Claim 和拒答进入 episode | 全功能 Python API 已接入；自然语言输入抽取待做 |
+| VQA-3 | 实现 EvidenceCard renderer 和 verifier | Q4 使用 `q4-response-2`；其余功能使用 `function-response-1`；EvidenceCard 保存完整输出及 Claim provenance | 精确输出、有效 Claim、路径脱敏和逐例审计可验证 | 工程实现已接入；当前全量 CPU 回归 529 passed |
 | VQA-4 | 测试本地 LLM consumer/verifier | 三种 consumer 均有本地适配器；权重状态与结构哈希记录在上文 | 完成三模型生成和 verifier 实测 | 适配器存在；Qwen/Lingshu 权重不全，三模型真实推理尚未完成 |
 | VQA-5 | 跑 Q4 development；冻结 prompt、阈值和统计脚本 | 20 张 A24 + evidence-echo smoke 是 2026-11-01 历史结果；evaluator 支持 image-only/evidence-only/image+evidence 三条件、逐例审计与患者聚类区间 | 开发集对照可复现；不把 smoke 当准确率；检查完整拒答分母 | 软件入口和回归完成；需完整模型权重后再运行真实 VLM 对照 |
 | VQA-6 | 跑 Q4 锁定 test 并完成回答评估 | 待 PhysioNet VQA 标注访问及图像匹配 | 逐例结果、指标、覆盖率、拒答和限制齐全 | 未开始 |
-| VQA-7 | 完成 P9 VQA 与多工具证据对照 | P9 组合程序已存在（A24 投照、A25 质量、A2 心影、A12 CTR/CXAS 肋骨），但不是当前已执行的 VQA 路径 | FOV、投照、质量和单位检查通过；数值可重算 | 程序已实现；VQA 对照未开始 |
+| VQA-7 | 完成 P9 VQA 与多工具证据对照 | P9 已进入 VQA API；合成 Harness 证明工具、卡片和 Claim verifier 闭环 | FOV、投照、质量和单位检查通过；数值可重算；再跑真实图与模型对照 | 软件链路已接入；真实 VLM/独立参照评估未开始 |
 | VQA-8 | 获取人工同口径 CTR 标注并做独立评估 | 未开始 | 报告 MAE/偏差/一致性，独立性和训练重叠清楚 | 未开始 |
-| VQA-9 | 扩展校准 Gate 和其余 Q/P 功能 | 五类独立 Gate 网络与可选适配已实现；编码器、训练与校准暂缓，默认仍为规则 | 路由错误与工具错误分开统计，拒答稳定 | 仅网络/接口完成 |
+| VQA-9 | 评估全功能 Gate 和其余 Q/P/T/S/G 功能 | 26 项 API 接入完成；无通用槽位抽取器、Gate 权重、功能级 VQA 数据与独立参照 | 路由错误与工具错误分开统计，覆盖和拒答稳定 | 接口已接入；系统评估未开始 |
 
 ## 12. 当前模块与运行入口
 
@@ -289,15 +295,16 @@ P9 增加 CTR MAE、偏差、Bland–Altman 界限、ICC 和临床解释覆盖�
 ```text
 src/visevi/vqa/
   schema.py          # VQARequest、RouteDecision、VQAResponse
-  gate.py            # Q4/P9 规则基线和 FunctionSpec 目录绑定
+  gate.py            # FunctionSpec 闭集规则路由和别名
   category_gate.py   # 五类类别路由契约与独立阈值
   gate_network.py    # 五个独立线性/MLP Gate；训练暂缓
   category_function_gate.py # 类别 Gate 到现有单功能 VQA 的可选适配
   evidence_card.py   # 保留嵌套结构的确定性 JSON/text renderer
   consumer.py        # CallableConsumer 与三种本地 Transformers VLM consumer
-  verifier.py        # Q4 投照枚举和 claim 引用核验
-  runner.py          # Q4 image+question -> answer/abstain 统一入口
+  verifier.py        # Q4 专用核验与其他功能的结构/Claim 绑定核验
+  runner.py          # 26 项单功能 VQA episode -> answer/abstain 统一入口
 scripts/
+  run_vqa.py         # 任一功能的通用单样本入口
   run_vqa_q4.py      # 单样本 Q4 运行；echo 模式仅作流程 smoke
   evaluate_vqa_q4.py # 私有开发清单的批量 Q4/A24 smoke 与聚合指标
 tests/
@@ -306,13 +313,23 @@ tests/
   test_vqa_evaluator.py
 ```
 
-Q4 所需最小集合已实现，P9 尚未接入。`evaluate_vqa_q4.py --limit 20` 已完成一次 PA/AP 混合开发 smoke，真实模型对照待模型权重完整后进行。使用模型时切换 `--consumer` 和 `--input-mode`，每个条件写入新的输出目录；`image_only` 不调用 A 工具或 Claim verifier，用于直接视觉答案对照；echo 模式只验证工具到 verifier 的软件链路，不调用语言模型，也不评估医学准确性：
+Q4 仍有专用 runner/evaluator；通用单样本入口 `scripts/run_vqa.py` 可选择 26 项中的任一功能，Q4/P9 的批量 evaluator 不会自动扩展为全功能评估。使用 `--function-id`、`--inputs-json`、`--slots-json` 和必要的 `--prior-image` 提供接口输入；`evidence-echo` 只验证 EvidenceCard 到 verifier 的软件链路，不调用语言模型，也不评估医学准确性：
 
 ```bash
 PYTHONPATH=src .venv-vqa/bin/python scripts/run_vqa_q4.py \
   --image /path/to/local-chest-xray.jpg \
   --out-dir /path/to/new-private-run \
   --consumer qwen3-vl --input-mode image_and_evidence --device cuda:4
+```
+
+通用单例运行示例（P9）：
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/run_vqa.py \
+  --image /path/to/local-chest-xray.jpg \
+  --question "Report the measured cardiothoracic ratio" \
+  --function-id P9 --out-dir /path/to/new-private-run \
+  --consumer evidence-echo
 ```
 
 批量评估同一份 development manifest 的示例：
@@ -331,7 +348,7 @@ PYTHONPATH=src .venv-vqa/bin/python scripts/evaluate_vqa_q4.py \
 |---|---|
 | PhysioNet 403 或 DUA 未完成 | 保留 manifest 和下载脚本；使用本地开发图做接口 smoke，答案评估标为 pending |
 | VQA 标注与现有图像不重合 | 按白名单补下载匹配图像，不递归下载全库 |
-| VQA 问题没有对应的 A 功能 | Gate 返回 unsupported/abstain，新增 FunctionSpec 后再接入 |
+| VQA 问题没有对应的 A 功能 | Gate 返回 unknown/ambiguous；明确提供功能输入或新增 FunctionSpec 后再接入 |
 | 模型训练与 MIMIC 重叠 | 标为 development/same-source；不宣称外部泛化 |
 | EvidenceCard 丢字段 | 用结构化 JSON schema 和嵌套字段回归测试阻断发布 |
 | LLM 幻觉或引用错误 | 强制枚举/数值/claim ID verifier；错误时返回受限回答或拒答 |
@@ -350,4 +367,4 @@ Q4 线路完成必须同时满足：
 - 报告把工具错误、路由错误、证据错误和 LLM 消费错误分开；
 - 没有把流程通过写成医学准确性结论。
 
-Q4 完成后，P9 按同一契约扩展。P9 完成并具备人工同口径参照后，才进入 26 项功能的批量 VQA 评估。
+全功能 VQA 软件接口已接入。后续工作转为 Q4/P9 真实模型对照、功能所需数据与独立参照、功能级评估协议，以及缺失的自然语言槽位抽取和多功能请求策略。

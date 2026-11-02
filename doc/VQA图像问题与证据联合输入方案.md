@@ -2,7 +2,7 @@
 
 > 日期：2026-11-02。性质：研究方案与实现状态记录。
 > 主设置：问题 + 原图 + 与问题相关的结构化工具证据。
-> 当前 runner 只执行 Q4；以下通用证据选择、冲突仲裁和实验对照仍待实现与验证。Q4 最小结构化回答契约已实现，不能等同于独立图像语义核验。
+> 当前 VQA API 已让 26 项 FunctionSpec 共用执行、EvidenceCard、consumer 和 verifier 流程。Q4 保留闭集 `q4-response-2`；其余功能使用 `function-response-1` 做完整结构化输出复制和 Claim 绑定核验。通用紧凑证据选择、冲突仲裁、多功能联合回答和真实 VLM 对照仍待实现与验证；结构化校验不等于独立图像语义或医学核验。
 
 ## 1. 核心决定
 
@@ -29,16 +29,16 @@
 | 部分 | 当前实现 | 不能据此声称的能力 |
 |---|---|---|
 | FunctionSpec / 功能执行 | 已有 26 项功能规格和统一执行入口；T4 仍受 caller-reference 等限制 | 26 项均已完成医学准确性验证 |
-| VQA runner | 当前只允许 Q4 进入 VQA 执行；P9 可成为路由候选，但尚未开放执行 | 26 项均已从自然语言和原图闭环回答 |
+| VQA runner | 26 项都可从统一 Python API 进入执行；按输入合同缺字段时提前拒答 | 已有完整自然语言槽位抽取，或 26 项医学回答准确 |
 | EvidenceCard | 保留功能相关节点及 provenance 上游闭包、嵌套值、工具步骤和功能输出 | 已有通用紧凑证据选择器或明确的冲突闭包 |
 | 图像输入 | Transformers consumer 支持 image_and_evidence；PIL 图像进入 image content | 路径写在文字中就等于模型看过原图 |
 | 运行默认值 | consumer 和单/批量 VQA 脚本现默认 image_and_evidence；每条结果记录实际输入模式 | 默认模式已经完成准确率验证 |
 | Q4 verifier | 接受版本化 `q4-response-2`：校验答案闭集、Claim 引用、限制代码及 `visual_assessment` 与输入模式的一致性；在 `image_and_evidence` 下只接受模型自报 `consistent` | 独立检查图像是否正确，或保证模型自报视觉状态真实 |
-| 输出契约 | `schema_version`、`answer`、`citations`、枚举 `limitations`、`visual_assessment` | 通用 `visual_observations`、逐项冲突列表和仲裁链尚未实现 |
+| 输出契约 | Q4 使用 `q4-response-2`；其他功能使用 `function-response-1`，要求精确复制功能输出并引用 Claim | 通用 `visual_observations`、逐项冲突列表和仲裁链尚未实现 |
 
 重要限制：`visual_assessment` 是 consumer 自报状态。当前 verifier 会拒绝 `conflict`、`uncertain`、`not_assessed`（图像+证据模式）等非 `consistent` 状态，也拒绝把自由文本塞入 `limitations`；它不重新读取图像，不能验证模型是否正确发现冲突。模型误报 `consistent` 仍可能通过文字与 Claim 的一致性检查，因此视觉冲突检出能力必须用独立图像标签评估，原始模型输出也必须留存。
 
-2026-11-01 曾修复 consumer 提示词构造并补图像传递回归。2026-11-02 按代码审查将 verifier 收紧为 `q4-response-2`，为每例持久化原始输出、解析/核验结果、最终响应、EvidenceCard/prompt 哈希和 consumer 配置；图像缺失改为结构化 `INPUT_IMAGE_NOT_FOUND` 拒答。独立 image-only Q4 baseline 已接入 evaluator：只给模型问题和原图，不运行功能/工具，不发送 EvidenceCard 或参考标签；答案直接按闭集标签计分。evaluator 另报告原始回答准确率、患者聚类 bootstrap 区间和完整逐例审计记录。持久化 episode/session 会移除图像路径和样本 ID，仅保留图像 SHA256；未显式指定 `out_dir` 时，工具执行临时工作区在回答生成时可用，并随 episode result 对象释放。当前全量 CPU 软件回归 498 passed；Q4 三种 VLM 尚未完成真实 VQA 推理评估。
+2026-11-01 曾修复 consumer 提示词构造并补图像传递回归。Q4 继续使用 `q4-response-2`，为每例持久化原始输出、解析/核验结果、最终响应、EvidenceCard/prompt 哈希和 consumer 配置；图像缺失返回结构化 `INPUT_IMAGE_NOT_FOUND` 拒答。独立 image-only Q4 baseline 已接入 evaluator：只给模型问题和原图，不运行功能/工具，不发送 EvidenceCard 或参考标签；答案直接按闭集标签计分。后续已将 26 项功能接入统一 VQA API，其他功能使用 `function-response-1` 精确核验输出与 Claim 绑定，配对流程审计两张影像哈希。持久化 episode/session 会移除图像路径和样本 ID；未显式指定 `out_dir` 时，工具工作区在 consumer 调用和 episode result 生命周期内保留。当前全量 CPU 软件回归 529 passed；三种 VLM 尚未完成真实 VQA 推理评估。
 
 ## 4. 推荐的数据流
 
@@ -138,7 +138,7 @@ Q4 的价值是检验路由、实际图像传入、证据引用和结构化自�
 
 输入“心胸比是多少？”、原图、心影/胸廓测量依据、A12 结果、A24 投照及 A25 质量条件。后续可额外给出测量线辅助图，但保留原图。模型只能引用本次测量结果和条件，不得根据整体视觉印象替换数值。
 
-P9 组合程序已实现，但 `SUPPORTED_VQA_FUNCTIONS` 当前只开放 Q4，因此 P9 尚未接入 VQA runner。若仅有模型分割却无独立参考，可验证链路和数值转述；连续测量准确性仍需同口径人工测量。投照或测量条件不满足时，明确限制或拒答；不将一个几何比值自动改写成临床诊断。此处仍是后续组织示例。
+P9 已接入统一 VQA runner：问题可路由到 P9，依次执行 A24 投照、A25 质量、心影分割和 CTR 测量，构造 Observation/Relation/Claim 与 EvidenceCard，再进入通用 consumer/verifier。consumer 必须原样返回卡片里的 P9 `function_output` 并引用绑定 Claim；验证器不接受模型自行解释 CTR，也不判断该测量在临床上是否正确。若仅有模型分割却无独立参考，只能验证链路和数值转述；连续测量准确性仍需同口径人工测量。投照或测量条件不满足时，功能程序拒答。
 
 ## 8. 最小实验与评估
 
@@ -151,7 +151,7 @@ P9 组合程序已实现，但 `SUPPORTED_VQA_FUNCTIONS` 当前只开放 Q4，�
 | E | C + 相关辅助图 | 检查定位收益、遮挡与成本 | 后续 |
 | F | 先问题+原图形成冻结观察，再联合输入 | 比较证据引导/冲突处置 | 后续 |
 
-第一批目标是在同一冻结清单上运行三种模型 × A/B/C，共九种条件。三个条件已有 evaluator 路径：A 使用独立 image-only baseline，不经过路由、工具或 Claim verifier；B 使用 evidence-only 的受约束 VQA 路径；C 使用 image+evidence 的主路径。输出和指标按模式隔离，不能混池。Q4 调试稳定后，需显式开放 P9 VQA 执行并冻结 P9 合同，才能检验多工具证据。
+第一批目标是在同一冻结清单上运行三种模型 × A/B/C，共九种条件。三个条件的 Q4 evaluator 路径已实现：A 使用独立 image-only baseline，不经过路由、工具或 Claim verifier；B 使用 evidence-only 的受约束 VQA 路径；C 使用 image+evidence 的主路径。输出和指标按模式隔离，不能混池。P9 与其余功能已开放统一 VQA API；多工具证据对照仍需冻结逐功能输入/评估合同并完成真实模型运行。
 
 消融必须控制模型版本、样本、问题、图像处理、解码、答案预算和评估规则。D 组尽量保留与 C 相同的事实、来源、单位和限制，避免同时改变内容与格式；研究来源或条件的效果时再单独消融。
 

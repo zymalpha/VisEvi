@@ -20,6 +20,7 @@ _LIMITATION_TEXT = {
 }
 _VISUAL_ASSESSMENTS = {"consistent", "conflict", "uncertain", "not_assessed"}
 _RESPONSE_SCHEMA = "q4-response-2"
+_FUNCTION_RESPONSE_SCHEMA = "function-response-1"
 
 
 def _payload(value: Mapping[str, Any] | str) -> dict[str, Any]:
@@ -102,3 +103,67 @@ def verify_q4_answer(card: EvidenceCard, output: Mapping[str, Any] | str, *,
             "citations": citations,
             "limitations": [_LIMITATION_TEXT[code] for code in parsed["limitations"]],
             "limitation_codes": parsed["limitations"], "parsed_output": parsed}
+
+
+def verify_function_answer(card: EvidenceCard, output: Mapping[str, Any] | str) -> dict[str, Any]:
+    """Accept only an exact structured copy bound to a function Claim.
+
+    This verifies transport and provenance. It does not assess medical
+    correctness or the validity of the upstream tools.
+    """
+    if card.function_id in {"Q4", "unselected"}:
+        raise ValueError("generic function verifier received a Q4 or unselected card")
+    if card.status != "answerable":
+        raise ValueError("cannot verify an answer from a refused or insufficient card")
+    try:
+        if isinstance(output, str):
+            output = json.loads(output)
+        if not isinstance(output, Mapping):
+            raise ValueError("consumer output must be a JSON object")
+        allowed = {"schema_version", "function_output", "citations"}
+        if set(output) != allowed:
+            raise ValueError("consumer output does not match the function-response-1 schema")
+        if output["schema_version"] != _FUNCTION_RESPONSE_SCHEMA:
+            raise ValueError("unsupported consumer response schema")
+        if not isinstance(output["function_output"], Mapping):
+            raise ValueError("function_output must be a JSON object")
+        if not isinstance(output["citations"], list) or any(
+                not isinstance(value, str) for value in output["citations"]):
+            raise ValueError("citations must be a list of claim IDs")
+        parsed = dict(output)
+    except (json.JSONDecodeError, TypeError, ValueError) as exc:
+        return {"accepted": False, "reason": str(exc), "answer": None,
+                "citations": [], "parsed_output": None,
+                "verification_level": "structured_output_and_claim_binding"}
+
+    citations = list(dict.fromkeys(parsed["citations"]))
+    if not citations:
+        reason = "answer has no claim citation"
+    elif any(citation not in card.claims for citation in citations):
+        reason = "answer cites a missing or non-claim evidence node"
+    elif dict(parsed["function_output"]) != card.function_output:
+        reason = "function_output differs from the evidence card"
+    else:
+        metadata_fields = {"function_id", "spec_version", "proposition", "support_ids",
+                           "counter_ids", "rule_id"}
+        bound = False
+        for citation in citations:
+            value = card.claims[citation].get("value", {})
+            if (value.get("function_id") == card.function_id
+                    and value.get("spec_version") == card.provenance.get("function_version")
+                    and {key: item for key, item in value.items()
+                         if key not in metadata_fields} == card.function_output):
+                bound = True
+                break
+        reason = None if bound else "cited claim is not bound to the function output"
+
+    accepted = reason is None
+    answer = (json.dumps(card.function_output, ensure_ascii=False, sort_keys=True,
+                         allow_nan=False) if accepted else None)
+    return {"accepted": accepted, "reason": reason, "answer": answer,
+            "citations": citations,
+            "limitations": (["Verification checks exact output copying and claim binding only; "
+                             "it does not establish medical accuracy."] if accepted else []),
+            "parsed_output": parsed,
+            "verification_level": "structured_output_and_claim_binding",
+            "medical_accuracy_verified": False}

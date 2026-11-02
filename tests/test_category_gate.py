@@ -93,7 +93,7 @@ def test_multi_category_selection_remains_visible_when_single_function_bridge_re
 
 @pytest.mark.parametrize("question,category,slots,expected", [
     ("PA还是AP投照？", "Q", {}, "matched"),
-    ("心胸比是多少？", "P", {}, "unsupported"),
+    ("心胸比是多少？", "P", {}, "matched"),
     ("PA还是AP投照？", "Q", {"undeclared_slot": True}, "invalid_input"),
 ])
 def test_vqa_keeps_category_trace_on_answers_and_execution_refusals(
@@ -110,8 +110,9 @@ def test_vqa_keeps_category_trace_on_answers_and_execution_refusals(
     assert trace["selected_categories"] == [category]
     assert trace["score_calibrated"] is False
     assert json.loads(json.dumps(result.to_dict(), allow_nan=False))["route"]["category_route"] == trace
-    assert tool.calls == (1 if expected == "matched" else 0)
-    assert result.status == ("answered" if expected == "matched" else "abstained")
+    should_run = expected == "matched" and category == "Q"
+    assert tool.calls == (1 if should_run else 0)
+    assert result.status == ("answered" if should_run else "abstained")
 
 
 def test_untrained_gate_never_calls_encoder_or_a_tools(tmp_path):

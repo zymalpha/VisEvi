@@ -58,6 +58,13 @@ class EvidenceCard:
                               if node_id in node_ids)
         image_binding = episode.session.__dict__.get("_function_image_binding")
         image_sha256 = image_binding[1] if image_binding else None
+        study_image_sha256s = {
+            role: binding[1]
+            for role, study in episode.study_sessions.items()
+            if (binding := study.__dict__.get("_function_image_binding")) is not None
+        }
+        if image_sha256 is not None:
+            study_image_sha256s.setdefault("current", image_sha256)
         traces = [trace for trace in episode.session.program_traces
                   if trace.get("program_id") == "run_function_episode"]
         spec_hash = traces[-1].get("spec_hashes", {}).get(run.function_id) if traces else None
@@ -74,8 +81,9 @@ class EvidenceCard:
             function_output=_json_value(run.outputs),
             tool_steps=tuple(_json_value(run.steps)),
             refusal=_json_value(refusal) if refusal else None,
-            provenance={"image_sha256": image_sha256, "spec_hash": spec_hash,
-                        "function_version": run.version},
+            provenance={"image_sha256": image_sha256,
+                        "study_image_sha256s": study_image_sha256s,
+                        "spec_hash": spec_hash, "function_version": run.version},
         )
 
     @classmethod

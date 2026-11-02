@@ -11,9 +11,10 @@ import pytest
 from visevi.core.registry import ToolRegistry
 from visevi.core.spec import ToolSpec, evidence_result_schema, parameter_schema
 from visevi.core.units import EvidenceUnit
+from visevi.functions.specs import FUNCTION_IDS
 from visevi.vqa import (EvidenceCard, RuleFunctionGate, VQARequest,
                         TransformersMedGemmaConsumer, run_vqa_episode,
-                        verify_q4_answer)
+                        verify_function_answer, verify_q4_answer)
 
 
 class FakeClassifyView:
@@ -63,6 +64,21 @@ class FakeConsumer:
                 "citations": [claim_id], "limitations": [],
                 "visual_assessment": ("consistent" if self.input_mode == "image_and_evidence"
                                       else "not_assessed")}
+
+
+class FakeFunctionConsumer:
+    model_id = "test-function-consumer"
+    input_mode = "evidence_only"
+
+    def __init__(self):
+        self.received_card = None
+
+    def generate(self, *, question, evidence_card, image_ref=None):
+        del question, image_ref
+        self.received_card = evidence_card
+        return {"schema_version": "function-response-1",
+                "function_output": evidence_card.function_output,
+                "citations": list(evidence_card.claim_ids)}
 
 
 def _image(path: Path) -> Path:
@@ -125,6 +141,124 @@ def test_q4_end_to_end_routes_runs_builds_lossless_card_and_verifies(tmp_path):
     assert "image_ref" not in saved_episode["session"]
     assert "image_ref" not in saved_session
     assert saved_session["image_sha256"] == audit["request"]["image_sha256"]
+
+
+def test_p9_runs_through_generic_card_consumer_and_claim_bound_verifier(tmp_path):
+    from PIL import Image
+    from test_function_episodes import Harness
+
+    image = tmp_path / "p9.png"
+    Image.new("L", (16, 12), 80).save(image)
+    harness = Harness(image)
+    consumer = FakeFunctionConsumer()
+    result = run_vqa_episode(
+        VQARequest(str(image), "P9"), consumer=consumer, registry=harness.registry,
+    )
+
+    assert result.status == "answered"
+    assert result.route.selected_function_ids == ("P9",)
+    assert result.evidence_card.function_id == "P9"
+    assert result.response.answer == json.dumps(
+        result.evidence_card.function_output, ensure_ascii=False, sort_keys=True)
+    assert result.to_dict()["prompt_schema_version"] == "function-response-1"
+    assert result.verification["verification_level"] == "structured_output_and_claim_binding"
+    assert result.verification["medical_accuracy_verified"] is False
+    assert consumer.received_card is result.evidence_card
+
+    prompt = __import__("visevi.vqa.consumer", fromlist=["build_answer_prompt"]).build_answer_prompt(
+        "CTR?", result.evidence_card)
+    assert "without changing, omitting, or adding any field" in prompt
+    assert result.evidence_card.to_text() in prompt
+
+    good = {"schema_version": "function-response-1",
+            "function_output": result.evidence_card.function_output,
+            "citations": list(result.evidence_card.claim_ids)}
+    bad_output = {**good, "function_output": {**good["function_output"], "CTR": 9.0}}
+    bad_citation = {**good, "citations": ["obs-9999"]}
+    assert verify_function_answer(result.evidence_card, good)["accepted"]
+    assert not verify_function_answer(result.evidence_card, bad_output)["accepted"]
+    assert not verify_function_answer(result.evidence_card, bad_citation)["accepted"]
+
+
+def test_function_required_inputs_refuse_before_a_tools_run(tmp_path):
+    from PIL import Image
+    from test_function_episodes import Harness
+
+    image = tmp_path / "missing-finding.png"
+    Image.new("L", (16, 12), 80).save(image)
+    harness = Harness(image)
+    result = run_vqa_episode(
+        VQARequest(str(image), "G1"), consumer=FakeFunctionConsumer(),
+        registry=harness.registry,
+    )
+
+    assert result.route.status == "invalid_input"
+    assert "finding" in result.route.reason
+    assert result.status == "abstained"
+    assert harness.calls == []
+
+
+@pytest.mark.parametrize("function_id", FUNCTION_IDS)
+def test_all_registered_functions_enter_vqa_without_q4_allowlist_block(tmp_path, function_id):
+    image = _image(tmp_path / f"{function_id}.bin")
+    result = run_vqa_episode(
+        VQARequest(str(image), function_id), registry=ToolRegistry(),
+    )
+
+    assert result.route.status != "unsupported"
+    assert result.route.status in {"matched", "invalid_input"}
+    assert result.response.status == "abstained"
+
+
+def test_malformed_function_input_becomes_route_refusal_not_python_error(tmp_path):
+    image = _image(tmp_path / "bad-input.bin")
+    result = run_vqa_episode(
+        VQARequest(str(image), "P3", slots={"finding": ["nodule"]}),
+        registry=ToolRegistry(),
+    )
+
+    assert result.route.status == "invalid_input"
+    assert "finding must be a non-empty string" in result.route.reason
+
+
+def test_s2_paired_image_pipeline_records_both_hashes_without_paths(tmp_path):
+    from PIL import Image
+    from test_function_s1 import PairHarness, pair_metadata
+
+    prior = tmp_path / "prior.png"
+    current = tmp_path / "current.png"
+    Image.new("L", (20, 16), 40).save(prior)
+    Image.new("L", (20, 16), 80).save(current)
+    harness = PairHarness(prior, current)
+    consumer = FakeFunctionConsumer()
+    result = run_vqa_episode(
+        VQARequest(str(current), "S2", inputs={"finding": "nodule",
+                                               "pair_metadata": pair_metadata()},
+                   prior_image_ref=str(prior)),
+        consumer=consumer, registry=harness.registry,
+    )
+
+    assert result.status == "answered"
+    assert result.route.selected_function_ids == ("S2",)
+    hashes = result.evidence_card.provenance["study_image_sha256s"]
+    assert hashes["current"] == result.to_dict()["request"]["image_sha256"]
+    assert hashes["prior"] == result.to_dict()["request"]["prior_image_sha256"]
+    audit = json.dumps(result.to_dict(), ensure_ascii=False)
+    assert str(prior) not in audit and str(current) not in audit
+    assert result.function_episode.study_sessions["prior"].image_ref == str(prior.resolve())
+
+
+def test_paired_function_requires_prior_image_before_tools_run(tmp_path):
+    image = _image(tmp_path / "single.png")
+    result = run_vqa_episode(
+        VQARequest(str(image), "S2", inputs={"finding": "nodule",
+                                               "pair_metadata": {}}),
+        consumer=FakeFunctionConsumer(), registry=ToolRegistry(),
+    )
+
+    assert result.route.status == "invalid_input"
+    assert "prior_image_ref" in result.route.reason
+    assert result.status == "abstained"
 
 
 def test_q4_answer_conflict_with_claim_is_rejected(tmp_path):

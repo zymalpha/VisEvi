@@ -109,7 +109,7 @@ result = run_vqa_episode(
 )
 ```
 
-这是 Python API 接入示例，不会自动更改 CLI 或默认路由。当前没有已训练 Gate 权重，原有 `RuleFunctionGate` 保持默认；VQA runner 仍只开放 Q4，P9 及 T/S/G 尚未开放 VQA 执行。
+这是 Python API 接入示例，不会自动更改默认路由。当前没有已训练 Gate 权重，原有 `RuleFunctionGate` 保持默认；VQA runner 可执行 26 项中的唯一选中功能。类别多选仍由单功能桥接器拒绝，并保留原始类别记录。
 
 ## 5. 训练状态
 
@@ -117,7 +117,7 @@ result = run_vqa_episode(
 
 ## 6. 本次验证
 
-新增测试覆盖五头参数独立、固定类别顺序、线性/MLP 两种模式、编码器与 Gate 梯度连续、`state_dict` 往返、非法输入、独立阈值、多选/全不选、超预算拒绝、未训练拒绝、类内候选隔离，以及 Q4 成功/P9 未开放/非法槽位时的类别记录保留。所有网络检查使用 CPU 合成张量；VQA 检查使用合成工具和 consumer。
+新增测试覆盖五头参数独立、固定类别顺序、线性/MLP 两种模式、编码器与 Gate 梯度连续、`state_dict` 往返、非法输入、独立阈值、多选/全不选、超预算拒绝、未训练拒绝、类内候选隔离，以及 Q4/P9 执行与非法槽位时的类别记录保留。所有网络检查使用 CPU 合成张量；VQA 检查使用合成工具和 consumer。
 
 只运行本次 Gate 与原 VQA 测试：
 
@@ -128,4 +128,4 @@ HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 CUDA_VISIBLE_DEVICES='' MPLBACKEND=Agg \
 tests/test_category_gate.py tests/test_vqa_pipeline.py
 ```
 
-本次定向测试：**54 passed**（类别 Gate 32 项、原 VQA 22 项），使用 CPU 合成张量、工具和 consumer。全量软件回归的当前结果统一见[项目现状](项目现状.md)。
+本次定向测试：**85 passed**（类别 Gate 29 项、VQA 56 项），使用 CPU 合成张量、工具和 consumer。全量软件回归的当前结果统一见[项目现状](项目现状.md)。
