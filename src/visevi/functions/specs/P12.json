@@ -101,8 +101,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Independent rare-positive region annotations and an applicable attribute channel are missing.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent rare-positive region annotations and an applicable attribute channel are missing."
   ],
   "version": "1.0",
   "keywords": [

@@ -3,1171 +3,1463 @@
  "cases": [
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000042_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "6abb0db33eeb44927305389329159bf7ad55b5d904e58d9750b57b4e16544028"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000061_019.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "21e2e221f8eec0c7e047ef539d1fd0007a527f16541e6884618ef38006eedfea"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000116_019.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "c7ce003ef5c0d58d4141ccb7a9689e4d56df90867ab86b866f2de9b11140c677"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000318_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "76bc69a96b0ee433ca84b48896b9a939a008eb4cb50c86559c8d65ed09582157"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000444_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1e7d3a7fdbec2813a30f78dd28a04f2974586d20deb43ea56bae3d762235875a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000459_037.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "e85384ea520e122657752382e115571c358f0d38a9c9951cb7bb85ffd507a5bc"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000583_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "d11c767e115276ab5d48b9da613d95fb73f5f3552d8c45c29ace0fa19f92cfa5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00000623_009.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8e1ee6d728daf490eb2acd5c16ee6eebde92e49575aa9a8735dd3418726953bd"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001075_046.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "6ec43bbad991f205c240f0aa4a34b14245121e0dd48046299b2822f0daa73067"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001120_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "3f4d6572117040cc6ebcc623b35518d260cb3b6d0fe027368ec6330f73849d08"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001138_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "9b550fa88a4a1217d63435954b9b7cfa7dc833330d44e633dac8ab8eef5e30e7"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001148_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "bf77c61d464deb36513171e9b318a2678b1c2088df9bad39cd885caef2e63fac"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001294_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ed20dc855eb75439f4a92f747ca071da967c8f37de3943d4fe978338c47d9392"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001301_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "3a0e62d7b017cca4e22ad2d1eaa1a7a9ffbd69ef0a790ebd945abb3e23c9b023"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001394_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "892fcc84a8ed9983ffcc231b4c29acd1ff18e5c06b1b5d0387aff0e65516089c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001429_007.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "eb7991cb17ccfa2498ca6007bdf0df5cdc5c239d3e71b2239cb92bd0ad428252"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001558_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "09a5a892e10c5f2f9d4a9e6757dfa475df24245c3d9fd73ad305795393de6691"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001836_048.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "4aa7a8358250efc5f0c758bc1c4c988740dfa1a44f0b487f872f53b03f00a014"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001847_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f197b6f564d5f979fee2a277f2fe5edb318bd01d386bf979fc85aab1274a4a18"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00001989_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "e956923d4572fc2b28a1b3db9322d8c8e66136a5e351e4b29cc8d2bd2c8cf472"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002486_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ba2090b99db6c5f6c1a6a69f060cfc5faca7c53fffab3c1cb8c26a919ae0d356"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002537_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1aba9269606ea01ae9fa20a5929d1cd700c00024c551ffa481021dd6bb930bfa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002547_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ec1d526e2a3f6056b7e8afcf9e2d16f77d05f67cf5fe4e0ff684d3076710d023"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002548_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a7624357a627b38c014cb74fe0ca65d5450efca000bd7561be22f2bc1c70da9d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002632_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d76308b7dbac70fff3d5b5391155ffd4f03f869351e2b232b05c38942b35f8a3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002702_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "4476ce1be79d53ef01fad671551237f9ab59691deda07dd95361ab3a4cc2649b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00002860_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "186c257e2fb22e8da86c789b3203b78506847606a6f1f24fdc9587ebd254a57b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00003122_015.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8ffab7f918f6e6e7c4416a9d618060a89710adc75586396613b06b6fd8f8e948"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00003426_008.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ab43271548db6f59d657863befdf034100541fd81001633c6722f3d6c8863b73"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00003741_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ddc91cdb47b862bbdb09e508c2560acb46916e2ba4c0e45aab9703f87bdd7d43"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00003867_012.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "13df3a53f8692e3e7cebb460e3ba5212a7ee29ac87bfb3835eba67fe55a584ff"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004009_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e2a5ffe6c58b73bc7217b45c68f1e2e844a31ba9e6a9c75cc6f0767535f979e1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004144_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "f665ce61fb6fa810403211b699223fda51156c539e82d7576be334758967531b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004153_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "0323da6bcbade3e6f0e2be7919c79371a40b80c5ec0a08d80e4e068807247f42"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004381_014.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "71c1638ec9ad87dab3be84761f7277790d751e62df3cd89d443f7c78ce6517ab"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004428_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bba20769180faa64395d43ad2d2635646eb20440e9e962a4e9b170e454d27765"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004606_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "22394691dea5a88102965195f2a97a3cdb3c6555352c9a47413194b3630a5699"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004737_016.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d33ffd5cd624b84111c05942d9d3ee2f9c779d8008a8b2de29bc85108e603f27"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004808_031.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "88134bc713dda5d674e5fcf8a68a6f61de018ebcf3251e6314d4db70cc915c65"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004822_007.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "5d196ab2fd0ef2b39d3b10074de72eb7b7b3ad24eda8d39ec80f27582fe47ee2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004824_015.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8b65a208d89a56f822d8e70d23d0bea12c8cbe9cd9feceb91895d000c39ac338"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004858_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "58a088775046f68ea7454e63fdd8974dd537ef4e2d984aea8758432d9f2c4ae9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004893_020.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "2440f42392d6dcf35420bc39b99160eb9250e56f660dd858f04ba94e36c35153"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004904_013.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "67ecf2f337a7df834e93415f07bd7dcfb6c3116ba2a48fccc4fcfbbaa924a0f9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004911_028.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bbae9c89f4832576be7c2ab7aefdbd22ef16a812e0ebeac81be597d3f5813300"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004915_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f39b447dd9ad00f9ed74e8223de5d61c5213038314f33b3b958f98cabb9c9bd3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00004959_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "84d8734c1982c25425436be57d812d8324e29402d9f0e0b80d918d0b90b5e4e5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005029_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "31edae2a765de6d17443c21dc43bc9dbf433472a86d6e0c809070c59745fb831"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005400_006.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9680ad2de850d9d4408b99b3515a6a499f26bd0c1c25d1ae788ab56be48f8bfa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005493_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "3007ebef0c20f590a343c382e38ce7162a72ed4eaf6385d5651764f7d2bae713"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005722_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8317ff999178f8095494ea565cea098e4e81bb46274788b8096a427b632d231a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005749_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "e79c8a6a42423cfe0d261d88339a6e2ca7a9dbe50d6369265138b9942002c750"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005778_031.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "90683085c76c99a0c73f0d51d04fc60017c3c14adec90fc54e8c534505a7ce0c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00005852_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "44d43a39979bcf0462fa00c4bdedea2736c2053912a549126fe8ffb86d88b6d7"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006195_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "0aea4f4eede946b5a98723e4441e045f4208a2dcfb1cce39bcc025dd6095565e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006271_066.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9a61893ce2e4bdb5b649d2425efa4baf7aad49eba6be9b0e52fe2dcbe532fad9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006504_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d59c1aa9abbece0034885cb1227afbc516cf21e831f9cec708c9b1e7c748eb14"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006519_026.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bb25dfdb142dfbfc24ff419615b00872525a1a084d78206e7dd64236ebe7118c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006522_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "c83aa2802eb1a3ec9ec60767fce339fa4b8175289fe1a8fb0d1805155e47682f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006569_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "2a51b7ed6c67a76665255f1b5cdaffc6dcb59f9cf945468ea147e8bc52942095"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006684_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "82d135688e7a5470b0e7f49890734e6da2ee0c2d48900663dc76cb76ca7c1911"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006754_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "fa3518a8765a72f7da7ced0f85668db41d173714201fb228212d9097f051bcb3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006762_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "100f2d3fc8d2abb1f863e2d2d836969239ee6a40a12788527ca01260a338fcb7"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006788_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "171cdba8a0077bd99407725d3f6717907d8ada3feeafce0495442f99b9740756"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006794_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "dee367297dfee014527f18e16b11b202023649af3391a74426d953e3d252d790"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006843_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "2d85aa3c39c30578c74c28acb1b2aca4faf9f308e982355db3e8cef6ae9e4411"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006959_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "5ca10c12b6b97dbb9b3f03a805b6080ca4fd3aa6862bc000a7e6a78c9edaf795"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006966_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "436d8a214936b9429228ce0212c08312935c0e6ce9542261d07c928c4c1283a9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006968_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "32c8fe568efc512e525ac270204ab2b87d5189d95e13d22b44be7828629d4e57"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00006973_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "35b1177d931bf6cfee100130b98201526607617ec3f2b249c7636b2f66c018f8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007007_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "57eaab26d2aeb5174d24cf2ebc42d630b51e163573d9e15ac8f1c36e083b515f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007008_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "0734cd73e3b437691a82b4705e727eded8a2da80703d46f1d6fe034d76989afa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007093_020.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "946cf56e77450b662bfd4c0196f71d684bc6315915024061f31f6766e366c512"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007169_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "6ff7534d5831be8409b059cc4b909b6b386ee829b46f2e4971d6453a3aa96b23"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007258_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "be86e502f16411ccba65407acdde618e9fe7b678b14497de9271ba72ba7b797c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007340_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7968c4110c2e24f8aa2a5b83fe68adcf545af644716bfa4aa40c7a1e86c1b8f0"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007374_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "766129f6963583cdc2e349ee7067689ce63be39b16240e742d9bc6cc83e5ae84"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007534_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "98dee88dba1d798b2345d6f9951a1556ba0915b7d70a240bad1eae53410628c8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00007882_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a2d1ca7b84bf267cc0e5ee4da41f1ea1ab6bff0b0ae8fff760d40107d33046bb"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008002_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "01d59f2c5a01ec3639d8eefd9b11b76f3efab28ca11c4fdb3c365dc14ba88467"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008067_018.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "ca8056bcef3b49abbde3643a06bc0f944bd1cab81f1355146e72b6149ec17149"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008489_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "c6430b0d1574a884d168a26749aa9410efa748a52cf8ca258c4d4c9d5adaa7ef"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008566_009.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b45770f7aec0b61727a7dbb7d519af6991344ab1b1acc9f8c32b2af16a069495"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008584_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e0b8e18bd211892542c9141f534a5f9d6e4b67afa995b2b384fc15ee2786ab12"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008694_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "308f01f436737d6397dafb40eec70d779a0453d2388f8e32f02baadc6e5d33e6"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008701_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "fbd9cc14d6708816cdedfeceeba8172ad09318f7f0e7b23d0545da5daf7c5e58"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00008797_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7f34e6b453b5517b0e6041d4c9d77a08285ec078a84ed6fa969b2ba9984c84bf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009051_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "db701bc9ca2bf1a98d0292ae39fda1c6d8e19596364aaccc2421fbdcb8d54516"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009067_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "67429d31ac888a37b612911f13426f46a7454a49254017292c0fc1c978f5dc9e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009107_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a4d9b64e3464eda69cc446d0ca53389b1e23e509021730e427c6fc8ce621c04f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009193_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "274e0c354e81f650d2a2681339092f83fe18530596272e4c1de858f484723278"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009231_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "541109a257509c3a3ee106f78b8e87a57a4d8d58b609e8a6d4dda52a4e7f1e49"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009234_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "7885603aaf78a90a628bf660ddbb1988cff4a61fcb27304cc7978d2d8d4f6e0b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009321_013.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9dda9b22b83d5464fd94b574ee6e0ff99a44a2af254d9d6d34e4adaf3960f53b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009446_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e1f88646834decf3cffe08e7575077fbe159feebbf19db51b1251e287aa799ea"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009473_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "2669142afda3a4920d007b1e3270b017fbd299575a7c3473b79251ed4ee69f76"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009526_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1f7e1dca8af4dcac93faa4c5597dea043d9bffe5555dfb0c533aea053d6ffaaf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009551_010.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "5a041dbaea1db9691b806595ef67ae5807f7d2abc0483f83eeb9835f65791ee5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009574_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "30ac6181928395c0a3ba026f497b7e68ad682acf66731f8d2a7c1f864ae480f1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009664_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9bbfae03896ec92449f32a3480dd1fad33c458c35900a858f597366c43721d98"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009806_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "875adaeb0ca46ce4c195e9aece1b04160c8e879b89fabad82f9e881bc2255c7a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009845_055.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e60c0a47b144fc13357a2d2d9357cfa8b5b2d12d188d13c80c27da199e4212d4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00009931_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "3f20d573fea8db58ae97f0c48b88b3bb883ab0b8b6257b2a90f4d9abc65b6051"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010012_017.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8c4f512902644d64f495ed0695c14748e8d71b9df9f481c984918724924c4aed"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010119_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "36fc20d121174d54241785efb572045140ed46b8aabfb6189e89570e3fd16550"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010274_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "f7cd5fd347d5e686bf0a1553e65abd60ca7e35f8436b7b7039c7397b1025f87f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010297_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "90e3e799e607df5b97ab10376c4fa910632e6a7754858376c452b077f612c4c9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010384_013.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bb5d31671700ee4f052d1048b3734777035a7d92787f3a2b25d3ad1fd6473e61"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010433_003.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "c9cd8b7a26167763435c4a48d4577e15ce6ae20c21d8bf5700ec4aa8a85ab921"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010481_017.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "84180998e89164e8ce3beb94ef6c8faf4d6b96cd8736574822eaa9263d84bca3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010530_010.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "c24603be47a343577fd81b86157a7b082c8eb2eb39d3b0af4227e2909042779f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010548_009.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "038e266b83d56094d50a40f1f73a8b32ce4f6d3796cad9cbeefdfc6ead1f836e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010583_016.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "4627e0205dd12ec36fa9513a173568a5bad79e8b5e386ac1cf16452ebea6e857"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010771_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "6dbf6e5a11964a3f22abfba189270249a097020c2d3dab2ce7163f0ccfbe0fc2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010790_006.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bc086e324c52acccf17670be7a72a908833f96cf454324af1a1aece6b4e2631e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010805_018.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8bbe2fcd2d5c36142c95d5572b1b8ab9fddf82c4142d540db2164890b48d4cd2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010870_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "38c9de5de9cf247fd5d465caf3fbd2009d3ab35cf80d3d1300fd54a15f77c469"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010926_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "f00bfc6c0270eb9dc45195583eb8f6715b92be391593fede5d403ff2342cca10"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00010973_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1d0faf9e3fc3042d31753abb37f7751df89e46b21fafbfd4838fed75380015ee"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011237_017.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "cca87d25d5c339581446176771f90f263f77fb5636bc578113b0d579e3eee9b3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011402_016.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7baef758c21d2f845f9677eab90f6e6e70d58ebfafd2b2ddfc0a9efbe9402672"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011446_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f8de50fbc1d6962d6cf24aaf236b494fcaa68bcdee0fd886e04a701f6377d531"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011553_008.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "128b45eefef70a46007717ce135a7fd6cc760f19eabf1409c12494cf5ec97f45"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011622_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "58a801b4dd4ae5dde818f1a7085a1d9481c8669320e159f2336e68f0c2d97989"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011683_037.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "ce3278e55767c23fd25cc246467b8e83fb8bcca2ece60d443bf65ea4b8ff8d5b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011702_075.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "2da68c245105468f269652a7ee33cf005bbd1dca2f44015b923a4d6df7f84308"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011804_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "aaf238741be1fb0b4132ac6867aee5e7afbb59cf0e3221ea71e524e7b07e03a4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00011837_008.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "45c0f17d4259acfaefae65393113141a0ce7f21d98cb92a7749b07381f19ccdc"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012092_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "09d115ac85becb0fb7d0796305766504bdd0fa112def121cea839a63bd64cc88"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012141_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "6b73b8d5a71f2ef9f43ed8c0c651bb4fe5bd9c5a91c8d5bb160f406fcebb71cf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012161_014.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "127f6fed1b9b89d809cf8cb32b597a257572640083b25d275693975f2a66eb46"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012260_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "5953fc894920cc529c72acaa1d9cfc3375c04243c8d09621cf03cd50ae31be4d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012625_006.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "bba9d437afa92ded6ffb62585c04577b661faa4b3ecea7a50617ddc50023be8d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012774_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f446470398780b128f23f257fbc3f002b58edbf7f08ffd83be90c535abe0b1c9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00012931_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "75e8850eb32ab02e64d456a6314a3c2d9574425d0a7df3ba445a3a202c36c1f8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013260_009.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b26c2c4949a33e5ec0a8f5fea941db273b0ac2f67048116b53d64cdddd7170cc"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013625_023.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "ed3d4c4c11d57b427d45c19e11de8fe219dedd6fcd5004abe720b782184dec8c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013731_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "22bc60abf4ba0c7e5d0b19d9ece1d7448b9104cb71103ecf04291be6ccae6d58"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013774_028.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "cdfa147e3d8f29e9a9a950108ad0ac7c4741abd0e92bd40d7002523384a53622"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013855_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b3f33976e4ab09c771448d33bf45b17ce5d561dd30dff371a8ee184e4c5a486c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00013917_056.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "6571449a39c405bbad5de7ccd6c25755c639e2490022bf9dd66357e3d39ecf34"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014125_034.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "5c454236676984facfbdec9c21b30d76c27b7f2a4fa00ee0fc5bfe0625f63a33"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014203_039.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "dd0299e3be96894f25e4a9334f0ba199572c0412355cb17d65a41b11aa48c9f0"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014259_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "0938c7b1919b77be34dde0fd5d1bf79cdb58b0ee036be7d9a843d9c0fb6338b5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014302_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b29a9778c961ce91ffcd158f300e85992fc497c00951940c5e0541c51541c95a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014368_009.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7303daebabd8c044474c87e11d2e2b9d8700b9b9556cc5f03a94dff26bcda9dd"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014438_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "1842e208391ae78d3a8ec7a7d79347da22c6eadfbe030a9052a1314d9dacbef4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014493_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "4a8a461c323cfdc85e39cbbd8c60c418cc7ec9c1678c51d13ef59fbc2c3a40c4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014529_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "969325f6d2f258790378c748ef223abf5a289e2b027e244b7854b258e2fa9bf1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014715_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "297313fa24b913e79c9a2e85bb54bc1885835f0af4b2407dee5eb1bb260d7bb3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014785_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "06234fc3b172ba547d09598d9b8f3f2ed5fdc81fe5558b12cbf6faa80239d71c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014879_010.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "96c0e932f5a1a5e75a461c2c657b41115caa4fe1f796cedc7cbf96f292c41308"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00014897_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "a96e787671a93df94d06471b7750c1c102b4c6469a27d20f547b480cdc8f4f77"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015045_017.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a52cf03e68cd4119e2221dcfb18508d82180a962cc56a54f25e75642e9359885"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015101_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "592d47cffb40ad715721078e047c5d18e6454ff7bb840a4647a92a71e6cb025a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015231_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f5ebeef849281f267d6feb4ac9c8366ad2b29cb483be50e2d214de26c211a5d8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015442_026.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "025bd6c73dd3bc10e0607483f5e0a21481feeba4a6d11bfd96adac82e89db528"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015530_063.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b80c11fe957991c910a660d0b10e8318694615cbb41115861305ec01ca2d33d5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015545_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7ed733354a55bf1d1146fd7d6cb964e4559607339b881fd001f50eb3e39ec82c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015679_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "d23075ceef2f5f5968f8cf5e4bb4f64c2b503d199109eaa357cde2e029a7c850"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015693_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "7cd632a5a2be83e3b5910dadcc2c83d3e4c85efad1f174498a960bbb98d60cff"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015929_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "637afdafbd12ea3a4cdae5a0bbc98a5ece39152964227b01c76926e129eee015"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00015956_012.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cf371aee11391b8be6a7c6ac3666abec0c92fc253cf28e5773a0c94f097db851"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016059_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "76aef33a1c7749d59fb7b10343068deea6536868343fda7a9557137501dc32f4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016177_014.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "05f53d3ae783b100d24649582b3c542e5494d6bfdfb36558a8675854c466793b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016438_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d04d2cb8a8d37fd7a3b120e3b5d65313abde05ba364c2e8aa6685ebb0cb87052"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016469_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "1338cb7b8ef324978fa8f5b4ed92d6ce0ba8eccbbd738e4ffe27be676da9f464"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016715_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "d89f4c4d603003a41a2cda77ecb0390956ef558e6d0720806071f638147a6815"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016778_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "45032ebc812ac8f1556b218f12523fe5bd9e5c630cfd2d8550e34c4188dc0c4c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016786_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8fcb8eb7ac435a7129f2e33da08592912b37af555acf3ac0e92e1acb1309d42e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016811_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cefb08bff9ca2634fb411325dcd3fc698da1046461214c4c7be5f65046f7eae8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016842_003.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "053b0e23041afdcbc74f6a880282331a236564c8b3d9758399b3b57811ef759e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016895_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "0814b9b9f102b7e20a26e3592120fa94732836ec4baaa90ed64814ac06020f23"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00016990_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "993e1b5dc457a96e57f0e2a9f3c883ed72e360fc6935d2fe002ee609df6f1985"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017136_018.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "fe36543bf5231710e764414d162de2d64c77eb2d3b898681628ffe65cff2d861"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017138_013.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8bf41885f9963e65fa8f97dc37cd5c537d786ee7e3a635bc0f544870e5e0d765"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017243_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7000281bc8b3134e082fccac37fa2531ebbf3c7494aa1742c58af51ee10345aa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017515_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "9236dd65173515b0e2af11468c9a9c0f3e5fb78e1d291cbff6bc01ef49d5bf34"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017555_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8222a0a6d47396accc55d0ecf2cb6bcd9380e1bcc05bbf374591c5cd593848f1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017556_013.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "fa5d58c58e44d2ec629c2de0813e3a203ab139d589fded3a4d4d33bdf5427368"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017573_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d891817f577da3b454a19ce70f2e1092e8cf41a718793fc2e21cff5e675efef7"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017618_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e1121003d82f5543ed62d119c5ee2a4c8b977eca01a86984ea58575ad3cb8c42"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017714_026.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "daae77ab3d412e29c987599697b6653b953188fae64cc9690859d075a4370eb2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017764_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9b17590f753a6d5108e1601b3ff1c839087b3d427a3c3a41f1f81573383db6c0"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017786_008.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "f9dd9b2df646bdaec778a735bfdb750c372c3a9f85d438a718b9b7dd57317c0a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017906_010.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "6a03c55e83b8b0795fb35d3ffd96404b5e7d6b2e481bacd3fcb6773ece21ad9b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00017981_024.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "d934c80c4ca9d60b888043161a15bfec11d1da2bed2200d9c2f2b34a3762a0f3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018017_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ef3e6d40d6817a81232342cea5b18822ee2ced00b6aa6a0afb0aeecf8220cee2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018387_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "4a17bdfa6bb296a4299f39fa30b31301457adf2df30fe7135b7a9a733af4729f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018403_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "24e41168144acbdf38f1ee45d6df2e63b58ff85442ea53f6a19557a8eaad069d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018525_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "c781e5e3c97a108c57b49790856ffb4c1bfc1c3d9ee820f99f2d75816546d798"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018608_016.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9a831803fdd7c1974c94563b4a2aefb50b3295b3bad47f95873b2b0ca291f6ee"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018626_003.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "10116b8dad243a83be8966ba8464a7585f2f2a34315820409ab5eab7acbaf1e2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00018748_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f758573aec262545b6f85404cbc4be72376ca0d25435410cd22c4681c55fd602"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019044_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "2e1c683cce83f1cd0a052bb7fea80701f29b2b8427f509f5be561a41e0fd1051"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019110_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "045bd369596adfae9acb157d3935693222d73e5e34f2ae24ab2b3d5fe8b7bfc5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019124_070.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8d8aad09a611f8d0c392984895f72bc7c6d73d71c0fbd559d9110da7d2b602bf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019218_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "14af4bbb0b0c07160af25b50e03dd052eff216eb37b6e50439f7232ee362348d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019240_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "31f7c54ebc2744fc484a19713da11385e0646ffa813646d1b572129781e27ba5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019336_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "9ae204b3396a47a7557699e1edf44460a35fc8d589649bcc3ef06fbe2d5d05c4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019468_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "04522003cbcbf73e36f5d796c449607af3f1c9705787904fc28967cbb9489c43"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019894_040.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "2120e57f0542ddb827f6ee07f14ef374c4a1ba796468a06a488edede4afa36aa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00019912_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "82c0293a2f05c712cc7c2fdece5fbcdc1e345ec06e511e9ca4dd9f12ec4a54f3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020163_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "150b2a8aab965358ba4d6db3a5e82b540774e7e6fc220a62588c7f0464e7de57"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020190_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8b9c53b7d03d88d701451959f07fe821bc7e7728822b5c1bf9288fab3f566ece"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020195_024.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "46880d7771de7c8717b4f30f9c8548c373596acc487e08fd164da1277dc96b9f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020204_019.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ce2a18530881056e907fb3a98ddbcfa285cd9974db801718a95c53d71e68a959"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020286_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cc39909c5453acc880eddbf3f0887892ec7208c293557fa89c391df06a66332c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020326_021.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "c02ce974b6253ac9601ddfc1a7e7f4ef01c29b1ff9fd9965e6fd572ed02746d3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020349_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "fba8dcf204e1b46e9d4885187f70f67000c7785549b2076bb3da2efee762a21f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020393_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cd28483357b13eca3ec5f5ced0acca7001863f78411ed413ac228da49bf58642"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020736_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "bb8bced7744efd69c00f697d570cfdd4a7c2555408a8f22bd771199e2030736e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020857_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "28e17b76ac10e0bbd7a9f8178446cfc4187984fe1e1317191cde0dbf97de58a2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00020972_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "5b91879cca6b6b85b57ca60b421ad7456d35a2778570ca419701d0d76359283e"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021170_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "725d6580f636176a7ae51d03a4974fbbfbe390eb958ebb4ff7307e59769df665"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021253_003.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "855ebab0380d3dd6bcf04602f2e55de23c241cd72512a7824d506e2b2c6e785f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021255_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ebb24ba0513a7fe0d1cd15fc935a2770f5b979699af76703397d1510d6e96fc4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021277_025.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "621f97b879b5bc069aae6fe852cfeb67580446c60a6414c44cd073e07729fa5c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021431_004.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "27aa60966e9d847955d6e16b9764d4dcf8d0d8b6ddc84832b47a60f3336cbba1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021889_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "5f7a479354da96a2c80d8d0c0c758f00cf0245c308b97dc9b2a7121b753cc267"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00021972_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "9a527daf355775343e007d088abf93063b09f37ef321912d8909a75031b6690c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022006_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "56573a0083e4b6a2c21a6609aebcf142924f1a4e96ad5d2f643557f6bd273991"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022234_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "a5e923285eb03186d8c453f9fe8944081b78f5fb4ffb33800c8b50f741cf49d4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022276_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "2bd94a62887b89cd15da0199e694df018f6480db3a99680fb8793d38850fdba8"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022402_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "37d954baee35ec34368529b718c3ab0313fb0ece8eddf00c37ab6f104bb83582"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022442_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "d9596ca78e8b20518d8e272050b8bcd7ef353f6f7d853b74979042a24265e036"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022596_008.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b86d6977ca8bc78bc1aec62677801a9ccb0050e6b90be5c869845ac1d1a66d46"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022693_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "208b647bb58448a71540adb4aed7591ff518bc9069f26ec1e77db331a307e8aa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022729_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "5c1b1c699d391b260b45e30846ea4d570699583a988b23fc750e4e502c68596d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00022881_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "0ccb6648c6fe1a674ee6b6e6c6ed4520c6ffc1f5ad03408844fa5a6f6722b087"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00023085_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ace1d96ac2ed83fc79109bd5b3c83af5bddaa434901bbc6525a09581b7d004fe"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00023179_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "028039ba47350293e6eaafa51d8637258580fb220f31c0fa69d7b336c0b292f3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00023297_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "db1e71d2943bee6731d077aa3e6cab762860a5848e70581b3179ce64060add85"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00023414_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "84a749a96958325c1e8c3b9c07c5ed662ea251a8d844f5e0daebe407272597b5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00023639_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d2c978744455dc834e54ebbfb4949283e430bd40bfcb1cb5b89b8893b15b4bc6"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00024545_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cb4052afed61decc6166799ed7c12323fe3a638cf021230ca85c16c4f93f98f5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00024649_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ab6b0f5ae1949447a03cde4b2c75dc145cb4f5083f4fb6ff65fdff05cfda7913"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00024885_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "a56790f3ebb3de11e0022f5283fcfb465ab4336683a2ff7d6af8c94668e784a3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025133_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "56b3bc4c5723b47167168c902684aa6200c1374451a9209a08f07f7f3874054c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025238_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ea4cfcf908f3b5813c0f5af01f37c6a8faf3bde5ce361938facbec2ce716025a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025252_074.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "8f221b35e37a1d058df9e28ad8f1f1bd61d6d7281627bbe862b6d29be0937332"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025464_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "c0bdc74d9050eb7cd8246cc7dd0e733f8ed6343d379d50b29fb33e522b2688c0"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025621_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "3222048b48f263649336d090dcf118a21bb9ac81647a94bb1e71c72b8ac94129"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025812_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "0ef6e11b5a9724712d375bcc6f5d2066feb95fc6d159fa5df4bb30b507c0ec3c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025841_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "ed4bad919b1ae021c2cf804dd35699f4135d9539f1dd8b75cc186ba1268df4bd"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025846_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f026f2c559fb4f7132942eec4892b0dd68884539a91fc01ac2fb1958f9b6ee62"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025849_037.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1c7835b0fd74f9ae51df1e0a67f12d0afcc4b3f5162d8abf187c8cd9524fcace"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00025968_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "da16e1215bbad41591f3924606339d83f57faa007fc2b802a0eb5b2c52c1d595"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026120_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a1ea9b90365cf8b457834fbd519f163c542b02302ddc119992c8704ead8ce4fa"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026137_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "d5cdfc3ec55f84f4a4b3e5b46fd7f9aa4f6f459e6dec386f24fd4075db876ac6"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026261_005.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "641092125bf22e80214bb7264c58b05effb071b4b77f9fa651845e7ee0db0ce3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026336_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "42006cb27c612946841b00a76d614b4933a29c11450b6d81ed45bb6643dc4050"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026374_009.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "226b55bc80244ecab658cf6e38d688d9106a81ff8de094f8c6b2f9d2b8c6394c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026400_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "400f58704e38b1aca03e40ed6235a9d3ae39dd03efc8ae93cba7b1216fad471f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026412_019.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1895f199efdf978b533fdaa36400743dd273124239f78eed9cd3466d02df7361"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026480_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "e6d46666974fc4ab80adb698177afc839b58c7c2082860b7754f0076f012ff50"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026555_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "74d7e18f23b90983b3ea714f4d57cc0c4cd9f5be168b5671d9fc3b399870c503"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00026652_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1f8f898311459e550829159b776c75982bc998ba159e954c123ff073e953f73b"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027165_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "7709768724b6207dcea934aa340562ca774ee8f444df2efd275c3862efe3f35f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027168_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "52690a735b20e1389b2315a5b85de337f5e0260651b91de45bc34db47d47b6a2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027211_003.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a53eec6f7afac42dd0c54173b36ec6e980efb377cbe57b48230f584bdf7d027d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027420_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "6869ba2471494db3f8f3aa42ae7a4a3f3cd8161359a8f5a3f8fc4f06a3311edd"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027464_033.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b6bdfb9358b81b59befcaae1210bddf179bcf9b3cde346bbbb2f5a1f5b458ddf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027479_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b46661ebf3d59e6221f2bb722a6419c61a1693a640dc1d9377e69dcbadb4b703"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027553_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ede7bfa374c78e3f7f3d481295a4835d635ced851857439f239a0ab498b0e128"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027765_000.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f8e53384a24827e41c8c8413b748cacd4e7427469bf41a05de9e3bad33623f3c"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00027978_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "8fe29b6d6850c0db0009412797bdca1cb309539b797e5729aef135d318372718"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028069_003.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "3549892ff287269f37c019cf25b72975b5cc7c268a95d287328343afb0cd4991"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028182_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "21d391aa3341b993355f570d4929fdc9e1c2a977681e6be7c5a0f3a6a0331edc"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028336_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "cab6e778908f587a316ddb244e4274912108e0edd7d3e5eb0a98d7f3d7fd738a"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028504_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b9e94b1d55cb3e76e33110235ed80d5255f0fccd9bc82834fdbd5cc2719c50b5"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028509_010.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "a01ab72f94153a9b332bdcec7d1bc4b33c1d2622cc26f18630107d36259c1bcc"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028539_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "ddf6ef9c2a6a626a321fad844df175fa3af6529b61349849a26a409ffbfc9c6f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028765_020.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "213817b5294bcbd29b565f79c6180e18533ab253a04b3e7589c853bf405d17cf"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028774_012.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "86465e04a150813c79521b5c9b59099571de11b27b45239393f96423bddcb4d0"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028873_004.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b4fd3dec631beb85cb5a216e4c07593dec80bd90413f3b9200fb92a8599fc1ad"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028897_014.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "6eea71998a2a01668ce749ee55defa3b8dd7d441be196d865b9096844af009a3"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00028916_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "9fc6f86783d4945ca6e87c8c18decc1eeda25bee71967947e7847f8c61cb16e1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029066_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "a331b6b72bb51ed06e3cc7839aaf955322abf2f98ff70f5690c88fdf164155b4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029159_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "96abe37ddce0b5933188580d205e75d664318746e83d09be185378b3b629cbac"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029248_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "fcf887fa84690efbbad0706f37a978d48374155dbbdc1be83c64a12896d612f2"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029437_005.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "a557091d3c630388b0adfaf761f01ec185e2d24745ec08f332779e33510b316f"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029779_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "346d346ce4c30655f7096a779799bc75145b59827e04be22c52330155bfbd184"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029795_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "31ab3eea13e6148698a239a4a557875911b107f4aee49cd5208c8bc3c19186d9"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029839_001.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "1c3159d61f4bd30f0e9443dc6e9738a7c42a5aab42652bb8850d698b8c9bcc87"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029852_002.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "b924d8b657c3de3f92a7d774b158bbecf8dea24aa5eb1b3cc94ec3c9ca05bacd"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029867_000.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "14c572955063aa22ae9f7404026e79eebe869f63ef75e4195e1281325bd66bc4"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00029959_002.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "e2efab04b10dcd63b6eefa6a04f1e6f81f0c1f068298c87b1573b27c7886602d"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00030079_033.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "f6ba5d51a455ef176e5bb6a86a3e99ba97cae98e4e7b8db5d11af5a16a973827"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00030200_001.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "118c867336f12944aae0272c3834f587b6b8beb70c32a5b5fdbb145d340d7ce1"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00030439_006.png",
-   "view_position": "PA"
+   "view_position": "PA",
+   "sha256": "6dca04046cf4735ae4c83cd29d741c02308de4758ece9b07b04f6b3862866607"
   },
   {
    "image_path": "nih-cxr14/kaggle-sample-v4/images/00030635_007.png",
-   "view_position": "AP"
+   "view_position": "AP",
+   "sha256": "b2d13470a36272a12688dd7c71dbe822911d771c05652e797eb23c58b4b7c952"
   }
  ]
 }

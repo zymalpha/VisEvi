@@ -12,10 +12,10 @@ the downloader will never automatically overwrite or delete such existing files.
 from __future__ import annotations
 
 import argparse
-import base64
 import getpass
 import hashlib
 import http.client
+import http.cookiejar
 import json
 import os
 from pathlib import Path
@@ -70,12 +70,14 @@ class SameHostRedirect(urllib.request.HTTPRedirectHandler):
 
 
 def opener_for(username: str, password: str):
-    token = base64.b64encode(f'{username}:{password}'.encode('utf-8')).decode('ascii')
-    # urllib's default ProxyHandler honours the host's HTTPS proxy settings;
-    # SameHostRedirect still rejects requests redirected to other origins.
-    opener = urllib.request.build_opener(SameHostRedirect())
-    opener.addheaders = [('User-Agent', 'MedVisEvi-subset-downloader/1.0'),
-                         ('Authorization', f'Basic {token}')]
+    # PhysioNet sets a test cookie on its 401 challenge, then a session cookie
+    # after Basic authentication. Both credentials and cookies stay in memory.
+    passwords = urllib.request.HTTPPasswordMgr()
+    passwords.add_password('PhysioNet', BASE, username, password)
+    opener = urllib.request.build_opener(
+        SameHostRedirect(), urllib.request.HTTPBasicAuthHandler(passwords),
+        urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    opener.addheaders = [('User-Agent', 'MedVisEvi-subset-downloader/1.0')]
     return opener
 
 

@@ -100,8 +100,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Formal hilar structure source and clinically meaningful ROI/grade protocol are missing.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Formal hilar structure source and clinically meaningful ROI/grade protocol are missing."
   ],
   "version": "1.0",
   "keywords": [

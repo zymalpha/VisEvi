@@ -221,7 +221,9 @@ class ClassifyRoiAttributes(ModelTool):
                               {'attribute': attribute, 'answer': self.options[letter] if letter else 'unparsed',
                                'raw_text': answer['text'],
                                'option_raw_probabilities': answer.get('first_token_option_probabilities'),
-                               'roi_mask_name': request['roi_mask_name'], 'crop_xyxy': request['crop_xyxy'],
+                               'roi_mask_name': request['roi_mask_name'],
+                               'roi_mask_sha256': request['roi_mask_sha256'],
+                               'crop_xyxy': request['crop_xyxy'],
                                'prompt_version': PROMPT_VERSION},
                               provenance=session.mask_provenance([request['roi_mask_name']]),
                               validity_conditions=list(CONDITIONS) + [

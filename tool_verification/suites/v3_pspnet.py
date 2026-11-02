@@ -14,6 +14,10 @@ from PIL import Image
 from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / 'tool_verification'
@@ -32,13 +36,16 @@ def main():
     if args.out.exists() and any(args.out.iterdir()):
         p.error('--out must be new')
     official = args.out / 'official'
-    subprocess.run([str(ROOT / '.venv/bin/python'), str(TV / 'oracles/pspnet_official.py'), '--cases', str(TV / 'cases/core40.json'),
+    cases_file = TV / 'cases/core40.json'
+    cases = json.loads(cases_file.read_text())['cases']
+    verify_frozen_cases(cases, ROOT / 'original_data')
+    subprocess.run([str(ROOT / '.venv/bin/python'), str(TV / 'oracles/pspnet_official.py'), '--cases', str(cases_file),
                     '--data-root', str(ROOT / 'original_data'), '--weights', str(ROOT / 'tools/weights'),
                     '--out', str(official), '--device', args.device], check=True)
     tol = json.loads((TV / 'cases/tolerances.json').read_text())['V3']['pspnet_official_vs_adapter_iou_equivalent']
     reg = build_a_registry()
     rows = []
-    for case in json.loads((TV / 'cases/core40.json').read_text())['cases']:
+    for case in cases:
         stem = Path(case['image_path']).stem
         image = (ROOT / 'original_data' / case['image_path']).resolve()
         out_dir = args.out / 'ours' / stem

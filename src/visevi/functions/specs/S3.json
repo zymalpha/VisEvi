@@ -106,9 +106,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Paired-image session orchestration and independent longitudinal annotations are missing.",
-    "Cross-study matching, comparable measurements and stability thresholds are not implemented/frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent longitudinal annotations and frozen stability thresholds are not available; current execution reports raw matched-candidate changes only."
   ],
   "version": "1.0",
   "keywords": [

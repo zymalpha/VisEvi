@@ -75,8 +75,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Fracture-specific independent labels and the anatomical coverage protocol are not available.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Fracture-specific independent labels and the anatomical coverage protocol are not available."
   ],
   "version": "1.0",
   "keywords": [

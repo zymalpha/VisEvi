@@ -16,6 +16,10 @@ from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
 from visevi.perception import structures
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / 'tool_verification'
@@ -75,6 +79,7 @@ def main():
     tol = json.loads((TV / 'cases/tolerances.json').read_text())['V3']
     cases_file = TV / 'cases/core40.json'
     cases = json.loads(cases_file.read_text())['cases']
+    verify_frozen_cases(cases, ROOT / 'original_data')
     ours, requests = run_ours(cases, args.out, args.device)
     backends.shutdown_workers()
     (args.out / 'chexone_requests.json').write_text(json.dumps(requests))
@@ -120,6 +125,15 @@ def main():
         row['a26_ett_tip_equal'] = r['devices']['ETT']['distal_tip_xy'] == ref['landmarks']['ett_tip_xy']
         row['a26_carina_equal'] = r['carina_xy'] == ref['landmarks']['carina_xy']
         row['a26_fold_ids_equal'] = r['fold_ids'] == ref['fold_ids']
+        official_lines = np.load(off / 'a26' / f'{stem}_lines.npz')['line_masks']
+        line_ious = []
+        for index, family in enumerate(('ETT', 'NGT', 'CVC', 'Swan Ganz')):
+            mask_path = Path(o['dir']) / 'a26' / r['devices'][family]['line_mask_file']
+            with Image.open(mask_path) as image:
+                adapter_line = np.asarray(image.convert('L')) > 0
+            line_ious.append(iou(adapter_line, official_lines[index]))
+        row['a26_line_ious'] = dict(zip(('ETT', 'NGT', 'CVC', 'Swan Ganz'), line_ious))
+        row['a26_min_line_iou'] = min(line_ious)
         # CXAS
         rr = rec['cxas']; w, h = o['case']['size_wh']
         labels = list(rr['result']['labels'].values())
@@ -144,10 +158,14 @@ def main():
         'A5 max node deviation <= %.1f px (1024 frame)' % tol['hybridgnet_max_node_deviation_px_1024']:
             all(r['a5_max_node_dev_px1024'] <= tol['hybridgnet_max_node_deviation_px_1024'] for r in rows),
         'A8 case score |d| <= %g' % tol['pneumothorax_prob_max_abs']: all(r['a8_case_score_abs'] <= tol['pneumothorax_prob_max_abs'] for r in rows),
+        'A8 probability max |d| <= %g' % tol['pneumothorax_prob_max_abs']:
+            all(r['a8_prob_max_abs_fp16_artifact'] <= tol['pneumothorax_prob_max_abs'] for r in rows),
         'A8 512-frame mask identical': all(r['a8_mask512_mismatch_px'] == 0 for r in rows),
         'A26 presence |d| <= %g' % tol['lines_tubes_score_abs']: all(r['a26_presence_max_abs'] <= tol['lines_tubes_score_abs'] for r in rows),
         'A26 classification |d| <= %g' % tol['lines_tubes_score_abs']: all(r['a26_classification_max_abs'] <= tol['lines_tubes_score_abs'] for r in rows),
         'A26 ETT tip and carina identical': all(r['a26_ett_tip_equal'] and r['a26_carina_equal'] and r['a26_fold_ids_equal'] for r in rows),
+        'A26 four line masks IoU >= %g' % tol['lines_tubes_line_iou']:
+            all(r['a26_min_line_iou'] >= tol['lines_tubes_line_iou'] for r in rows),
         'CXAS label IoU >= %g' % tol['cxas_official_vs_adapter_mask_iou']: all(r['cxas_min_label_iou'] >= tol['cxas_official_vs_adapter_mask_iou'] for r in rows),
         'CheXOne identical token sequences': all(r['chexone_identical_token_sequences'].split('/')[0] == r['chexone_identical_token_sequences'].split('/')[1] for r in rows),
         'CheXOne option prob |d| <= %g' % tol['chexone_option_prob_abs']: all(r['chexone_option_prob_max_abs'] <= tol['chexone_option_prob_abs'] for r in rows),

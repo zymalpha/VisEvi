@@ -13,6 +13,7 @@ dependencies = [
 
 [project.optional-dependencies]
 eval = ["torchxrayvision==1.4.0", "jsonschema>=4.23", "pytest>=8"]
+routing = ["torch>=2.6,<3"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

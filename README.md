@@ -2,7 +2,7 @@
 
 MedVisEvi 是一个面向胸片的可调用、可复算、可追溯视觉证据工具包。项目把模型输出和确定性几何/图像计算统一为结构化证据，并保留输入图像、坐标、单位、模型身份、参数、来源和拒答原因。
 
-当前研究顺序是：先实现并验证 A1–A26 基础工具，再把这些工具组合成 Q/P/T/S/G 五类、26 项业务功能；E1–E10 暂缓。当前已经完成大部分工程实现验证，但尚未完成独立医学准确性评估。
+当前工作并行推进 A1–A26 基础工具的实现验证与 Q/P/T/S/G 五类、26 项业务功能的组合开发；正式功能评估依赖冻结协议和合适参照。E1–E10 暂缓。
 
 ## 文档
 
@@ -14,7 +14,12 @@ MedVisEvi 是一个面向胸片的可调用、可复算、可追溯视觉证据�
 - [MedVisEvi 方法框架](doc/MedVisEvi方法框架.md)：项目的方法分层、证据信息流、功能执行和评估层级
 - [未来计划](doc/未来计划.md)：阶段验收门、组合功能协议和后续任务
 - [组合功能与证据评估框架](doc/组合功能与证据评估框架.md)：26 项功能、证据图、EvidenceCard 和评估框架
+- [VQA 端到端 Pipeline 计划](doc/VQA端到端Pipeline计划.md)：从图片和问题到功能路由、工具执行、证据卡、医学模型和答案核验的分阶段计划
+- [VQA 图像、问题与证据联合输入方案](doc/VQA图像问题与证据联合输入方案.md)：一手文献调研、EvidenceCard 组织、冲突处理、消融实验和当前实现边界
+- [五类 Gate 网络调研与实现](doc/五类Gate网络调研与实现.md)：Q/P/T/S/G 五个独立 Gate、线性/MLP 结构、类别选择策略与可选 VQA 接入；训练暂缓
 - [功能集成实现说明](doc/功能集成实现说明.md)：FunctionSpec、依赖路由、三层证据图和统一执行入口
+- [Q/P 开发集流程记录](doc/Q_P开发集流程记录.md)：Q1–Q4、P1–P12 的 400 张开发批次覆盖、拒答统计和后续评估缺口
+- [T4 胸腔引流管调研与实现方案](doc/T4胸腔引流管调研与实现方案.md)：T4 reference adapter 的边界和自动后端路线
 - [A 工具实现验证方案](tool_verification/README.md)：V1–V5 验证方法、冻结样本、容差和结果摘要
 
 ## 目录
@@ -45,7 +50,7 @@ python -m venv .venv
 运行软件测试：
 
 ```bash
-.venv/bin/python -m pytest -q -p no:cacheprovider
+PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -B -m pytest -q -p no:cacheprovider
 ```
 
 模型类工具需要单独的模型环境、模型权重、固定版本的第三方源码和本地数据。模型环境依赖锁定在 [`tools/requirements-models.lock`](tools/requirements-models.lock)；模型资产准备和许可限制见项目文档。不要把权重或数据复制进 Git 仓库。
@@ -68,6 +73,9 @@ python -m venv .venv
 - V1 接口契约和 V2 确定性计算验证已通过；PSPNet 官方流程差分已在修复预处理后通过。
 - A5、A26、CXAS 的官方流程差分通过；A8 严格 mask、CheXOne 严格 token 和部分变换一致性检查仍有未决项。
 - 当前结果是工程实现核验，不是独立医学准确率结论。
-- 26 项组合功能均已有版本化 `FunctionSpec`；Q4、P3、P6、P9、T1、G1、S1 七项代表功能已接入统一 `run_function_episode()`，其余 19 项会返回明确的 `blocked`，尚未实现功能声明程序。
-- 七项代表功能目前通过的是人工可算输入和假模型输出上的软件集成测试，用于验证依赖、证据关系、拒答和溯源；这不等于真实胸片上的医学准确性已经通过。
-- 功能层新增依赖图、闭集规则路由和 Observation/Relation/Claim 三层证据节点；这属于组合框架的软件实现，不代表功能医学准确性已经评估。
+- 26 项组合功能均已有版本化 `FunctionSpec`；全部 26 项已接入统一 `run_function_episode()`。T4 当前是显式 caller-reference adapter：缺少带来源的引流管 reference 时结构化拒答，尚没有自动胸腔引流管模型。
+- 代表性功能已通过人工可算输入和假模型输出的软件集成测试，用于验证依赖、证据关系、拒答和溯源；医学准确性仍按独立协议评估。
+- 功能层已实现依赖图、闭集规则路由和 Observation/Relation/Claim 三层证据节点。
+- Q/P/T/S/G 五个独立类别 Gate 已有线性/MLP 网络、独立 Sigmoid 阈值策略和可选 VQA 适配；问题编码器、权重训练与校准暂缓。未训练时返回 `untrained`，默认仍用规则路由。
+- VQA 当前只开放 Q4；类别 Gate 可多选，但现有单功能 VQA 适配会拒绝多类别执行。P9 及其他功能尚未开放 VQA。
+- 最新软件测试结果与复现记录统一见[项目现状](doc/项目现状.md)，软件通过不表示路由或医学准确性通过。

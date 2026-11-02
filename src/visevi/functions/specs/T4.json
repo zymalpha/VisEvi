@@ -6,22 +6,8 @@
   "input_type": "single_image",
   "steps": [
     {
-      "step_id": "devices",
-      "tool": "localize_devices",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
       "step_id": "lungs",
       "tool": "segment_lungs",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
-      "step_id": "bones",
-      "tool": "segment_shoulder_bones",
       "depends_on": [],
       "parameters": {},
       "required": true
@@ -43,12 +29,13 @@
     "Inputs and all spatial evidence must use the same original-image coordinate frame.",
     "Model-derived masks and box approximations are predictions, not independent reference annotations.",
     "The current A26 backend covers ETT/NGT/CVC/Swan-Ganz only; it has no chest-drain output."
+    ,"T4 currently uses an explicit caller-reference adapter; it does not claim an automatic chest-drain detector."
   ],
   "refusal_rules": [
     "Refuse when required evidence is missing, malformed, or its tool returns ToolRefusal.",
     "Refuse measurement over a mask truncated at an internal model field-of-view boundary.",
     "Do not turn raw uncalibrated model scores into calibrated clinical probabilities.",
-    "Always block chest-drain conclusions with the current backend; absence from its outputs is not a negative finding."
+    "Refuse when the caller reference is missing, malformed, not bound to the current image, or the drain path/tip/side-hole evidence is inconsistent."
   ],
   "evaluation_protocol": {
     "reference": "Independent drain path, side-hole, tip and pleural-space annotations using a drain-capable model.",
@@ -69,8 +56,7 @@
   },
   "status": "specified",
   "blockers": [
-    "A26 does not support chest drains; drain/side-hole detection and pleural-space reference must be added.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Automatic drain-capable model and independent drain path/side-hole/tip annotations are not available; current execution is a reference adapter only."
   ],
   "version": "1.0",
   "keywords": [

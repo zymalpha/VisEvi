@@ -6,6 +6,13 @@
   "input_type": "single_image",
   "steps": [
     {
+      "step_id": "view",
+      "tool": "classify_view",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
       "step_id": "bones",
       "tool": "segment_shoulder_bones",
       "depends_on": [],
@@ -72,8 +79,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Freeze anatomical endpoint convention and independent rotation grade mapping.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Freeze anatomical endpoint convention and independent rotation grade mapping."
   ],
   "version": "1.0",
   "keywords": [

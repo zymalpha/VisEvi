@@ -79,8 +79,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Formal aortic-knob source and independent measurement/grade annotations are missing.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Formal aortic-knob source and independent measurement/grade annotations are missing."
   ],
   "version": "1.0",
   "keywords": [

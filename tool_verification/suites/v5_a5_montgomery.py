@@ -17,6 +17,10 @@ from visevi import backends
 from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / "tool_verification"
@@ -71,6 +75,7 @@ def main():
     args.out.mkdir(parents=True)
 
     manifest = json.loads((TV / "cases/montgomery138.json").read_text())
+    verify_frozen_cases(manifest["cases"], ROOT / "original_data", hash_key="image_sha256")
     gt_root = ROOT / "original_data/montgomery-nlm/data/MontgomerySet/ManualMask"
     reg = build_a_registry()
     rows = []

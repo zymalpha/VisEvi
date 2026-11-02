@@ -65,8 +65,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Independent technical quality labels and clinical grade mapping are not frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent technical quality labels and clinical grade mapping are not frozen."
   ],
   "version": "1.0",
   "keywords": [

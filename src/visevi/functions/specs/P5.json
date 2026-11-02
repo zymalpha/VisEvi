@@ -88,8 +88,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Independent costophrenic landmarks and feature-to-claim mapping remain to be established.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent costophrenic landmarks and feature-to-claim mapping remain to be established."
   ],
   "version": "1.0",
   "keywords": [

@@ -17,6 +17,10 @@ from visevi import backends
 from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / 'tool_verification'
@@ -78,7 +82,9 @@ def main():
     if args.out.exists() and any(args.out.iterdir()):
         p.error('--out must be new')
     tol = json.loads((TV / 'cases/tolerances.json').read_text())['V4']
-    cases = [c for c in json.loads((TV / 'cases/core40.json').read_text())['cases'] if c['source'] in ('chestx-det', 'nih')]
+    frozen_cases = json.loads((TV / 'cases/core40.json').read_text())['cases']
+    verify_frozen_cases(frozen_cases, ROOT / 'original_data')
+    cases = [c for c in frozen_cases if c['source'] in ('chestx-det', 'nih')]
     cases = [c for c in cases if c['source'] == 'chestx-det'][:5] + [c for c in cases if c['source'] == 'nih'][:5]
     reg = build_a_registry()
     rows = []

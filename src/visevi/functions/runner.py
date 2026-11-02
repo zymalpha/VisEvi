@@ -3,7 +3,8 @@
 The catalogue and execution coverage are deliberately separate.  All functions
 can be planned; only programs with an explicit claim rule can be executed.
 No clinical thresholds, calibrated probabilities or fusion weights are invented
-here. Q4, P3, P6, P9, T1, G1 and S1 are executable integration pilots.
+here. Q/P programs expose raw evidence and keep clinical interpretation
+explicitly unassessed until an independent protocol is frozen.
 """
 from __future__ import annotations
 
@@ -27,10 +28,21 @@ from ..core.session import EvidenceSession
 from ..core.units import AnswerVerdict, Demand, EvidenceUnit, ToolRefusal
 from ..perception.vlm import box_mask
 from .planning import DependencyGraph, RouteResult, RuleRouter
+from .p_programs_a import P_PROGRAMS_A
+from .p_programs_b import P_PROGRAMS_B
+from .q_programs import Q_PROGRAMS
+from .spatial_programs import SPATIAL_PROGRAMS
+from .temporal_programs import TEMPORAL_PROGRAMS
+from .device_programs import DEVICE_PROGRAMS
+from .drain_programs import DRAIN_PROGRAMS
 from .specs import FunctionSpec, ToolStep, load_function_specs
 
 
-IMPLEMENTED_FUNCTIONS = ("Q4", "P3", "P6", "P9", "T1", "G1", "S1")
+IMPLEMENTED_FUNCTIONS = (
+    "Q1", "Q2", "Q3", "Q4",
+    "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10", "P11", "P12",
+    "T1", "T2", "T3", "T4", "G1", "G2", "G3", "S1", "S2", "S3",
+)
 
 
 @dataclass
@@ -90,8 +102,33 @@ class FunctionEpisodeResult:
                 "study_sessions": {role: study.to_dict() for role, study in self.study_sessions.items()}}
 
 
+def _hashable_json(value: Any) -> Any:
+    """Canonicalize runtime values used in cache keys and fingerprints.
+
+    Model backends may keep NumPy arrays in the session landmark cache.  The
+    serialized evidence contract remains JSON-only, but cache validation must
+    still be able to fingerprint those runtime values without attempting to
+    materialize the full array in a trace.
+    """
+    if isinstance(value, np.ndarray):
+        array = np.ascontiguousarray(value)
+        return {"__ndarray__": True, "shape": list(array.shape),
+                "dtype": str(array.dtype),
+                "sha256": hashlib.sha256(array.tobytes()).hexdigest()}
+    if isinstance(value, np.generic):
+        return _hashable_json(value.item())
+    if isinstance(value, Mapping):
+        return {str(key): _hashable_json(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_hashable_json(item) for item in value]
+    if isinstance(value, bytes):
+        return {"__bytes__": True, "sha256": hashlib.sha256(value).hexdigest(),
+                "length": len(value)}
+    return value
+
+
 def _json_hash(value: Any) -> str:
-    data = json.dumps(value, sort_keys=True, ensure_ascii=False, allow_nan=False,
+    data = json.dumps(_hashable_json(value), sort_keys=True, ensure_ascii=False, allow_nan=False,
                       separators=(",", ":")).encode()
     return hashlib.sha256(data).hexdigest()
 
@@ -615,15 +652,17 @@ def _t1_program(session: EvidenceSession, spec: FunctionSpec, outputs: dict, inp
     return value, relation, [ett[0].id, carina[0].id, position[0].id]
 
 
-def _pair_metadata(inputs: dict) -> dict:
+def _pair_metadata(inputs: dict, *, require_lesion_match: bool = False) -> dict:
     metadata = inputs.get("pair_metadata")
     if not isinstance(metadata, dict):
-        raise ValueError("S1 pair_metadata is required")
+        raise ValueError("paired function pair_metadata is required")
     allowed = {"patient_id_hash", "identity_verified", "prior_study_id", "current_study_id",
                "prior_time", "current_time", "chronology_verified", "projection_comparable",
                "registration", "lesion_match"}
-    if set(metadata) != allowed:
-        raise ValueError(f"pair metadata fields must be exactly {sorted(allowed)}")
+    if set(metadata) - allowed:
+        raise ValueError(f"pair metadata has unknown fields: {sorted(set(metadata) - allowed)}")
+    if require_lesion_match and "lesion_match" not in metadata:
+        raise ValueError("verified lesion match metadata with id and source is required")
     for key in ("patient_id_hash", "prior_study_id", "current_study_id",
                 "prior_time", "current_time"):
         if not isinstance(metadata.get(key), str) or not metadata[key].strip():
@@ -657,11 +696,18 @@ def _pair_metadata(inputs: dict) -> dict:
         raise ValueError("verified registration must be applied to both inputs in a named common pixel frame")
     lesion_match = metadata.get("lesion_match")
     lesion_fields = {"status", "id", "source"}
-    if (not isinstance(lesion_match, dict) or lesion_match.get("status") != "verified"
+    if (require_lesion_match and
+            (not isinstance(lesion_match, dict) or lesion_match.get("status") != "verified"
             or set(lesion_match) != lesion_fields
             or not all(isinstance(lesion_match.get(key), str) and lesion_match[key].strip()
-                       for key in ("id", "source"))):
+                       for key in ("id", "source")))):
         raise ValueError("verified lesion match metadata with id and source is required")
+    if lesion_match is not None and (not isinstance(lesion_match, dict)
+            or set(lesion_match) != lesion_fields
+            or lesion_match.get("status") not in {"verified", "not_available"}
+            or not all(isinstance(lesion_match.get(key), str) and lesion_match[key].strip()
+                       for key in ("status", "id", "source"))):
+        raise ValueError("lesion_match must be verified or explicitly not_available")
     return metadata
 
 
@@ -679,7 +725,7 @@ def _numeric(value: Any, name: str) -> float:
 
 
 def _s1_program(session: EvidenceSession, spec: FunctionSpec, outputs: dict, inputs: dict):
-    metadata = _pair_metadata(inputs)
+    metadata = _pair_metadata(inputs, require_lesion_match=True)
     finding = inputs["finding"]
     candidates = {role: _step_unit(outputs, f"{role}_candidates")
                   for role in ("prior", "current")}
@@ -749,9 +795,22 @@ def _s1_program(session: EvidenceSession, spec: FunctionSpec, outputs: dict, inp
     return value, relation, observations
 
 
-_PROGRAMS = {"Q4": _q4_program, "P3": _p3_program, "P6": _p6_program,
-             "P9": _p9_program, "T1": _t1_program, "G1": _g1_program,
-             "S1": _s1_program}
+_PROGRAMS = {
+    **Q_PROGRAMS,
+    **P_PROGRAMS_A,
+    **P_PROGRAMS_B,
+    **SPATIAL_PROGRAMS,
+    **TEMPORAL_PROGRAMS,
+    **DEVICE_PROGRAMS,
+    **DRAIN_PROGRAMS,
+    "Q4": _q4_program,
+    "P3": _p3_program,
+    "P6": _p6_program,
+    "P9": _p9_program,
+    "T1": _t1_program,
+    "G1": _g1_program,
+    "S1": _s1_program,
+}
 
 
 def _prepare_inputs(inputs: Mapping[str, Any] | None) -> dict:
@@ -845,10 +904,12 @@ def _run_spec(spec: FunctionSpec, session: EvidenceSession, registry: ToolRegist
     try:
         if spec.function_id == "P3" and inputs.get("finding") not in {"nodule", "mass"}:
             raise ValueError("P3 finding must be nodule or mass")
+        if spec.function_id == "T4" and not isinstance(inputs.get("drain_reference"), dict):
+            raise ValueError("T4 requires a drain_reference input; current A26 has no automatic chest-drain detector")
         sessions = dict(study_sessions or {"current": session})
         hashes = dict(image_hashes or {"current": image_hash})
         if spec.function_id == "S1":
-            _pair_metadata(inputs)
+            _pair_metadata(inputs, require_lesion_match=True)
             if "prior" not in sessions or "prior" not in hashes:
                 raise ValueError("S1 requires a separate prior image/session")
             if hashes["prior"] == hashes["current"]:
@@ -859,6 +920,16 @@ def _run_spec(spec: FunctionSpec, session: EvidenceSession, registry: ToolRegist
                     current_frame["width"], current_frame["height"]):
                 raise ValueError("registered paired inputs must have the same common pixel-frame dimensions")
             inputs["_pair_image_sha256"] = {"prior": hashes["prior"], "current": hashes["current"]}
+        if spec.input_type == "paired_images":
+            if "prior" not in sessions or "prior" not in hashes:
+                raise ValueError(f"{spec.function_id} requires a separate prior image/session")
+            prior_frame = inspect_image(sessions["prior"].image_ref)
+            current_frame = inspect_image(sessions["current"].image_ref)
+            if (prior_frame["width"], prior_frame["height"]) != (
+                    current_frame["width"], current_frame["height"]):
+                raise ValueError("registered paired inputs must have the same common pixel-frame dimensions")
+            inputs["_pair_image_sha256"] = {"prior": hashes["prior"], "current": hashes["current"]}
+            session.__dict__["_paired_prior_session"] = sessions["prior"]
         graph = DependencyGraph(spec.steps)
         graph.validate_registry(registry, required_only=True)
         steps = graph.topological_order() if include_optional else graph.required_closure()
@@ -947,8 +1018,11 @@ def _run_spec(spec: FunctionSpec, session: EvidenceSession, registry: ToolRegist
                 _restore_runtime(target_session, snapshot)
                 record_step.update(status="invalid_output", reason=str(exc))
                 run.steps.append(record_step)
-                run.status, run.refusal = "refused", ToolRefusal(step.tool, str(exc))
-                break
+                if step.step_id in required_ids:
+                    run.status, run.refusal = "refused", ToolRefusal(step.tool, str(exc))
+                    break
+                run.missing_optional.append(step.step_id)
+                continue
             ids = [unit.id for unit in units]
             record_step.update(status="ok", ids=ids)
             run.steps.append(record_step)
@@ -987,6 +1061,8 @@ def _run_spec(spec: FunctionSpec, session: EvidenceSession, registry: ToolRegist
     run.evidence_refs = EvidenceRefs(observation_ids=observations)
     if run.refusal:
         return run
+    program_nodes = dict(session.graph.nodes)
+    program_edges = list(session.graph.edges)
     try:
         errors = validate_graph(session)
         if errors:
@@ -1009,6 +1085,8 @@ def _run_spec(spec: FunctionSpec, session: EvidenceSession, registry: ToolRegist
         run.status, run.outputs = "ok", value
         run.evidence_refs = EvidenceRefs(program_observations, (relation.id,), (claim.id,))
     except (TypeError, ValueError, KeyError) as exc:
+        session.graph.nodes = program_nodes
+        session.graph.edges = program_edges
         run.status, run.refusal = "refused", ToolRefusal(spec.function_id, str(exc))
     return run
 

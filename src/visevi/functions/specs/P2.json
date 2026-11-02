@@ -85,8 +85,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Single target phenotype and corresponding reference annotations are not frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Single target phenotype and corresponding reference annotations are not frozen."
   ],
   "version": "1.0",
   "keywords": [

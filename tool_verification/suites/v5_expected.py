@@ -22,6 +22,10 @@ from visevi import backends
 from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / "tool_verification"
@@ -55,6 +59,7 @@ def run_segment(reg, image, out, device, tool):
 
 def montgomery(args, reg):
     manifest = json.loads((TV / "cases/montgomery138.json").read_text())
+    verify_frozen_cases(manifest["cases"], ROOT / "original_data", hash_key="image_sha256")
     root = ROOT / "original_data/montgomery-nlm/data/MontgomerySet"
     rows, node_rows = [], []
     for index, case in enumerate(manifest["cases"], 1):
@@ -107,6 +112,7 @@ def polygon_mask(points, shape):
 
 def jsrt(args, reg):
     manifest = json.loads((TV / "cases/jsrt_scr247.json").read_text())
+    verify_frozen_cases(manifest["cases"], ROOT / "original_data", hash_key="image_sha256")
     rows = []
     for index, case in enumerate(manifest["cases"], 1):
         image = ROOT / "original_data" / case["image_path"]
@@ -146,6 +152,7 @@ def jsrt(args, reg):
 
 def nih_view(args, reg):
     manifest = json.loads((TV / "cases/nih_view292.json").read_text())
+    verify_frozen_cases(manifest["cases"], ROOT / "original_data", hash_key="sha256")
     rows = []
     for index, case in enumerate(manifest["cases"], 1):
         image = ROOT / "original_data" / case["image_path"]

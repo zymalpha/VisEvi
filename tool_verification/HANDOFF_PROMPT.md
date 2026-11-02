@@ -51,7 +51,7 @@
   - A5 把 HybridGNet 左右肺节点围成多边形，与人工 mask 比 Dice，中位数 ≥ 0.90；同时在全部 138 例上复核语义节点表（0/21/29/44/65/71）是否为对应几何极值，报告一致比例。
 - JSRT SCR 镜像 mask（1024²，原图 2048²）：先确定并核对坐标映射（叠加若干例确认），再算 A1 肺 Dice 中位数 ≥ 0.85、A2 心 ≥ 0.75，锁骨只记录。
 - NIH 292 例 ViewPosition：A24 准确率 ≥ 0.85；JSRT、Montgomery 全为 PA，记录误判率。
-- CheXOne 框网格尺度：在 ≥ 50 个 ChestX-Det 参照框上确认 0–100 网格（已有 6 例记录：doc/_review_records/20261030_a_tools/chexone_box_scale.json）。
+- CheXOne 框网格尺度：在 ≥ 50 个 ChestX-Det 参照框上确认 0–100 网格（已有 6 例记录：tool_verification/runs/_review_records/20261030_a_tools/chexone_box_scale.json）。
 - A12：在 core40 上与 CXAS 作者自带的 CTR 提取器（tools/src/cxas/.../cxas/extraction/cardiothoracic_ratio.py）比较，口径不同不要求相等，要求 Spearman ≥ 0.8，并逐例解释大偏差。
 - 跨工具一致性（只报告分布，极端不一致逐例查看）：PSPNet 心与 CXAS heart、PSPNet 肺与 CXAS lung 与 HybridGNet 肺轮廓、A26 隆突与 CXAS tracheal bifurcation。
 - V5 未达区间时，先排查实现错误（归一化、通道、坐标、侧别），不得调整区间。

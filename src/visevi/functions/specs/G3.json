@@ -58,6 +58,7 @@
     "overlap_2d",
     "containment_2d",
     "adjacency_2d",
+    "pairwise_relations_2d",
     "gap_distance_px",
     "image_axis_direction",
     "interpretation_scope"
@@ -99,8 +100,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Independent projected-relation labels and caller lesion-mask source contract remain to be frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent projected-relation labels remain unavailable; execution requires image-bound source metadata for caller-supplied lesion masks."
   ],
   "version": "1.0",
   "keywords": [

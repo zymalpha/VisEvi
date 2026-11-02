@@ -102,8 +102,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Target definition, grade mapping and independent geometric labels are not frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Target definition, grade mapping and independent geometric labels are not frozen."
   ],
   "version": "1.0",
   "keywords": [

@@ -38,6 +38,7 @@
   ],
   "outputs": [
     "lung_side",
+    "patient_sides",
     "upper_middle_lower_zones",
     "zone_overlap",
     "coordinate_frame",
@@ -78,8 +79,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Independent region labels and multiple-zone claim policy are not frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent region labels are not available; current execution is an engineering workflow check only."
   ],
   "version": "1.0",
   "keywords": [

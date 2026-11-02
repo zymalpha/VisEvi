@@ -66,8 +66,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Freeze clinical mediastinal width level and manual boundary definition; geometric proxy alone is insufficient.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Freeze clinical mediastinal width level and manual boundary definition; geometric proxy alone is insufficient."
   ],
   "version": "1.0",
   "keywords": [

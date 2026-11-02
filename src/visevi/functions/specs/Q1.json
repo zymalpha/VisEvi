@@ -6,6 +6,13 @@
   "input_type": "single_image",
   "steps": [
     {
+      "step_id": "view",
+      "tool": "classify_view",
+      "depends_on": [],
+      "parameters": {},
+      "required": true
+    },
+    {
       "step_id": "landmarks",
       "tool": "locate_lung_landmarks",
       "depends_on": [],
@@ -61,8 +68,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Clinical inspiration grade mapping and independent quality annotations are not frozen.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Clinical inspiration grade mapping and independent quality annotations are not frozen."
   ],
   "version": "1.0",
   "keywords": [

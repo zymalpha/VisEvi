@@ -11,26 +11,6 @@
       "depends_on": [],
       "parameters": {},
       "required": true
-    },
-    {
-      "step_id": "landmarks",
-      "tool": "locate_lung_landmarks",
-      "depends_on": [],
-      "parameters": {},
-      "required": true
-    },
-    {
-      "step_id": "distance",
-      "tool": "measure_region_distance",
-      "depends_on": [
-        "devices",
-        "landmarks"
-      ],
-      "parameters": {
-        "mask_a": "$input.ngt_tip_mask_name",
-        "mask_b": "$input.diaphragm_reference_mask_name"
-      },
-      "required": true
     }
   ],
   "outputs": [
@@ -78,8 +58,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Diaphragm/crossing program, point-distance adapter and independent tube annotations are missing.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent diaphragm/path/tip annotations are not available; current execution is a projected crossing workflow check only."
   ],
   "version": "1.0",
   "keywords": [

@@ -13,6 +13,10 @@ from visevi import backends
 from visevi.core.session import EvidenceSession
 from visevi.core.units import ToolRefusal
 from visevi.eval.runner import build_a_registry
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / "tool_verification"
@@ -27,6 +31,7 @@ def main():
         p.error("--out must be a new directory")
     args.out.mkdir(parents=True)
     cases = json.loads((TV / "cases/core40.json").read_text())["cases"]
+    verify_frozen_cases(cases, ROOT / "original_data")
     reg = build_a_registry()
     manifest = {"cases": []}
     rows = []

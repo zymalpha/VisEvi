@@ -105,9 +105,7 @@
   },
   "status": "specified",
   "blockers": [
-    "Paired-image session orchestration and independent longitudinal annotations are missing.",
-    "Cross-study lesion matching and new-lesion decision program are not implemented.",
-    "Function-level evidence/claim executor is not implemented; this protocol is a specification rather than an executable clinical function."
+    "Independent longitudinal annotations and verified lesion correspondence are not available; current execution reports candidate newness only."
   ],
   "version": "1.0",
   "keywords": [

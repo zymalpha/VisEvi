@@ -276,6 +276,41 @@ def validate_graph(session: EvidenceSession) -> list[str]:
             references = [p for p in node.provenance if p in nodes]
             if not references:
                 errors.append(f"{node_id}: derived node has no upstream graph nodes")
+        if node.category == RELATION:
+            if not isinstance(node.value, Mapping):
+                errors.append(f"{node_id}: relation payload must be a mapping")
+                relation_value: Mapping[str, Any] = {}
+            else:
+                relation_value = node.value
+
+            inputs = relation_value.get("input_ids")
+            rule_id = relation_value.get("rule_id")
+            valid_inputs = isinstance(inputs, list) and all(
+                isinstance(item, str) and bool(item.strip()) for item in inputs
+            )
+            if not valid_inputs or not inputs:
+                errors.append(f"{node_id}: relation input_ids must be a non-empty list of IDs")
+            else:
+                if len(set(inputs)) != len(inputs):
+                    errors.append(f"{node_id}: relation input_ids contain duplicates")
+                missing_inputs = [item for item in inputs if item not in nodes]
+                if missing_inputs:
+                    errors.append(f"{node_id}: relation input node missing: {', '.join(missing_inputs)}")
+                if node.provenance != inputs:
+                    errors.append(f"{node_id}: relation input_ids disagree with provenance")
+
+            if not isinstance(rule_id, str) or not rule_id.strip():
+                errors.append(f"{node_id}: relation is missing rule_id")
+
+            incoming = [edge for edge in session.graph.edges
+                        if edge.get("dst") == node_id and edge.get("relation") == "derived_from"]
+            incoming_ids = [edge.get("src") for edge in incoming]
+            if valid_inputs and incoming_ids != inputs:
+                errors.append(f"{node_id}: derived_from edges disagree with relation input_ids")
+            if isinstance(rule_id, str) and rule_id.strip() and any(
+                edge.get("basis") != rule_id for edge in incoming
+            ):
+                errors.append(f"{node_id}: derived_from edge basis disagrees with relation rule_id")
         if node.category == CLAIM:
             # Old claim nodes omit these fields; if present, they must agree
             # with provenance and support/counter edges (no forged references).

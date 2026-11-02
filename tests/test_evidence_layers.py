@@ -103,6 +103,56 @@ def test_relation_payload_and_claim_empty_proposition_are_rejected_atomically():
     assert session.graph.edges == []
 
 
+def test_relation_graph_contract_detects_post_construction_tampering():
+    session = EvidenceSession(image_ref="synthetic:test")
+    first = add_observation(session, "heart", {}, source_tool="segment_heart")
+    second = add_observation(session, "lungs", {}, source_tool="segment_lungs")
+    relation = add_relation(session, "heart_to_lung_ratio", {"ratio": 0.5},
+                            input_ids=[first.id, second.id], rule_id="ctr:v1")
+    assert validate_graph(session) == []
+
+    relation.value["input_ids"] = [first.id, "obs-missing"]
+    errors = validate_graph(session)
+    assert any("relation input node missing" in error for error in errors)
+    assert any("input_ids disagree with provenance" in error for error in errors)
+    assert any("derived_from edges disagree" in error for error in errors)
+
+
+@pytest.mark.parametrize("mutation,expected", [
+    ("provenance", "input_ids disagree with provenance"),
+    ("rule_id", "edge basis disagrees with relation rule_id"),
+    ("edge_removed", "derived_from edges disagree with relation input_ids"),
+    ("edge_added", "derived_from edges disagree with relation input_ids"),
+])
+def test_relation_provenance_rule_and_edges_remain_consistent(mutation, expected):
+    session = EvidenceSession(image_ref="synthetic:test")
+    first = add_observation(session, "heart", {}, source_tool="segment_heart")
+    second = add_observation(session, "lungs", {}, source_tool="segment_lungs")
+    relation = add_relation(session, "heart_to_lung_ratio", {"ratio": 0.5},
+                            input_ids=[first.id, second.id], rule_id="ctr:v1")
+
+    if mutation == "provenance":
+        relation.provenance = [first.id]
+    elif mutation == "rule_id":
+        relation.value["rule_id"] = "forged-rule"
+    elif mutation == "edge_removed":
+        session.graph.edges.pop()
+    elif mutation == "edge_added":
+        session.graph.add_edge("obs-unrelated", relation.id, "derived_from", "ctr:v1")
+
+    assert any(expected in error for error in validate_graph(session))
+
+
+def test_relation_payload_with_malformed_inputs_is_reported_without_raising():
+    session = EvidenceSession(image_ref="synthetic:test")
+    observation = add_observation(session, "heart", {}, source_tool="segment_heart")
+    relation = add_relation(session, "heart_width", {"width": 10},
+                            input_ids=[observation.id], rule_id="heart_width:v1")
+    relation.value["input_ids"] = observation.id
+    errors = validate_graph(session)
+    assert any("input_ids must be a non-empty list" in error for error in errors)
+
+
 @pytest.mark.parametrize("relation", ["attribute_of", "spatial", "comparison", "temporal"])
 def test_legacy_edge_types_remain_valid(relation):
     session = EvidenceSession(image_ref="synthetic:test")

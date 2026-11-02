@@ -2,9 +2,11 @@
 import importlib.util
 import http.client
 import io
+from email.message import Message
 from pathlib import Path
 import urllib.error
 import urllib.request
+import urllib.response
 
 import pytest
 
@@ -205,6 +207,48 @@ def test_opener_honours_https_proxy_without_exposing_credentials(monkeypatch):
     assert len(proxy_handlers) == 1
     assert proxy_handlers[0].proxies['https'] == 'http://127.0.0.1:8123'
     assert any(isinstance(handler, downloader.SameHostRedirect) for handler in opener.handlers)
+    assert not any(name.lower() == 'authorization' for name, _ in opener.addheaders)
+
+
+def test_physionet_challenge_and_session_cookie_are_used_in_memory(monkeypatch):
+    """Exercise urllib's actual auth/cookie handlers with fake HTTPS responses."""
+    seen = []
+
+    def reply(request, status, headers):
+        message = Message()
+        for key, value in headers:
+            message.add_header(key, value)
+        response = urllib.response.addinfourl(io.BytesIO(JPEG if status == 200 else b''),
+                                              message, request.full_url, status)
+        response.msg = 'OK' if status == 200 else 'Unauthorized'
+        return response
+
+    def mock_https_open(handler, request):
+        auth = request.get_header('Authorization')
+        cookie = request.get_header('Cookie', '')
+        seen.append((auth is not None, cookie))
+        if not auth and 'sessionid=synthetic-session' not in cookie:
+            return reply(request, 401, [
+                ('WWW-Authenticate', 'Basic realm="PhysioNet", charset="UTF-8"'),
+                ('Set-Cookie', 'testcookie=1; Path=/; Secure'),
+            ])
+        if auth:
+            assert auth == 'Basic dGVzdC11c2VyOnRlc3QtcGFzc3dvcmQ='
+            assert 'testcookie=1' in cookie
+            return reply(request, 200, [('Set-Cookie', 'sessionid=synthetic-session; Path=/; Secure')])
+        assert 'sessionid=synthetic-session' in cookie
+        return reply(request, 200, [])
+
+    monkeypatch.setattr(urllib.request.HTTPSHandler, 'https_open', mock_https_open)
+    opener = downloader.opener_for('test-user', 'test-password')
+    with opener.open(downloader.BASE + IMAGE) as response:
+        assert response.read() == JPEG
+    with opener.open(downloader.BASE + IMAGE) as response:
+        assert response.read() == JPEG
+    assert len(seen) == 3
+    assert seen[0] == (False, '')
+    assert seen[1][0] is True
+    assert seen[2][0] is False
 
 
 @pytest.mark.parametrize('failure', [OSError('receipt failure'), KeyboardInterrupt()])

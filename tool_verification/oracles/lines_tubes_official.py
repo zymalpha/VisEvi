@@ -5,6 +5,7 @@ all 25 checkpoints contain tensors only, so the loaded state is the same.
 """
 import argparse, importlib.util, json
 from pathlib import Path
+import cv2
 import numpy as np, torch
 from PIL import Image
 
@@ -23,11 +24,25 @@ def load_state(model, path):
     assert not missing and not unexpected
 rt._load_state = load_state
 runtime = rt.LocalLinesTubesRuntime(args.weights, args.device)
+device_predictions = {}
+original_device = runtime._device
+def capture_device(image, count):
+    result = original_device(image, count)
+    device_predictions["family"] = result[1]
+    return result
+runtime._device = capture_device
 for case in json.loads(args.cases.read_text())['cases']:
     with Image.open(args.data_root / case['image_path']) as im:
         gray = np.asarray(im.convert('L'))
     out = runtime.predict(gray, presence_folds=5, device_folds=5, carina_folds=5, classifier_folds=5, force_full_pipeline=True)
+    family = device_predictions.pop("family")
+    line_masks = np.stack([
+        cv2.resize(channel, (gray.shape[1], gray.shape[0]), interpolation=cv2.INTER_LINEAR) > 0.5
+        for channel in family[:4]
+    ])
     (args.out / (Path(case['image_path']).stem + '.json')).write_text(json.dumps(
         {'presence': out['presence'], 'classification': out['classification'], 'landmarks': out['landmarks'],
          'fold_ids': out['metadata']['fold_ids']}))
+    np.savez_compressed(args.out / (Path(case['image_path']).stem + '_lines.npz'),
+                        line_masks=line_masks)
 print('done')

@@ -17,6 +17,7 @@ from visevi.core.session import EvidenceSession
 from visevi.core.spec import ToolSpec, evidence_result_schema, parameter_schema
 from visevi.core.units import EvidenceUnit, ToolRefusal
 from visevi.functions.runner import run_function_episode
+from visevi.functions import runner
 from visevi.functions.specs import ToolStep, load_function_specs
 from visevi.perception.metrics import build_metric_tools
 
@@ -313,6 +314,22 @@ def test_required_tool_refusal_is_retained_and_stops_claims(harness, tmp_path):
     assert not result.evidence_refs
 
 
+def test_failed_function_program_rolls_back_its_relation_and_edges(harness, tmp_path, monkeypatch):
+    original = runner._PROGRAMS['Q4']
+
+    def malformed(session, spec, outputs, inputs):
+        value, relation, support = original(session, spec, outputs, inputs)
+        return {}, relation, support
+
+    monkeypatch.setitem(runner._PROGRAMS, 'Q4', malformed)
+    result = harness.run('Q4', out_dir=tmp_path / 'run')
+    assert result.status == 'refused'
+    assert result.session.graph.by_category('observation')
+    assert not result.session.graph.by_category('relation')
+    assert not result.session.graph.by_category('claim')
+    assert not result.session.graph.edges
+
+
 def test_optional_tool_refusal_is_recorded_but_does_not_block_q4(harness, tmp_path):
     catalog = load_function_specs()
     spec = catalog['Q4']
@@ -328,8 +345,8 @@ def test_unknown_planned_and_ambiguous_requests_do_not_execute_tools(harness, tm
     unknown = harness.run('P99')
     assert unknown.status == 'unknown' and not unknown.functions
     planned = harness.run('T4')
-    assert planned.status == 'blocked'
-    assert 'not implemented' in planned.functions[0].refusal.reason
+    assert planned.status == 'refused'
+    assert 'drain_reference' in planned.functions[0].refusal.reason
     ambiguous = harness.run(query='请检查投照和心胸比')
     assert ambiguous.status == 'ambiguous' and not ambiguous.functions
     assert not harness.calls

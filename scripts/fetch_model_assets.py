@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SNAPSHOT = ROOT / 'doc/_review_records/20261028_selection/primary_source_snapshot.json'
+SNAPSHOT = ROOT / 'tool_verification/runs/_review_records/20261028_selection/primary_source_snapshot.json'
 
 BACKENDS = {
     'chexmask-u': {'repo': 'mcosarinsky/CheXmask-U', 'revision': 'ed012f0fbb84969cc2af95f3e521dfdef6d334bf',
@@ -73,6 +73,8 @@ def sha256(path: Path) -> str:
 
 
 def snapshot_hashes(key: str) -> dict[str, str]:
+    if not SNAPSHOT.is_file():
+        return {}
     data = json.loads(SNAPSHOT.read_text())
     info = json.loads(data[key]['content'])
     files = info.get('files') or [{'name': s['rfilename'], 'sha256': (s.get('lfs') or {}).get('sha256')}

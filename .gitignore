@@ -2,6 +2,7 @@
 .venv/
 .venv-models/
 .venv-oracle/
+.venv-vqa/
 .claude/
 __pycache__/
 *.pyc
@@ -34,6 +35,7 @@ tools/cache/
 # Keep the dependency lock and setup notes visible in the public repository.
 !tools/
 !tools/requirements-models.lock
+!tools/requirements-vqa.lock
 !tools/README.md
 
 # 压缩包、模型和其他大文件
@@ -60,5 +62,4 @@ build/
 
 # Local evaluation workspace and untouched uploaded baseline
 .baseline/
-doc/_review_records/
 migration_record.json

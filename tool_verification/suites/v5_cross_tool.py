@@ -12,6 +12,10 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+try:
+    from .case_manifest import verify_frozen_cases
+except ImportError:
+    from case_manifest import verify_frozen_cases
 
 ROOT = Path(__file__).resolve().parents[2]
 TV = ROOT / "tool_verification"
@@ -65,6 +69,7 @@ def main():
         p.error("--out must be a new directory")
     args.out.mkdir(parents=True)
     cases = json.loads((TV / "cases/core40.json").read_text())["cases"]
+    verify_frozen_cases(cases, ROOT / "original_data")
     psp_root = TV / "runs/20261030/v5_ctr_crosscheck_retry4"
     model_root = TV / "runs/20261030/v3_models_retry1/ours"
     rows = []
